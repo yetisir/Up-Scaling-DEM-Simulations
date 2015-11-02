@@ -1,2 +1,3 @@
 untitled.tex
 section_Introduction_Short_paragraph_defining__.tex
+section_Formulation_Consider_the_dynamic__.tex
