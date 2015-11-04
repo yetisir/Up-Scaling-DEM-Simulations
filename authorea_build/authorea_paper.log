@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.14)  4 NOV 2015 10:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.14)  4 NOV 2015 12:07
 entering extended mode
 **authorea_paper.tex
 (authorea_paper.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
-(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/header.tex
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/preamble.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -80,6 +80,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 ))
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/header.tex)
 (authorea_paper.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -108,9 +109,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]) [2]
 (authorea_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 870 strings out of 493698
- 10456 string characters out of 3144415
- 65468 words of memory out of 3000000
+ 872 strings out of 493698
+ 10580 string characters out of 3144415
+ 65472 words of memory out of 3000000
  4236 multiletter control sequences out of 15000+200000
  8407 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
