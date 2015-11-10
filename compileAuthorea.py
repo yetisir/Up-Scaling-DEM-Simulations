@@ -22,6 +22,7 @@ The key assumptions are:
 
 import os
 import subprocess
+import time
 
 
 #lots of dobule-{}'s are here because we use it as a formatting template below
@@ -221,7 +222,6 @@ def build_authorea_latex(localdir, builddir, latex_exec, bibtex_exec, outname,
         msg = 'Preprocessing done but skipping build.  Main file:"{0}.tex"'
         print(msg.format(os.path.join(builddir, outname)))
 
-
 if __name__ == '__main__':
     import argparse
 
@@ -279,3 +279,5 @@ if __name__ == '__main__':
                          args.filename, args.usetitle, args.usebibtex,
                          args.n_runs_after_bibtex, args.open_with,
                          args.titleinput, args.dobuild, pathtype)
+
+    p = subprocess.Popen([os.path.join(args.build_dir, args.filename+'.pdf')],shell=True)
