@@ -15,8 +15,6 @@
 \int_{\Omega_{f}} \boldsymbol{\sigma} { dA_f}} \bigg \rbrack
 \end{equation}
 
-*this is wrong
-
 \begin{equation}
 \label{eqn:stress3}
 \langle \boldsymbol{\sigma} \rangle^\Omega = 
@@ -27,8 +25,8 @@
 \begin{equation}
 \label{eqn:stress4}
 \langle \boldsymbol{\sigma} \rangle^\Omega = 
-\frac{1}{A_{r}} \sum_{i=1}^{N_{b}} \sum_{j=1}^{N_{z}} \boldsymbol{\sigma}_z^{ij} A_{z}^{ij} + 
-\frac{1}{A_{f}} \sum_{i=1}^{N_{d}} p_d^{i} \textbf{I} A_{d}^{i}
+\frac{1}{A} \bigg \lbrack \sum_{i=1}^{N_{b}} \sum_{j=1}^{N_{z}} \boldsymbol{\sigma}_z^{ij} A_{z}^{ij} + 
+\sum_{i=1}^{N_{d}} p_d^{i} \textbf{I} A_{d}^{i} \bigg \rbrack
 \end{equation}
 
 \subsection{Strain Homogenization}
