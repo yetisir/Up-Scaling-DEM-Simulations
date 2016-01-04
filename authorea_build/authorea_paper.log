@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.14)  10 NOV 2015 12:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.14)  4 JAN 2016 14:47
 entering extended mode
 **authorea_paper.tex
 (authorea_paper.tex
@@ -95,11 +95,11 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 
-(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/untitled.tex)
-(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_Introduction_Short_p
-aragraph_defining__.tex
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_abstract.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_introduction.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -111,42 +111,64 @@ s de-formable
  []
 
 )
-(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_Formulation_subsecti
-on_Governing_equations__.tex)
-(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_Governing_equatio
-ns_of_the__.tex)
-(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/Section_Homogenization_Appro
-ach.tex [1
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_distinctElementMetho
+d.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_homogenizationApproa
+ch.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_stressHomogenizat
+ion.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_strainHomogenizat
+ion.tex [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_damagedPlasticityMod
+el.tex
+Overfull \hbox (6.14632pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/14.4 Damage Plas-ticty Model For Quasi-Brittle Ma-
+ []
+
+)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_governingEquation
+sOfCourseScale.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_femFormulation.te
+x)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_constitutiveRelation
+shipParameterEstimation.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_levenberg-Marquar
+tdAlgorithm.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_parameterInitialA
+ndBoundaryEstimates.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_materialTestingExamp
+le.tex) (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_results.tex)
+(C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_conclusions.tex)
 (authorea_paper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 24--30
 []\OT1/cmr/m/n/10 Gracie, R.; Be-
  []
 
-) [2] (authorea_paper.aux) ) 
+[2]) [3] (authorea_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 905 strings out of 493698
- 11424 string characters out of 3144415
+ 935 strings out of 493698
+ 13338 string characters out of 3144415
  68472 words of memory out of 3000000
  4260 multiletter control sequences out of 15000+200000
  8407 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,6n,20p,809b,149s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
-Output written on authorea_paper.pdf (2 pages, 132326 bytes).
+ 29i,6n,20p,789b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb>
+Output written on authorea_paper.pdf (3 pages, 135868 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
