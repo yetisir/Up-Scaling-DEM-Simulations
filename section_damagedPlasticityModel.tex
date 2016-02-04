@@ -56,3 +56,21 @@ In this formulation, the brittle nature of rock neccessitates seperate character
 	\boldsymbol{\bar{\epsilon}_t^{pl}} \\ 
 	\boldsymbol{\bar{\epsilon}_c^{pl}} \end{bmatrix}
 \end{equation}
+
+The evolution of the equivalent plastic strains are described by the time derivative of the equivalent plastic strain, which can be considered to be related to the time derivative of the plastic strain through a hardenbing rule, $\mathbf{h}$ such that:
+\begin{equation}
+\label{eqn:const10}
+\boldsymbol{\dot{\bar{\epsilon}}^{pl}} = \mathbf{h}(\boldsymbol{\bar{\sigma}},
+	\boldsymbol{\bar{\epsilon}^{pl}})\bullet \boldsymbol{\dot{\epsilon}} 
+\end{equation}
+
+The flow rule can be written in terms of the flow potential function, $G(\boldsymbol{\bar{\sigma}})$, and a plastic mulitplier $\dot{\lambda}$:
+\begin{equation}
+\label{eqn:const11}
+\boldsymbol{\dot{\epsilon}} = \dot{\lambda} \dfrac{\partial G(\boldsymbol{\bar{\sigma}})}{\partial \boldsymbol{\bar{\sigma}}}
+\end{equation}
+
+Non-associated plasticity  is used, which required the solution of non-symetric equations.
+
+
+

@@ -1,28 +1,30 @@
 \subsection{Stress Homogenization}
+Homogenization of the stresses in a DEM simulation generally relies upon the reduction of the inter-particle contact forces to generate an equivalent continuum stress state(ref wellman). However, in UDEC\textsuperscript{TM}, since the blocks are deformable, the contact force reduction is done during simulation time to allow stresses to develop within the block zones. As such, the stress homogenization procedure presented here is formulated around deformable DEM blocks.  
 
+For 
 \begin{equation}
 \label{eqn:stress1}
-\langle \boldsymbol{\sigma} \rangle^\Omega = 
-\frac{1}{A} \int_\Omega \boldsymbol{\sigma} { dA}
+\langle \boldsymbol{\sigma} \rangle = 
+\frac{1}{A^h} \int_\Omega \boldsymbol{\sigma} { dA}
 \end{equation}
 
 \begin{equation}
 \label{eqn:stress2}
-\langle \boldsymbol{\sigma} \rangle^\Omega = 
-\frac{1}{A} \bigg \lbrack {\int_{\Omega_{r}} \boldsymbol{\sigma} { dA_r} + 
-\int_{\Omega_{f}} \boldsymbol{\sigma} { dA_f}} \bigg \rbrack
+\langle \boldsymbol{\sigma} \rangle = 
+\frac{1}{A^h} \bigg \lbrack {\int_{\Omega_{r}} \boldsymbol{\sigma} { dA} + 
+\int_{\Omega_{f}} \boldsymbol{\sigma} { dA}} \bigg \rbrack
 \end{equation}
 
 \begin{equation}
 \label{eqn:stress3}
-\langle \boldsymbol{\sigma} \rangle^\Omega = 
-\frac{1}{A} \bigg \lbrack \sum_{i=1}^{N_{b}} \boldsymbol{\sigma}^{i} A_{b}^{i} + 
+\langle \boldsymbol{\sigma} \rangle = 
+\frac{1}{A^h} \bigg \lbrack \sum_{i=1}^{N_{b}} \boldsymbol{\sigma}^{i} A_{b}^{i} + 
 \sum_{i=1}^{N_{d}} \boldsymbol{\sigma}^{i} A_{d}^{i} \bigg \rbrack
 \end{equation}
 
 \begin{equation}
 \label{eqn:stress4}
-\langle \boldsymbol{\sigma} \rangle^\Omega = 
-\frac{1}{A} \bigg \lbrack \sum_{i=1}^{N_{b}} \sum_{j=1}^{N_{z}} \boldsymbol{\sigma}_z^{ij} A_{z}^{ij} + 
+\langle \boldsymbol{\sigma} \rangle = 
+\frac{1}{A^h} \bigg \lbrack \sum_{i=1}^{N_{b}} \sum_{j=1}^{N_{z}} \boldsymbol{\sigma}_z^{ij} A_{z}^{ij} + 
 \sum_{i=1}^{N_{d}} p_d^{i} \textbf{I} A_{d}^{i} \bigg \rbrack
 \end{equation}

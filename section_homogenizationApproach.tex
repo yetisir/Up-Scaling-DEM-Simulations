@@ -1,1 +1,42 @@
 \section{Homogenization Approach}
+The main objective of homogenizing DEM simulations is to be able to describe the macroscopic behaviour of the distontinuous medium in term of a standard continuum model. In this homogenization process, the resultant inter-block contact forces and block displacements - resultant from the DEM simulations - are converted to stresses and strains in a continuum mechanical context.
+
+The first logical step in this homogenization procedure is to riggerously define the area of interest to be homogenized. For the homogenization procedure to yeild any meaningful outcome, the homogenization procedure should be applied to a Representative Elementary Volume (REV) for the system. The exact size of the REV functions on the Discrete Fracture Network (DFN) prescribed to the DEM model, and some relavent statistical parameters (insert reference). For this homogenization approach to hold valid, the REV of size $d$ contained within a system with a characteristic length $D$ and consisting of particles with a characteristic diamater $\delta$, must subsribe to the following scale seperation (ref wellman):
+\begin{equation}
+\label{eqn:hom1a}
+D \gg d \gg \delta
+\end{equation}
+
+**To avoid indulging on the statistics required to formally define an REV for a particular DFN, an REV is assumed for this purposes of this investigation. The REV is chosen to be a circular subsection of the DEM model for reasons (in this reference). 
+
+Due to the discontinuous nature of the DEM simulations, the circular REV cannot be used dirrectly. Because the calculated displacements and contact forces from the DEM are known at the block edges, the homogenization area boundary must follow the block boundaries. In order to define a homogenization area based on the REV, but subscribing to the block boundaries, the homogenization area is taken to be the area defined by the block boundaries of the blocks that intersect the REV boundary (see figure blah).
+
+
+*************************(figure blah, depicting the homogenization boundary and a close up of the boundary showing the displacment jumps)***************************
+
+
+One must also note the potential displacement jumps that may occur between blocks on the boundary. In the case where the blocks become physically separated, there exists a discontinuity along the homogenization boundary (again, see figure blah abaove). These discontinuities along the homogenization boundary were considered by adding boundary segments to the homogenization boundary between the corners of the adjacent blocks. 
+
+The homogenization boundary, $\Gamma_{h}$, can be described in terms of $n$ ordered boundary vertices, $V_{i}^{h} = (x_{i}^{h}, y_{i}^{h})$, representing the $i$th set of vertex coordinates along the boundary, such that the homogenization area, $A^h$, can be calculated using the following formulation for the area of an arbitrary, non-self-intersecting polygon(find reference):
+\begin{equation}
+\label{eqn:hom1}
+A^h = \dfrac{1}{2} \sum_{i=1}^{n}x_i^h(y_{i+1}^h-y_{i-1}^h)
+\end{equation}
+
+At this point, within the homogenization area, one must differentiate between the block area and the void area as they have fundamentally different behaviour. The total block area, $A^b$ can be assessed as a summation of $m$ block areas within the homogenization area, while the individual block area can be assessed in a similar manner to \ref{eqn:hom1}. For $n^j$ block boundary vertices, $V_{i,j}^{b} = (x_{i,j}^{b}, y_{i,j}^{b})$ representing the $i$th set of vertex coordinates on the $j$th block, the total block area can be calculated as:
+\begin{equation}
+\label{eqn:hom2}
+A^b = \dfrac{1}{2} \sum_{j=0}^{m} \sum_{i=1}^{n^j} x_{i,j}^b(y_{i+1,j}^b-y_{i-1,j}^b)
+\end{equation}
+
+Assuming that the block area and the void area are jointly exhaustive of the total homogenization area, the total void area, $A^v$, can be written as the difference of the homogenization area and the block area:
+\begin{equation}
+\label{eqn:hom3}
+A^v = A^h - A^b
+\end{equation}
+\begin{equation}
+\label{eqn:hom4}
+A^v = \dfrac{1}{2} \sum_{i=1}^{n}x_i^h(y_{i+1}^h-y_{i-1}^h) - \dfrac{1}{2} \sum_{j=0}^{m} \sum_{i=1}^{n^j} x_{i,j}^b(y_{i+1,j}^b-y_{i-1,j}^b)
+\end{equation}
+
+
