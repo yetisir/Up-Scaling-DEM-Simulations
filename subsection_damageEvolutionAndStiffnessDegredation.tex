@@ -1,0 +1,42 @@
+\subsection{Damage Evolution and Stiffness Degredation}
+
+The evolution of the equivalent plastic strains are formulated by assuming the stress-strain curves can be converted  into stress vs plastic strain curves where the tensile and compressive stresses are streated seperately:
+\begin{equation}
+\label{eqn:dam1}
+\begin{aligned}
+\boldsymbol{\sigma}_t = \boldsymbol{\sigma}_t(\boldsymbol{\bar{\epsilon}^{pl}_t},
+	\boldsymbol{\dot{\bar{\epsilon}}^{pl}_t}) \\
+\boldsymbol{\sigma}_c = \boldsymbol{\sigma}_c(\boldsymbol{\bar{\epsilon}^{pl}_c},
+	\boldsymbol{\dot{\bar{\epsilon}}^{pl}_c})
+\end{aligned}
+\end{equation}
+
+Loading a quasi-brittle in compression or tension causes damage in the material, which reduces the effective stiffness, weakening the unloading response. This damage is characterized by two damage variables, one of which represents the damage due to tensile loading, the other represents damage due to compressive loading. 
+\begin{equation}
+\label{eqn:dam2}
+\begin{aligned}
+D_t = D_t(\boldsymbol{\bar{\epsilon}^{pl}_t}),\qquad 0 \leq D_t \leq 1 \\
+D_c = D_c(\boldsymbol{\bar{\epsilon}^{pl}_c}),\qquad 0 \leq D_t \leq 1
+\end{aligned}
+\end{equation}
+
+The damage in both compression and tension is a neccesarily increasing function of the equivalent plastic strains. This formulation will adopt the convention where $\boldsymbol{sigma_c}$ is positive in compression, as with the respectiove strains.
+\begin{equation}
+\label{eqn:dam3}
+\begin{aligned}
+\boldsymbol{\sigma}_t = (1-D_t)\mathbf{E}:(\boldsymbol{\epsilon_t} - \boldsymbol{\bar{\epsilon}^{pl}_t}) \\
+\boldsymbol{\sigma}_c = (1-D_c)\mathbf{E}:(\boldsymbol{\epsilon_c} - \boldsymbol{\bar{\epsilon}^{pl}_c})
+\end{aligned}
+\end{equation}
+
+For cyclic loading, both the compressive and tensile damage need to be considered. Two stiffness recovery factors are introduced, $s_t$ and $s_c$, which represent the stiffness recovery effects associated with stress reversals. The damage can be said to take the form of:
+\begin{equation}
+\label{eqn:dam4}
+(1-D) = (1-s_t D_c)(1-s_c D_t),\qquad 0 \leq s_t, s_c, \leq 1
+\end{equation}
+
+In the case of tensile loading followed by compressive loading, the stiffness is assumed to completely recover
+
+
+
+
