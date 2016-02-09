@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.14)  3 FEB 2016 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.9.14)  9 FEB 2016 12:28
 entering extended mode
 **authorea_paper.tex
 (authorea_paper.tex
@@ -116,22 +116,34 @@ d.tex [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_homogenizationApproa
-ch.tex)
+ch.tex
+Overfull \hbox (9.41753pt too wide) in paragraph at lines 15--16
+[]\OT1/cmr/m/n/10 *************************(figure blah, de-pict-ing the ho-mog
+-e-niza-tion bound-
+ []
+
+
+Overfull \hbox (76.11208pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/n/10 ary and a close up of the bound-ary show-ing the dis-plac-ment 
+jumps)*************************** 
+ []
+
+[2])
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_stressHomogenizat
 ion.tex)
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_strainHomogenizat
-ion.tex)
+ion.tex [3])
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_damagedPlasticityMod
 el.tex
 Overfull \hbox (6.14632pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/14.4 Damage Plas-ticty Model For Quasi-Brittle Ma-
  []
 
-[2] [3])
+[4])
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_damageEvolutionAn
-dStiffnessDegredation.tex)
+dStiffnessDegredation.tex [5])
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_governingEquation
-sOfCourseScale.tex [4])
+sOfCourseScale.tex)
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/subsection_femFormulation.te
 x)
 (C:/Users/Mike/Documents/GitHub/DEM-Homogenization/section_constitutiveRelation
@@ -148,31 +160,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--30
 []\OT1/cmr/m/n/10 Gracie, R.; Be-
  []
 
-) [5] (authorea_paper.aux) ) 
+[6]) [7] (authorea_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 953 strings out of 493698
- 13767 string characters out of 3144415
- 69472 words of memory out of 3000000
- 4275 multiletter control sequences out of 15000+200000
+ 958 strings out of 493698
+ 13818 string characters out of 3144415
+ 68472 words of memory out of 3000000
+ 4280 multiletter control sequences out of 15000+200000
  8407 words of font info for 30 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 29i,15n,23p,789b,197s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cmextra/cmmib7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
-fb>
-Output written on authorea_paper.pdf (5 pages, 165123 bytes).
+ 29i,15n,23p,830b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on authorea_paper.pdf (7 pages, 182498 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
