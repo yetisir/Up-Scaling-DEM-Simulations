@@ -8,17 +8,10 @@ The DEM simulations used in this investigation consist of a DFN within a 10m×10
 
 The 10m×10m model size was determined to be sufficient to represent the DFN, which was characterized by a Voronoi tessellation with a block size of approximately 0.5m. Since the material model used in this investigation can only consider an isotropic NFR, a inherently isotropic randomly generated Voronoi tessellation was chosen to represent the DFN in the DEM simulation. The rock and joint properties for the model, given in Table \ref{tab:demProp}, were chosen to be representative of a reservoir rock (Pirayehgar and Dusseault, 2015).
 
-\begin{table} 
-    \begin{tabular}{ c c c }
-         6&  6&  6\\ 
-         6&  6&  6\\ 
-         6&  6& 6 \\ 
-    \end{tabular} 
-\end{table}
-
 \begin{table}[!htbp]
 	\caption{Rock and joint properties for the DEM simulations}\label{tab:demProp}
-	\begin{tabularx}{\textwidth}{C C}
+%	\begin{tabularx}{\textwidth}{C C}
+    \begin{tabular}{c c}
 		\toprule
 		Property				&	Value\\
 		\midrule
@@ -32,7 +25,8 @@ The 10m×10m model size was determined to be sufficient to represent the DFN, wh
 		Joint Tensile Strength	&	$10 MPa$\\
 		Joint Dilation Angle	&	$10^\circ$\\
 		\bottomrule
-	\end{tabularx}
+%	\end{tabularx}
+    \end{tabular}
 \end{table}
 
 The DEM model was subjected to uniaxial tension and compression cycles as well as triaxial tension and compression cycles under different confining stresses to calibrate the continuum model. The triaxial tests were conducted at confining stresses of 5MPa and 10MPa. These numerical tests were constrained in such a way to imitate the laboratory testing procedures. The only procedural difference in these virtual laboratory tests was that the axial strain is brought back to the initial configuration in order to characterize the damage evolution. 
