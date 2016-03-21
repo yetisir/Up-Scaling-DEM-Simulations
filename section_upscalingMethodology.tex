@@ -1,0 +1,8 @@
+\section{Up-Scaling Methodology}
+The upscaling methodology that is developed in this paper aims to homogenize DEM simulations to estimate a set of parameters in a Continuum Damage Mechanics (CDM) model. In order for this method to be effective, the CDM has to be parameterized by identifying key parameters in the constitutive relationships that govern the behavioral response. The general upscaling methodology presented here can be summarized in three steps:
+\begin{enumerate}
+	\item Run REV DEM simulations of NFR under various loading conditions.
+	\item Apply homogenization algorithms to DEM results to obtain stress-strain curves.
+	\item Iteratively run a parameterized CDM model within a parameter estimation algorithm to minimize the difference between the CDM and DEM responses.
+\end{enumerate}
+Once the optimal parameter set for the continuum material model is identified, the newly established constitutive model can be used in a Finite Element Method (FEM) code to simulate the response of NFR at the reservoir scale.

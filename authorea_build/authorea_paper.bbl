@@ -2,7 +2,7 @@
 \providecommand*\mcitethebibliography{\thebibliography}
 \csname @ifundefined\endcsname{endmcitethebibliography}
   {\let\endmcitethebibliography\endthebibliography}{}
-\begin{mcitethebibliography}{1}
+\begin{mcitethebibliography}{0}
 \providecommand*\natexlab[1]{#1}
 \providecommand*\mciteSetBstSublistMode[1]{}
 \providecommand*\mciteSetBstMaxWidthForm[2]{}
@@ -20,11 +20,4 @@
   {\relax}
   {\relax}
 
-\bibitem[Gracie and Belytschko(2011)Gracie, and Belytschko]{Gracie_2011}
-Gracie,~R.; Belytschko,~T. \emph{International Journal for Numerical Methods in
-  Engineering} \textbf{2011}, \emph{86}, 575--597\relax
-\mciteBstWouldAddEndPuncttrue
-\mciteSetBstMidEndSepPunct{\mcitedefaultmidpunct}
-{\mcitedefaultendpunct}{\mcitedefaultseppunct}\relax
-\EndOfBibitem
 \end{mcitethebibliography}
