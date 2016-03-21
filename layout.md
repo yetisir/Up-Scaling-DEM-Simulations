@@ -1,7 +1,7 @@
 section_abstract.tex
 section_introduction.tex
 section_upscalingMethodology.tex
-	subsection_demSimulations.tex
+subsection_demSimulations.tex
 section_distinctElementMethod.tex
 section_homogenizationApproach.tex
 	subsection_stressHomogenization.tex
