@@ -29,29 +29,17 @@ The 10m×10m model size was determined to be sufficient to represent the DFN, wh
 	\end{tabularx}
 \end{table}
 
-\begin{table}
-\begin{tabular}{|l|l|l|}
-\hline
-\multicolumn{3}{|c|}{Table cheat sheet} \\
-\hline
-Horizontal line & \verb|\hline| & underlines current table row \\ \hline
-\multirow{4}{*}{Column types} & \verb|l| & left \\
- & \verb.c. & center\\
- & \verb.r. & right\\
- & \verb,p{’width’}, & custom width, aligned top \\
- & \verb,m{’width’}, & custom width, aligned middle \\
- & \verb,b{’width’}, & custom width, aligned bottom \\ \hline
-\multirow{3}{*}{Borders} & none & default \\
- & \verb.|. & single, as in \verb.l|. \\
- & \verb.||. & double, as in \verb.l||c. \\ \hline
-Alignment & \& & separates columns \\ \hline
-\multirow{2}{*}{End of line} & \verb|\\| & new table row \\
- & \verb|newline| & new line within cell \\
-\hline
-\end{tabular}
+\begin{table} 
+    \begin{tabular}{ c c }
+        \hline
+        wer & wer \\ 
+        \hline
+        5 & 345 \\ 
+        54 & 345 \\ 
+        \hline
+    \end{tabular} 
+    \caption{balh caption} 
 \end{table}
-
-
 The DEM model was subjected to uniaxial tension and compression cycles as well as triaxial tension and compression cycles under different confining stresses to calibrate the continuum model. The triaxial tests were conducted at confining stresses of 5MPa and 10MPa. These numerical tests were constrained in such a way to imitate the laboratory testing procedures. The only procedural difference in these virtual laboratory tests was that the axial strain is brought back to the initial configuration in order to characterize the damage evolution. 
 
 The compression cycles were run at a target strain rate of 0.001/s for a period of 10s in compression followed by a period of 10s in tension to return the strain to zero. The transition from the compression part of the load path to the tension part of the load path was conducted over a period of 2s to avoid shocking the system.
