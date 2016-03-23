@@ -1,21 +1,21 @@
 \section{Homogenization Approach}
-The main objective of homogenizing DEM simulations is to be able to describe the macroscopic behaviour of the distontinuous medium in term of a standard continuum model. In this homogenization process, the resultant inter-block contact forces and block displacements - resultant from the DEM simulations - are converted to stresses and strains in a continuum mechanical context.
+The main objective of homogenizing DEM simulations is to be able to describe the macroscopic behavior of the discontinuous medium in terms of a standard more computationally efficient continuum model. The homogenization algorithms used herein are based on the methods developed by (D’Addetta et al., 2004) and (Wellmann et al., 2008). In this homogenization process, the resultant inter-block contact forces and block displacement from the DEM simulations are converted to average stresses and strains for a continuum.
 
-The first logical step in this homogenization procedure is to riggerously define the area of interest to be homogenized. For the homogenization procedure to yeild any meaningful outcome, the homogenization procedure should be applied to a Representative Elementary Volume (REV) for the system. The exact size of the REV functions on the Discrete Fracture Network (DFN) prescribed to the DEM model, and some relavent statistical parameters (insert reference). For this homogenization approach to hold valid, the REV of size $d$ contained within a system with a characteristic length $D$ and consisting of particles with a characteristic diamater $\delta$, must subsribe to the following scale seperation (ref wellman):
+For the homogenization procedure to yield meaningful results, it should be applied to a REV. The exact size of the REV depends on the geometry and mechanical properties of the DEM model. For the homogenization approach to hold, the REV of size $d$ within a system with a characteristic length $D$ and consisting of blocks with a characteristic diameter $\delta$, must subscribe to the following scale separation (Wellmann et al., 2008).
 \begin{equation}
 \label{eqn:hom1a}
 D \gg d \gg \delta
 \end{equation}
 
-**To avoid indulging on the statistics required to formally define an REV for a particular DFN, an REV is assumed for this purposes of this investigation. The REV is chosen to be a circular subsection of the DEM model for reasons (in this reference). 
+To avoid a lengthy discussion of the statistics required to formally define an REV for a particular DFN, an REV is assumed for the purposes of this investigation. The REV is chosen to be a nearly circular subsection of the 10m×10m DEM model with a radius of 4m. This representative subsection aims to be as large as possible, while being a sufficiently small REV so as to reduce the influence of boundary effects.
 
-Due to the discontinuous nature of the DEM simulations, the circular REV cannot be used dirrectly. Because the calculated displacements and contact forces from the DEM are known at the block edges, the homogenization area boundary must follow the block boundaries. In order to define a homogenization area based on the REV, but subscribing to the block boundaries, the homogenization area is taken to be the area defined by the block boundaries of the blocks that intersect the REV boundary (see figure blah).
+Due to the discontinuous nature of the DEM simulations, the circular REV cannot be used directly. Because the calculated displacements and contact forces from the DEM are known at the block edges, the homogenization area boundary must follow the block boundaries. In order to define a homogenization area based on the REV, but subscribing to the block boundaries, the homogenization area is taken to be the area defined by the outside boundaries of the blocks that intersect the REV boundary, as illustrated in \ref{fig:vorDFN}. 
+\begin{figure}
+	\label{fig:vorDFN}
+	\caption{The homogenization domain boundary defined based on the outer boundary of all blocks that intersect a 4 m radius circle}
+\end{figure}
 
-
-*************************(figure blah, depicting the homogenization boundary and a close up of the boundary showing the displacment jumps)***************************
-
-
-One must also note the potential displacement jumps that may occur between blocks on the boundary. In the case where the blocks become physically separated, there exists a discontinuity along the homogenization boundary (again, see figure blah abaove). These discontinuities along the homogenization boundary were considered by adding boundary segments to the homogenization boundary between the corners of the adjacent blocks. 
+One must also note the potential displacement jumps that may occur between blocks on the boundary. In the case where the blocks become physically separated, there exists a discontinuity along the homogenization boundary as can be seen in \ref{fig:vorDFN}. These discontinuities along the homogenization boundary were considered by adding boundary segments to the homogenization boundary between the corners of the adjacent blocks. 
 
 The homogenization boundary, $\Gamma_{h}$, can be described in terms of $n$ ordered boundary vertices, $V_{i}^{h} = (x_{i}^{h}, y_{i}^{h})$, representing the $i$th set of vertex coordinates along the boundary, such that the homogenization area, $A^h$, can be calculated using the following formulation for the area of an arbitrary, non-self-intersecting polygon(find reference):
 \begin{equation}

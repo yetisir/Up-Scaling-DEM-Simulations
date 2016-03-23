@@ -1,30 +1,41 @@
 \subsection{Stress Homogenization}
-Homogenization of the stresses in a DEM simulation generally relies upon the reduction of the inter-particle contact forces to generate an equivalent continuum stress state(ref wellman). However, in UDEC\textsuperscript{TM}, since the blocks are deformable, the contact force reduction is done during simulation time to allow stresses to develop within the block zones. As such, the stress homogenization procedure presented here is formulated around deformable DEM blocks.  
+The homogenized Cauchy stress, $\langle \boldsymbol{\sigma} \rangle$, is derived from the definition of the spatial average of the stress, $\boldsymbol{\sigma}$, over the homogenization domain $\Omega^h$, with an area $A^h$:
 
-For 
 \begin{equation}
 \label{eqn:stress1}
-\langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \int_\Omega \boldsymbol{\sigma} { dA}
+\langle \boldsymbol{\sigma} \rangle = \frac{1}{A^h} \int_{\Omega^h} \boldsymbol{\sigma} {dA}
 \end{equation}
+
+Within the homogenization domain, a distinction is made between the area occupied by blocks and the void area between the blocks. This distinction is made in order to account for the discontinuities that would influence the stress state of the rock mass. 
 
 \begin{equation}
 \label{eqn:stress2}
 \langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \bigg \lbrack {\int_{\Omega_{r}} \boldsymbol{\sigma} { dA} + 
-\int_{\Omega_{f}} \boldsymbol{\sigma} { dA}} \bigg \rbrack
+\frac{1}{A^h} \bigg \lbrack {\int_{\Omega^{b}} \boldsymbol{\sigma} {dA} + 
+\int_{\Omega^{v}} \boldsymbol{\sigma} {dA}} \bigg \rbrack
+\end{equation}
+
+\begin{equation}
+\label{eqn:stress2a}
+\langle \boldsymbol{\sigma} \rangle = 
+\frac{1}{A^h} \int_{\Omega^{b}} \boldsymbol{\sigma} {dA}
 \end{equation}
 
 \begin{equation}
 \label{eqn:stress3}
 \langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \bigg \lbrack \sum_{i=1}^{N_{b}} \boldsymbol{\sigma}^{i} A_{b}^{i} + 
-\sum_{i=1}^{N_{d}} \boldsymbol{\sigma}^{i} A_{d}^{i} \bigg \rbrack
+\frac{1}{A^h} \sum_{i=1}^{N^{b}} \boldsymbol{\sigma}_{i}^b A^{b}_{i} 
 \end{equation}
 
 \begin{equation}
 \label{eqn:stress4}
 \langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \bigg \lbrack \sum_{i=1}^{N_{b}} \sum_{j=1}^{N_{z}} \boldsymbol{\sigma}_z^{ij} A_{z}^{ij} + 
-\sum_{i=1}^{N_{d}} p_d^{i} \textbf{I} A_{d}^{i} \bigg \rbrack
+\frac{1}{A^h} \sum_{i=1}^{N^{b}} \sum_{j=1}^{N^{z}_i} \boldsymbol{\sigma}^z_{ij} A^{z}_{ij} 
 \end{equation}
+
+
+In this investigation, the DEM simulations considered deformable blocks. Each one of these blocks is discretized into zones, in which the stresses are calculated at each time step. As such, the homogenization procedure can be simplified to a weighted average of the stresses in the zones. The integral (2) can be rewritten as a summation: 
+
+
+	
+where the homogenization domain contains $N_b$ number of blocks, each containing $N_z^i$ number of zones. $\boldsymbol{\sigma}_z^ij$ and $A_z^ij$ are the stress tensor and area of the jth zone of the ith block in the homogenization domain, respectively.

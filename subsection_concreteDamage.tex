@@ -1,0 +1,114 @@
+\subsection{Damage Plasticty Model For Quasi-Brittle Materials}
+
+Damage plasticity model based on 
+Strain can be decomposed into elastic and plastic components:
+\begin{equation}
+\label{eqn:const1}
+\boldsymbol{\epsilon} = \boldsymbol{\epsilon}^{el} + \boldsymbol{\epsilon}^{pl}
+\end{equation}
+
+Taking the time derivative gives the decomposition of the strain rate, $\boldsymbol{\dot{\epsilon}}$ :
+\begin{equation}
+\label{eqn:const2}
+\boldsymbol{\dot{\epsilon}} = \boldsymbol{\dot{\epsilon}}^{el} + \boldsymbol{\dot{\epsilon}}^{pl}
+\end{equation}
+
+The constitutive stress-strain relationship including a scalar damage parameter, $\mathbf{D}$ can be written as follows:
+\begin{equation}
+\label{eqn:const3}
+\boldsymbol{\sigma} = (1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}
+\end{equation}
+
+For simplicity, the damaged elastic stiffness is described as the reduced stiffness due to the damage:
+\begin{equation}
+\label{eqn:const4}
+\mathbf{E^d} = (1-\mathbf{D})\mathbf{E}
+\end{equation}
+
+Substituting \ref{eqn:const1} and \ref{eqn:const4} into \ref{eqn:const3} results in the following:
+\begin{equation}
+\label{eqn:const5}
+\boldsymbol{\sigma} = \mathbf{E^d}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
+\end{equation}
+
+Using the "usual notions of CDM" (find reference), the effective stress. $\boldsymbol{\bar{\sigma}}$, can be defined as:
+\begin{equation}
+\label{eqn:const6}
+\boldsymbol{\bar{\sigma}} = \mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
+\end{equation}
+
+Such that the cauchy stress tensor can be realted to the effective stress tensor as follows:
+\begin{equation}
+\label{eqn:const7}
+\boldsymbol{\sigma} = (1-\mathbf{D})\boldsymbol{\bar{\sigma}}
+\end{equation}
+
+The nature of the damage evolution is assumed to be a function of the effective stress and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
+\begin{equation}
+\label{eqn:const8}
+\mathbf{D} = \mathbf{D}(\boldsymbol{\bar{\sigma}}, \boldsymbol{\bar{\epsilon}^{pl}})
+\end{equation}
+
+In this formulation, the brittle nature of rock neccessitates seperate characterization of tensile and compressive damage. In the case where a rock sample fails completely in tension, (i.e. the tensile stiffness becomes effectively 0), the compressive strength remains intacts to a fairly high degree such that two seperate damage variables for tensile damage and compressive damage. As such, the equivalent plastic strain is also considered seperately for tension and compression and is represented as follows:
+\begin{equation}
+\label{eqn:const9}
+\boldsymbol{\bar{\epsilon}^{pl}} = \begin{bmatrix} 
+	\boldsymbol{\bar{\epsilon}_t^{pl}} \\ 
+	\boldsymbol{\bar{\epsilon}_c^{pl}} \end{bmatrix}
+\end{equation}
+
+The evolution of the equivalent plastic strains are described by the time derivative of the equivalent plastic strain, which can be considered to be related to the time derivative of the plastic strain through a hardenbing rule, $\mathbf{h}$ such that:
+\begin{equation}
+\label{eqn:const10}
+\boldsymbol{\dot{\bar{\epsilon}}^{pl}} = \mathbf{h}(\boldsymbol{\bar{\sigma}},
+	\boldsymbol{\bar{\epsilon}^{pl}})\bullet \boldsymbol{\dot{\epsilon}} 
+\end{equation}
+
+The flow rule can be written in terms of the flow potential function, $G(\boldsymbol{\bar{\sigma}})$, and a plastic mulitplier $\dot{\lambda}$:
+\begin{equation}
+\label{eqn:const11}
+\boldsymbol{\dot{\epsilon}} = \dot{\lambda} \dfrac{\partial G(\boldsymbol{\bar{\sigma}})}{\partial \boldsymbol{\bar{\sigma}}}
+\end{equation}
+
+Non-associated plasticity  is used, which required the solution of non-symetric equations.
+
+
+*****Damage Evolution and Stiffness Degredation
+
+The evolution of the equivalent plastic strains are formulated by assuming the stress-strain curves can be converted  into stress vs plastic strain curves where the tensile and compressive stresses are streated seperately:
+\begin{equation}
+\label{eqn:dam1}
+\begin{aligned}
+\boldsymbol{\sigma}_t = \boldsymbol{\sigma}_t(\boldsymbol{\bar{\epsilon}^{pl}_t},
+	\boldsymbol{\dot{\bar{\epsilon}}^{pl}_t}) \\
+\boldsymbol{\sigma}_c = \boldsymbol{\sigma}_c(\boldsymbol{\bar{\epsilon}^{pl}_c},
+	\boldsymbol{\dot{\bar{\epsilon}}^{pl}_c})
+\end{aligned}
+\end{equation}
+
+Loading a quasi-brittle in compression or tension causes damage in the material, which reduces the effective stiffness, weakening the unloading response. This damage is characterized by two damage variables, one of which represents the damage due to tensile loading, the other represents damage due to compressive loading. 
+\begin{equation}
+\label{eqn:dam2}
+\begin{aligned}
+D_t = D_t(\boldsymbol{\bar{\epsilon}^{pl}_t}),\qquad 0 \leq D_t \leq 1 \\
+D_c = D_c(\boldsymbol{\bar{\epsilon}^{pl}_c}),\qquad 0 \leq D_t \leq 1
+\end{aligned}
+\end{equation}
+
+The damage in both compression and tension is a neccesarily increasing function of the equivalent plastic strains. This formulation will adopt the convention where $\boldsymbol{sigma_c}$ is positive in compression, as with the respectiove strains.
+\begin{equation}
+\label{eqn:dam3}
+\begin{aligned}
+\boldsymbol{\sigma}_t = (1-D_t)\mathbf{E}:(\boldsymbol{\epsilon_t} - \boldsymbol{\bar{\epsilon}^{pl}_t}) \\
+\boldsymbol{\sigma}_c = (1-D_c)\mathbf{E}:(\boldsymbol{\epsilon_c} - \boldsymbol{\bar{\epsilon}^{pl}_c})
+\end{aligned}
+\end{equation}
+
+For cyclic loading, both the compressive and tensile damage need to be considered. Two stiffness recovery factors are introduced, $s_t$ and $s_c$, which represent the stiffness recovery effects associated with stress reversals. The damage can be said to take the form of:
+\begin{equation}
+\label{eqn:dam4}
+(1-D) = (1-s_t D_c)(1-s_c D_t),\qquad 0 \leq s_t, s_c, \leq 1
+\end{equation}
+
+In the case of tensile loading followed by compressive loading, the stiffness is assumed to completely recover
+
