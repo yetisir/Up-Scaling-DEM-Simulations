@@ -7,15 +7,31 @@ For the homogenization procedure to yield meaningful results, it should be appli
 D \gg d \gg \delta
 \end{equation}
 
-To avoid a lengthy discussion of the statistics required to formally define an REV for a particular DFN, an REV is assumed for the purposes of this investigation. The REV is chosen to be a nearly circular subsection of the 10m×10m DEM model with a radius of 4m. This representative subsection aims to be as large as possible, while being a sufficiently small REV so as to reduce the influence of boundary effects.
+% To avoid a lengthy discussion of the statistics required to formally define an REV for a particular DFN, an REV is assumed for the purposes of this investigation. The REV is chosen to be a circular subsection of the DEM model. This representative subsection aims to be as large as possible, while being a sufficiently small REV so as to reduce the influence of boundary effects.
 
-Due to the discontinuous nature of the DEM simulations, the circular REV cannot be used directly. Because the calculated displacements and contact forces from the DEM are known at the block edges, the homogenization area boundary must follow the block boundaries. In order to define a homogenization area based on the REV, but subscribing to the block boundaries, the homogenization area is taken to be the area defined by the outside boundaries of the blocks that intersect the REV boundary, as illustrated in \ref{fig:vorDFN}. 
+Given a circular REV, due to the discontinuous nature of the DEM simulations, the circular REV cannot be used directly. Because the calculated displacements and contact forces from the DEM are known at the block edges, the homogenization domain boundary must follow the block boundaries. In order to define a homogenization domain based on the REV, but subscribing to the block boundaries, the homogenization domain is taken to be the domain defined by the outside boundaries of the blocks that intersect the REV boundary, as illustrated in \ref{fig:vorDFN}. The homogenization domain is characterized by a series of block corners which are identified for the initial (zero strain) state. These corners continue to define the homogenization domain once deformation occurs, allowing for a consistent homogenization domain definition as the model is deformed. The algorithm that was developed to assess the homogenization domain boundary is presented as follows:
 \begin{figure}
 	\label{fig:vorDFN}
-	\caption{The homogenization domain boundary defined based on the outer boundary of all blocks that intersect a 4 m radius circle}
+	\caption{Figure illustrating the assessment of the homogenization domain}
 \end{figure}
 
-One must also note the potential displacement jumps that may occur between blocks on the boundary. In the case where the blocks become physically separated, there exists a discontinuity along the homogenization boundary as can be seen in \ref{fig:vorDFN}. These discontinuities along the homogenization boundary were considered by adding boundary segments to the homogenization boundary between the corners of the adjacent blocks. 
+\begin{enumerate}
+	\item \label{hli:1} Identify all blocks that lie on the REV boundary.
+	\item \label{hli:2} Identify all blocks that lie completely outside the REV boundary.
+	\item \label{hli:3} Find all contacts corresponding to the intersection between blocks in \ref{hli:1} and \ref{hli:2}.
+	\item \label{hli:4} Find all corners corresponding to the contacts in \ref{hli:3}.
+	\item \label{hli:5} Find all contacts of blocks in \ref{hli:1}.
+	\item \label{hli:6} Find all blocks corresponding to the intersection of contacts in \ref{hli:3} and \ref{hli:5}.
+	\item \label{hli:7} Find all corners corresponding to blocks in \ref{hli:6}.
+	\item \label{hli:8} Find intersection of corners in \ref{hli:4} and \ref{hli:7}.
+	\item \label{hli:9}	Find corners that initially (at zero strain) coincided with the corners in \ref{hli:8}
+	\item \label{hli:10} Find union of corners in \ref{hli:8} and \ref{hli:9}.
+	\item \label{hli:11} Order corners from \ref{hli:10} such that they form the boundary of the 
+\end{enumerate}
+
+This alogorithm for defninig the homogenization domain was developed to provide an unambiguous method for assessing a unique homogenization domain for a given circle radius and location. In steps \ref{hli:1} and {\ref{hli:2}, two mutually exclusive block sets are identified, which neccessarily share contacts. It is the boundary between these two block sets that is the homogenization domain boundary which is characterized by this algorithm. Ultimately, the goal of this process is to identify the corners on this boundary that are on the blocks that intersect with the REV boundary and not the blocks that are outside the REV boundary. As such, the corners (step \ref{hli:4}) corresponding to the contacts (step \ref{hli:3}) between the two sets of blocks are determined. Step \ref{hli:5} is neccessary to help eliminate some blocks from the set of boundary block which intersect the REV boundary, but only have contact with blocks inside the homogenization domain boundary, and thus do not have any overall contribution to the definition. Step \ref{hli:6} determines this resultant set of boundary blocks of which every member is conected to the boundary in some capacity. Finding the set of corners that is mutually shared by these blocks in step \ref{hli:7} and the boundary contact corners in step \ref{hli:4} allow for the determination of the initial set of boundary corners (step \ref{hli:8}). 
+
+However, one must also note the potential displacement jumps that may occur between blocks on the boundary as the model deforms. In the case where the blocks become physically separated, there exists a discontinuity along the homogenization boundary as can be seen in \ref{fig:vorDFN}. These discontinuities along the homogenization boundary were considered by adding boundary segments to the homogenization boundary between the corners of the adjacent blocks. As such, steps \ref{hli:9} and \ref{hli:10} find coincident corners on adjacent boundary blocks to allow for the blocks to become separated on the boundary, while still maintaining a consistend homogenization domain. It is also neccessary to order the corners as they would appear along the homogenization boundary in order to define the boundary segments along which integration can be performed. 
 
 The homogenization boundary, $\Gamma_{h}$, can be described in terms of $n$ ordered boundary vertices, $V_{i}^{h} = (x_{i}^{h}, y_{i}^{h})$, representing the $i$th set of vertex coordinates along the boundary, such that the homogenization area, $A^h$, can be calculated using the following formulation for the area of an arbitrary, non-self-intersecting polygon(find reference):
 \begin{equation}
