@@ -1,13 +1,11 @@
 \subsection{Stress Homogenization}
 The homogenized Cauchy stress, $\langle \boldsymbol{\sigma} \rangle$, is derived from the definition of the spatial average of the stress, $\boldsymbol{\sigma}$, over the homogenization domain $\Omega^h$, with an area $A^h$:
-
 \begin{equation}
 \label{eqn:stress1}
 \langle \boldsymbol{\sigma} \rangle = \frac{1}{A^h} \int_{\Omega^h} \boldsymbol{\sigma} {dA}
 \end{equation}
 
-Within the homogenization domain, a distinction is made between the area occupied by blocks and the void area between the blocks. This distinction is made in order to account for the discontinuities that would influence the stress state of the rock mass. 
-
+As previously mentioned, there exists a nesseccary distinction between the block subdomain and the void subdomain when dealing with stress. Here, the integration over the homogenization domain can be decomposed into two seperate integrations over the block subdomain and the void subdomain:
 \begin{equation}
 \label{eqn:stress2}
 \langle \boldsymbol{\sigma} \rangle = 
@@ -15,18 +13,28 @@ Within the homogenization domain, a distinction is made between the area occupie
 \int_{\Omega^{v}} \boldsymbol{\sigma} {dA}} \bigg \rbrack
 \end{equation}
 
+This distinction is made due to the fact that in a purely mechanical model, there isn't any pressure or stress being retained in the void space, resulting in a negligable contribution to the overall stress state. This allows for the void subdomain integration term to be dropped from the formulation:
 \begin{equation}
 \label{eqn:stress2a}
 \langle \boldsymbol{\sigma} \rangle = 
 \frac{1}{A^h} \int_{\Omega^{b}} \boldsymbol{\sigma} {dA}
 \end{equation}
 
+Since the block subdomain is inherently discretized, the integration of the stress over the block subdomain can be written as a summation of the average stress in each block, $\boldsymbol{\sigma}^b_i$, of area $A^b_i$over $N^b$ number of blocks in the block subdomain:
 \begin{equation}
 \label{eqn:stress3}
 \langle \boldsymbol{\sigma} \rangle = 
 \frac{1}{A^h} \sum_{i=1}^{N^{b}} \boldsymbol{\sigma}_{i}^b A^{b}_{i} 
 \end{equation}
 
+*In the case where the blocks are considered deformable, the average stress in a given block can be assessed by taking a spatially weighted average of the zone stresses. *explain how stresses are calculated
+\begin{equation}
+\label{eqn:stress3a}
+\boldsymbol{\sigma}_{i}^b = 
+\frac{1}{A^b_i} \sum_{j=1}^{N^{z}_i} \boldsymbol{\sigma}^z_{ij} A^{z}_{ij} 
+\end{equation}
+
+Combining equations \ref{eqn:stress3} and \ref{eqn:stress3a} yeild the final form for assessing the homogenized Cauchy stress tensor for deformable DEM blocks:
 \begin{equation}
 \label{eqn:stress4}
 \langle \boldsymbol{\sigma} \rangle = 
