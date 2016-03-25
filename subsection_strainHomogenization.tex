@@ -1,27 +1,22 @@
 \subsection{Strain Homogenization}
-
-\begin{equation}
-\label{eqn:strain1}
-\boldsymbol{\epsilon} = 
-\frac{1}{2}  \left[ \nabla \mathbf{u} + \left( \nabla \mathbf{u} \right)^{T} \right]
-\end{equation}
+The derivation for the homogenized strain tensor starts much like the homogenized stress tensor derivation with the familiar definition of the spatial average:
 
 \begin{equation}
 \label{eqn:strain2}
-\langle \boldsymbol{\epsilon} \rangle^\Omega = 
+\langle \boldsymbol{\epsilon} \rangle = 
 \frac{1}{A} \int_\Omega \boldsymbol{\epsilon} { dA}
 \end{equation}
 
 \begin{equation}
 \label{eqn:strain3}
-\langle \boldsymbol{\epsilon} \rangle^\Omega = 
+\langle \boldsymbol{\epsilon} \rangle = 
 \frac{1}{A} \bigg \lbrack {\int_{\Omega_{r}} \boldsymbol{\epsilon} { dA_r} + 
 \int_{\Omega_{f}} \boldsymbol{\epsilon} { dA_f}} \bigg \rbrack
 \end{equation}
 
 \begin{equation}
 \label{eqn:strain4}
-\langle \boldsymbol{\epsilon} \rangle^\Omega = 
+\langle \boldsymbol{\epsilon} \rangle = 
 \frac{1}{2 A} \bigg \lbrack {\int_{\Omega_{r}} \left[ \nabla \mathbf{u} + 
 \left( \nabla \mathbf{u} \right)^{T} \right] {dA_r} +
 \int_{\Omega_{f}} \left[ \nabla \mathbf{u} + 
@@ -30,7 +25,7 @@
 
 \begin{equation}
 \label{eqn:strain5}
-\langle \boldsymbol{\epsilon} \rangle^\Omega = 
+\langle \boldsymbol{\epsilon} \rangle = 
 \frac{1}{2 A} \bigg \lbrack {\oint_{\Gamma_{r}} \left[ \mathbf{u} \otimes \mathbf{n} + 
 \mathbf{n} \otimes \mathbf{u} \right] {d \Gamma_r} +
 \oint_{\Gamma_{f}} \left[ \mathbf{u} \otimes \mathbf{n} + 
@@ -39,9 +34,20 @@
 
 \begin{equation}
 \label{eqn:strain6}
-\langle \boldsymbol{\epsilon} \rangle^\Omega = 
+\langle \boldsymbol{\epsilon} \rangle = 
 \frac{1}{2 A} \bigg \lbrack {\sum_{i=1}^{N_{rb}} \left[ \mathbf{u}_{rb}^i \otimes \mathbf{n}_{rb}^i + 
 \mathbf{n}_{rb}^i \otimes \mathbf{u}_{rb}^i \right] {L_{rb}^i} +
 \sum_{i=1}^{N_{db}} \left[ \mathbf{u}_{db}^i \otimes \mathbf{n}_{db}^i + 
 \mathbf{n}_{db}^i \otimes \mathbf{u}_{db}^i \right] {L_{db}^i}} \bigg \rbrack
+\end{equation}
+
+
+
+
+
+
+\begin{equation}
+\label{eqn:strain1}
+\boldsymbol{\epsilon} = 
+\frac{1}{2}  \left[ \nabla \mathbf{u} + \left( \nabla \mathbf{u} \right)^{T} \right]
 \end{equation}

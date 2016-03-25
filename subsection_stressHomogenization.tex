@@ -27,7 +27,7 @@ Since the block subdomain is inherently discretized, the integration of the stre
 \frac{1}{A^h} \sum_{i=1}^{N^{b}} \boldsymbol{\sigma}_{i}^b A^{b}_{i} 
 \end{equation}
 
-*In the case where the blocks are considered deformable, the average stress in a given block can be assessed by taking a spatially weighted average of the zone stresses. *explain how stresses are calculated
+In the case where the blocks are considered as deformable bodies, the average stress in a given block can be assessed by taking a spatially weighted average of the zone stresses ($\boldsymbol{\sigma}^z_{ij}$). For a given block with $N_i^z$ zones, the average stress can be weighted based on the zone area, $A^{z}_{ij}$:
 \begin{equation}
 \label{eqn:stress3a}
 \boldsymbol{\sigma}_{i}^b = 
@@ -41,9 +41,6 @@ Combining equations \ref{eqn:stress3} and \ref{eqn:stress3a} yeild the final for
 \frac{1}{A^h} \sum_{i=1}^{N^{b}} \sum_{j=1}^{N^{z}_i} \boldsymbol{\sigma}^z_{ij} A^{z}_{ij} 
 \end{equation}
 
+%In the case that the blocks are considered as rigid bodies, the determination of the block stresses is less trivial. Becasue a rigid body cannot undergo deformation, and therfore not experience any strain, the concept of stress in a undeformable block is unreasonable. In this case, the stress homogenization procedure focuses on reducing the block boundary contact forces to a resultant force-moment pair acting on the center of mass of the block. 
 
-In this investigation, the DEM simulations considered deformable blocks. Each one of these blocks is discretized into zones, in which the stresses are calculated at each time step. As such, the homogenization procedure can be simplified to a weighted average of the stresses in the zones. The integral (2) can be rewritten as a summation: 
-
-
-	
-where the homogenization domain contains $N_b$ number of blocks, each containing $N_z^i$ number of zones. $\boldsymbol{\sigma}_z^ij$ and $A_z^ij$ are the stress tensor and area of the jth zone of the ith block in the homogenization domain, respectively.
+%elaborate on rigid body homogenization?
