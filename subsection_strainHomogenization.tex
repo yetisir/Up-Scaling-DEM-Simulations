@@ -4,32 +4,32 @@ The derivation for the homogenized strain tensor starts much like the homogenize
 \begin{equation}
 \label{eqn:strain2}
 \langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{A} \int_\Omega \boldsymbol{\epsilon} { dA}
+\frac{1}{A} \int_\Omega \boldsymbol{\epsilon} {dA}
 \end{equation}
 
 \begin{equation}
 \label{eqn:strain3}
 \langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{A} \bigg \lbrack {\int_{\Omega_{r}} \boldsymbol{\epsilon} { dA_r} + 
-\int_{\Omega_{f}} \boldsymbol{\epsilon} { dA_f}} \bigg \rbrack
+\frac{1}{A} \bigg \lbrack {\int_{\Omega_{b}} \boldsymbol{\epsilon} { dA} + 
+\int_{\Omega_{v}} \boldsymbol{\epsilon} {dA}} \bigg \rbrack
 \end{equation}
 
 \begin{equation}
 \label{eqn:strain4}
 \langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\int_{\Omega_{r}} \left[ \nabla \mathbf{u} + 
-\left( \nabla \mathbf{u} \right)^{T} \right] {dA_r} +
-\int_{\Omega_{f}} \left[ \nabla \mathbf{u} + 
-\left( \nabla \mathbf{u} \right)^{T} \right] { dA_f}} \bigg \rbrack
+\frac{1}{2 A} \bigg \lbrack {\int_{\Omega_{b}} \left[ \nabla \mathbf{u} + 
+\left( \nabla \mathbf{u} \right)^{T} \right] {dA} +
+\int_{\Omega_{b}} \left[ \nabla \mathbf{u} + 
+\left( \nabla \mathbf{u} \right)^{T} \right] {dA}} \bigg \rbrack
 \end{equation}
 
 \begin{equation}
 \label{eqn:strain5}
 \langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\oint_{\Gamma_{r}} \left[ \mathbf{u} \otimes \mathbf{n} + 
-\mathbf{n} \otimes \mathbf{u} \right] {d \Gamma_r} +
-\oint_{\Gamma_{f}} \left[ \mathbf{u} \otimes \mathbf{n} + 
-\mathbf{n} \otimes \mathbf{u} \right] { d \Gamma_f}} \bigg \rbrack
+\frac{1}{2 A} \bigg \lbrack {\oint_{\Gamma_{b}} \left[ \mathbf{u} \otimes \mathbf{n} + 
+\mathbf{n} \otimes \mathbf{u} \right] {d \Gamma_b} +
+\oint_{\Gamma_{v}} \left[ \mathbf{u} \otimes \mathbf{n} + 
+\mathbf{n} \otimes \mathbf{u} \right] { d \Gamma_v}} \bigg \rbrack
 \end{equation}
 
 \begin{equation}
