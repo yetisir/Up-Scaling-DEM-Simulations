@@ -35,10 +35,19 @@ The derivation for the homogenized strain tensor starts much like the homogenize
 \begin{equation}
 \label{eqn:strain6}
 \langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\sum_{i=1}^{N_{rb}} \left[ \mathbf{u}_{rb}^i \otimes \mathbf{n}_{rb}^i + 
-\mathbf{n}_{rb}^i \otimes \mathbf{u}_{rb}^i \right] {L_{rb}^i} +
-\sum_{i=1}^{N_{db}} \left[ \mathbf{u}_{db}^i \otimes \mathbf{n}_{db}^i + 
-\mathbf{n}_{db}^i \otimes \mathbf{u}_{db}^i \right] {L_{db}^i}} \bigg \rbrack
+\frac{1}{2 A} \bigg \lbrack {\sum_{i=1}^{N_{b}} \left[ \mathbf{u}_{b}^i \otimes \mathbf{n}_{b}^i + 
+\mathbf{n}_{b}^i \otimes \mathbf{u}_{b}^i \right] {L_{b}^i} +
+\sum_{i=1}^{N_{v}} \left[ \mathbf{u}_{v}^i \otimes \mathbf{n}_{v}^i + 
+\mathbf{n}_{v}^i \otimes \mathbf{u}_{v}^i \right] {L_{v}^i}} \bigg \rbrack
+\end{equation}
+
+\begin{equation}
+\label{eqn:strain7}
+\langle \boldsymbol{\epsilon} \rangle = 
+\frac{1}{2 A} \bigg \lbrack {\sum_{i=1}^{N_{b}} \left[ \mathbf{u}_{b}^i \otimes \mathbf{n}_{b}^i + 
+\mathbf{n}_{b}^i \otimes \mathbf{u}_{b}^i \right] {L_{b}^i} +
+\sum_{i=1}^{N_{v}} \left[ \mathbf{u}_{v}^i \otimes \mathbf{n}_{v}^i + 
+\mathbf{n}_{v}^i \otimes \mathbf{u}_{v}^i \right] {L_{v}^i}} \bigg \rbrack
 \end{equation}
 
 
