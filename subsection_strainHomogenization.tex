@@ -44,10 +44,8 @@ The derivation for the homogenized strain tensor starts much like the homogenize
 \begin{equation}
 \label{eqn:strain7}
 \langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\sum_{i=1}^{N_{b}} \left[ \mathbf{u}_{b}^i \otimes \mathbf{n}_{b}^i + 
-\mathbf{n}_{b}^i \otimes \mathbf{u}_{b}^i \right] {L_{b}^i} +
-\sum_{i=1}^{N_{v}} \left[ \mathbf{u}_{v}^i \otimes \mathbf{n}_{v}^i + 
-\mathbf{n}_{v}^i \otimes \mathbf{u}_{v}^i \right] {L_{v}^i}} \bigg \rbrack
+\frac{1}{2 A} \sum_{i=1}^{N_{b}} \left[ \mathbf{u}^i \otimes \mathbf{n}^i + 
+\mathbf{n}^i \otimes \mathbf{u}_{b}^i \right] {L^i} 
 \end{equation}
 
 
