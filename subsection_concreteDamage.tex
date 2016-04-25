@@ -13,42 +13,6 @@ Taking the time derivative gives the decomposition of the strain rate, $\boldsym
 \boldsymbol{\dot{\epsilon}} = \boldsymbol{\dot{\epsilon}}^{el} + \boldsymbol{\dot{\epsilon}}^{pl}
 \end{equation}
 
-The constitutive stress-strain relationship including a scalar damage parameter, $\mathbf{D}$ can be written as follows:
-\begin{equation}
-\label{eqn:const3}
-\boldsymbol{\sigma} = (1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}
-\end{equation}
-
-For simplicity, the damaged elastic stiffness is described as the reduced stiffness due to the damage:
-\begin{equation}
-\label{eqn:const4}
-\mathbf{E^d} = (1-\mathbf{D})\mathbf{E}
-\end{equation}
-
-Substituting \ref{eqn:const1} and \ref{eqn:const4} into \ref{eqn:const3} results in the following:
-\begin{equation}
-\label{eqn:const5}
-\boldsymbol{\sigma} = \mathbf{E^d}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
-\end{equation}
-
-Using the "usual notions of CDM" (find reference), the effective stress. $\boldsymbol{\bar{\sigma}}$, can be defined as:
-\begin{equation}
-\label{eqn:const6}
-\boldsymbol{\bar{\sigma}} = \mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
-\end{equation}
-
-Such that the cauchy stress tensor can be realted to the effective stress tensor as follows:
-\begin{equation}
-\label{eqn:const7}
-\boldsymbol{\sigma} = (1-\mathbf{D})\boldsymbol{\bar{\sigma}}
-\end{equation}
-
-The nature of the damage evolution is assumed to be a function of the effective stress and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
-\begin{equation}
-\label{eqn:const8}
-\mathbf{D} = \mathbf{D}(\boldsymbol{\bar{\sigma}}, \boldsymbol{\bar{\epsilon}^{pl}})
-\end{equation}
-
 In this formulation, the brittle nature of rock neccessitates seperate characterization of tensile and compressive damage. In the case where a rock sample fails completely in tension, (i.e. the tensile stiffness becomes effectively 0), the compressive strength remains intacts to a fairly high degree such that two seperate damage variables for tensile damage and compressive damage. As such, the equivalent plastic strain is also considered seperately for tension and compression and is represented as follows:
 \begin{equation}
 \label{eqn:const9}
