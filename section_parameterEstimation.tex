@@ -1,6 +1,9 @@
 \section{Parameter Estimation}
 A total of nine parameters were identified as being essential to the definition of the CDM material model. The elastic behavior of the rock mass was described using two parameters, Young’s Modulus, and Poisson’s Ratio, while 5 additional parameters were used to describe the plastic behavior of the rock mass in both tension and compression. The remaining two parameters describe the damage evolution in tension and compression respectively. 
+
 The parameter estimation algorithm that was used for this investigation is known as the Levenburg-Marquardt Algorithm (LMA) which was proposed by Marquardt (1963) and aims to minimize non-linear least-squares problems. This investigation uses an implementation by Matott (2016) in the form of model-independent optimization software, OSTRICH.
+
 The LMA works by iteratively running the CDM model on a single element model, subject to the same boundary conditions as the DEM model, with successive parameter sets that intelligently adapt in order to converge to the DEM data. The axial stress-strain data was taken to be the most indicative of the material response and thus used for the parameter estimation datasets.
+
 In order to accurately assess the optimal parameter set, the parameter estimation of the CDM material model was conducted in two steps. The first step consisted of a uniaxial tension test to estimate the elastic and tensile plastic properties of the material. The test direction reverses to compression before complete yield of the material in order to assess the tensile damage parameter. 
 
