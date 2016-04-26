@@ -1,4 +1,4 @@
-#LyX file created by tex2lyx 2.1
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 474
 \begin_document
 \begin_header
@@ -74,11 +74,22 @@ Homogenization Approach
 \end_layout
 
 \begin_layout Standard
-The main objective of homogenizing DEM simulations is to be able to describe the macroscopic behavior of the discontinuous medium in terms of a standard more computationally efficient continuum model. The homogenization algorithms used herein are based on the methods developed by (DâAddetta et al., 2004) and (Wellmann et al., 2008). In this homogenization process, the resultant inter-block contact forces and block displacement from the DEM simulations are converted to average stresses and strains for a continuum.
+The main objective of homogenizing DEM simulations is to be able to describe
+ the macroscopic behavior of the discontinuous medium in terms of a standard
+ more computationally efficient continuum model.
+ The homogenization algorithms used herein are based on the methods developed
+ by (DâAddetta et al., 2004) and (Wellmann et al., 2008).
+ In this homogenization process, the resultant inter-block contact forces
+ and block displacement from the DEM simulations are converted to average
+ stresses and strains for a continuum.
 \end_layout
 
 \begin_layout Standard
-For the homogenization procedure to yield meaningful results, it should be applied to a REV. The exact size of the REV depends on the geometry and mechanical properties of the DEM model. For the homogenization approach to hold, the REV of size 
+For the homogenization procedure to yield meaningful results, it should
+ be applied to a REV.
+ The exact size of the REV depends on the geometry and mechanical properties
+ of the DEM model.
+ For the homogenization approach to hold, the REV of size 
 \begin_inset Formula $d$
 \end_inset
 
@@ -90,23 +101,30 @@ For the homogenization procedure to yield meaningful results, it should be appli
 \begin_inset Formula $\delta$
 \end_inset
 
-, must subscribe to the following scale separation (Wellmann et al., 2008). 
-\begin_inset Formula \begin{equation}
-\label{eqn:hom1a}
-D \gg d \gg \delta
+, must subscribe to the following scale separation (Wellmann et al., 2008).
+ 
+\begin_inset Formula 
+\begin{equation}
+D\gg d\gg\delta\label{eqn:hom1a}
 \end{equation}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
 \begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
-% To avoid a lengthy discussion of the statistics required to formally define an REV for a particular DFN, an REV is assumed for the purposes of this investigation. The REV is chosen to be a circular subsection of the DEM model. This representative subsection aims to be as large as possible, while being a sufficiently small REV so as to reduce the influence of boundary effects.
+
+% To avoid a lengthy discussion of the statistics required to formally define
+ an REV for a particular DFN, an REV is assumed for the purposes of this
+ investigation.
+ The REV is chosen to be a circular subsection of the DEM model.
+ This representative subsection aims to be as large as possible, while being
+ a sufficiently small REV so as to reduce the influence of boundary effects.
 \end_layout
 
 \end_inset
@@ -115,22 +133,35 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-*Given a circular REV, due to the discontinuous nature of the DEM simulations, the circular REV cannot be used directly. Because the calculated displacements and contact forces from the DEM are known at the block edges, the homogenization domain boundary must follow the block boundaries. In order to define a homogenization domain based on the REV, but subscribing to the block boundaries, the homogenization domain is taken to be the domain defined by the outside boundaries of the blocks that intersect the REV boundary, as illustrated in 
+*Given a circular REV, due to the discontinuous nature of the DEM simulations,
+ the circular REV cannot be used directly.
+ Because the calculated displacements and contact forces from the DEM are
+ known at the block edges, the homogenization domain boundary must follow
+ the block boundaries.
+ In order to define a homogenization domain based on the REV, but subscribing
+ to the block boundaries, the homogenization domain is taken to be the domain
+ defined by the outside boundaries of the blocks that intersect the REV
+ boundary, as illustrated in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:vorDFN"
 
 \end_inset
 
-. The homogenization domain is characterized by a series of block corners which are identified for the initial (zero strain) state. These corners continue to define the homogenization domain once deformation occurs, allowing for a consistent homogenization domain definition as the model is deformed. The algorithm that was developed to assess the homogenization domain boundary is presented as follows: 
+.
+ The homogenization domain is characterized by a series of block corners
+ which are identified for the initial (zero strain) state.
+ These corners continue to define the homogenization domain once deformation
+ occurs, allowing for a consistent homogenization domain definition as the
+ model is deformed.
+ The algorithm that was developed to assess the homogenization domain boundary
+ is presented as follows: 
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
-
-\begin_layout Standard
-
+\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:vorDFN"
@@ -155,29 +186,28 @@ Figure illustrating the assessment of the homogenization domain
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:1"
 
 \end_inset
 
- Identify all blocks that lie on the REV boundary. 
+ Identify all blocks that lie on the REV boundary.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:2"
 
 \end_inset
 
- Identify all blocks that lie completely outside the REV boundary. 
+ Identify all blocks that lie completely outside the REV boundary.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:3"
@@ -198,11 +228,11 @@ reference "hli:2"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:4"
@@ -216,11 +246,11 @@ reference "hli:3"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:5"
@@ -234,11 +264,11 @@ reference "hli:1"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:6"
@@ -259,11 +289,11 @@ reference "hli:5"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:7"
@@ -277,11 +307,11 @@ reference "hli:6"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:8"
@@ -302,18 +332,19 @@ reference "hli:7"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:9"
 
 \end_inset
 
- Find corners that initially (at zero strain) coincided with the corners in 
+ Find corners that initially (at zero strain) coincided with the corners
+ in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:8"
@@ -324,7 +355,6 @@ reference "hli:8"
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:10"
@@ -345,11 +375,11 @@ reference "hli:9"
 
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 \begin_inset CommandInset label
 LatexCommand label
 name "hli:11"
@@ -367,7 +397,10 @@ reference "hli:10"
 \end_layout
 
 \begin_layout Standard
-This algorithm for defining the homogenization domain was developed to provide an unambiguous method for assessing a unique homogenization domain for a given circle radius and location. In steps 
+This algorithm for defining the homogenization domain was developed to provide
+ an unambiguous method for assessing a unique homogenization domain for
+ a given circle radius and location.
+ In steps 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:1"
@@ -381,7 +414,14 @@ reference "hli:2"
 
 \end_inset
 
-, two mutually exclusive block sets are identified, which necessarily share contacts. It is the boundary between these two block sets that is the homogenization domain boundary which is characterized by this algorithm. Ultimately, the goal of this process is to identify the corners on this boundary that are on the blocks that intersect with the REV boundary and not the blocks that are outside the REV boundary. As such, the corners (step 
+, two mutually exclusive block sets are identified, which necessarily share
+ contacts.
+ It is the boundary between these two block sets that is the homogenization
+ domain boundary which is characterized by this algorithm.
+ Ultimately, the goal of this process is to identify the corners on this
+ boundary that are on the blocks that intersect with the REV boundary and
+ not the blocks that are outside the REV boundary.
+ As such, the corners (step 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:4"
@@ -395,21 +435,29 @@ reference "hli:3"
 
 \end_inset
 
-) between the two sets of blocks are determined. Step 
+) between the two sets of blocks are determined.
+ Step 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:5"
 
 \end_inset
 
- is necessary to help eliminate some blocks from the set of boundary block which intersect the REV boundary, but only have contact with blocks inside the homogenization domain boundary, and thus do not have any overall contribution to the definition. Step 
+ is necessary to help eliminate some blocks from the set of boundary block
+ which intersect the REV boundary, but only have contact with blocks inside
+ the homogenization domain boundary, and thus do not have any overall contributi
+on to the definition.
+ Step 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:6"
 
 \end_inset
 
- determines this resultant set of boundary blocks of which every member is connected to the boundary in some capacity. Finding the set of corners that is mutually shared by these blocks in step 
+ determines this resultant set of boundary blocks of which every member
+ is connected to the boundary in some capacity.
+ Finding the set of corners that is mutually shared by these blocks in step
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:7"
@@ -423,7 +471,8 @@ reference "hli:4"
 
 \end_inset
 
- allow for the determination of the initial set of boundary corners (step 
+ allow for the determination of the initial set of boundary corners (step
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:8"
@@ -434,14 +483,21 @@ reference "hli:8"
 \end_layout
 
 \begin_layout Standard
-However, one must also note the potential displacement jumps that may occur between blocks on the boundary as the model deforms. In the case where the blocks become physically separated, there exists a discontinuity along the homogenization boundary as can be seen in 
+However, one must also note the potential displacement jumps that may occur
+ between blocks on the boundary as the model deforms.
+ In the case where the blocks become physically separated, there exists
+ a discontinuity along the homogenization boundary as can be seen in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:vorDFN"
 
 \end_inset
 
-. These discontinuities along the homogenization boundary were considered by adding boundary segments to the homogenization boundary between the corners of the adjacent blocks. As such, steps 
+.
+ These discontinuities along the homogenization boundary were considered
+ by adding boundary segments to the homogenization boundary between the
+ corners of the adjacent blocks.
+ As such, steps 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:9"
@@ -455,14 +511,18 @@ reference "hli:10"
 
 \end_inset
 
- find coincident corners on adjacent boundary blocks to allow for the blocks to become separated on the boundary, while still maintaining connectivity along the homogenization domain boundary. It is also necessary to order the corners (step 
+ find coincident corners on adjacent boundary blocks to allow for the blocks
+ to become separated on the boundary, while still maintaining connectivity
+ along the homogenization domain boundary.
+ It is also necessary to order the corners (step 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "hli:11"
 
 \end_inset
 
-) as they would appear along the homogenization boundary in order to define the boundary segments along which integration can be performed.
+) as they would appear along the homogenization boundary in order to define
+ the boundary segments along which integration can be performed.
 \end_layout
 
 \begin_layout Standard
@@ -475,57 +535,67 @@ The homogenization boundary,
 \end_inset
 
  ordered boundary vertices, 
-\begin_inset Formula $V_{i}^{h} = (x_{i}^{h}, y_{i}^{h})$
+\begin_inset Formula $V_{i}^{h}=(x_{i}^{h},y_{i}^{h})$
 \end_inset
 
 , representing the 
 \begin_inset Formula $i$
 \end_inset
 
-th set of vertex coordinates along the boundary, such that the homogenization area, 
-\begin_inset Formula $A^h$
+th set of vertex coordinates along the boundary, such that the homogenization
+ area, 
+\begin_inset Formula $A^{h}$
 \end_inset
 
-, can be calculated using the following formulation for the area of an arbitrary, non-self-intersecting polygon(find reference): 
-\begin_inset Formula \begin{equation}
-\label{eqn:hom1}
-A^h = \dfrac{1}{2} \sum_{i=1}^{n}x_i^h(y_{i+1}^h-y_{i-1}^h)
+, can be calculated using the following formulation for the area of an arbitrary
+, non-self-intersecting polygon(find reference): 
+\begin_inset Formula 
+\begin{equation}
+A^{h}=\dfrac{1}{2}\sum_{i=1}^{n}x_{i}^{h}(y_{i+1}^{h}-y_{i-1}^{h})\label{eqn:hom1}
 \end{equation}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-At this point, within the homogenization domain, one must differentiate between the blocks and the void space between the blocks as they have fundamentally different behaviour. As such, the homogenization domain can be decomposed into two mutually exclusive subdomains representing the voids and blocks, 
-\begin_inset Formula $\Omega^v$
+At this point, within the homogenization domain, one must differentiate
+ between the blocks and the void space between the blocks as they have fundament
+ally different behaviour.
+ As such, the homogenization domain can be decomposed into two mutually
+ exclusive subdomains representing the voids and blocks, 
+\begin_inset Formula $\Omega^{v}$
 \end_inset
 
  and 
-\begin_inset Formula $\Omega^b$
+\begin_inset Formula $\Omega^{b}$
 \end_inset
 
-, respectively. The total block area associated with the block subdomain, 
-\begin_inset Formula $A^b$
+, respectively.
+ The total block area associated with the block subdomain, 
+\begin_inset Formula $A^{b}$
 \end_inset
 
 , can be assessed as a summation of 
 \begin_inset Formula $m$
 \end_inset
 
- block areas within the homogenization domain, while the individual block area can be assessed in a similar manner to 
+ block areas within the homogenization domain, while the individual block
+ area can be assessed in a similar manner to 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eqn:hom1"
 
 \end_inset
 
-. For 
-\begin_inset Formula $n^j$
+.
+ For 
+\begin_inset Formula $n^{j}$
 \end_inset
 
  block boundary vertices, 
-\begin_inset Formula $V_{i,j}^{b} = (x_{i,j}^{b}, y_{i,j}^{b})$
+\begin_inset Formula $V_{i,j}^{b}=(x_{i,j}^{b},y_{i,j}^{b})$
 \end_inset
 
  representing the 
@@ -537,32 +607,38 @@ th set of vertex coordinates on the
 \end_inset
 
 th block, the total block area can be calculated as: 
-\begin_inset Formula \begin{equation}
-\label{eqn:hom2}
-A^b = \dfrac{1}{2} \sum_{j=0}^{m} \sum_{i=1}^{n^j} x_{i,j}^b(y_{i+1,j}^b-y_{i-1,j}^b)
+\begin_inset Formula 
+\begin{equation}
+A^{b}=\dfrac{1}{2}\sum_{j=0}^{m}\sum_{i=1}^{n_{j}}x_{i,j}^{b}(y_{i+1,j}^{b}-y_{i-1,j}^{b})\label{eqn:hom2}
 \end{equation}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Assuming that the block domain and the void domain are jointly exhaustive of the total homogenization domain, the total area associated with the void subdomain, 
-\begin_inset Formula $A^v$
+Assuming that the block domain and the void domain are jointly exhaustive
+ of the total homogenization domain, the total area associated with the
+ void subdomain, 
+\begin_inset Formula $A^{v}$
 \end_inset
 
-, can be written as the difference of the homogenization domain area and the block subdomain area: 
-\begin_inset Formula \begin{equation}
-\label{eqn:hom3}
-A^v = A^h - A^b
+, can be written as the difference of the homogenization domain area and
+ the block subdomain area: 
+\begin_inset Formula 
+\begin{equation}
+A^{v}=A^{h}-A^{b}\label{eqn:hom3}
 \end{equation}
+
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-\label{eqn:hom4}
-A^v = \dfrac{1}{2} \sum_{i=1}^{n}x_i^h(y_{i+1}^h-y_{i-1}^h) - \dfrac{1}{2} \sum_{j=0}^{m} \sum_{i=1}^{n^j} x_{i,j}^b(y_{i+1,j}^b-y_{i-1,j}^b)
+\begin_inset Formula 
+\begin{equation}
+A^{v}=\dfrac{1}{2}\sum_{i=1}^{n}x_{i}^{h}(y_{i+1}^{h}-y_{i-1}^{h})-\dfrac{1}{2}\sum_{j=0}^{m}\sum_{i=1}^{n_{j}}x_{i,j}^{b}(y_{i+1,j}^{b}-y_{i-1,j}^{b})\label{eqn:hom4}
 \end{equation}
+
 \end_inset
 
 

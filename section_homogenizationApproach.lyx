@@ -78,7 +78,7 @@ The main objective of homogenizing DEM simulations is to be able to describe
  the macroscopic behavior of the discontinuous medium in terms of a standard
  more computationally efficient continuum model.
  The homogenization algorithms used herein are based on the methods developed
- by (DâAddetta et al., 2004) and (Wellmann et al., 2008).
+ by (D'Addetta et al., 2004) and (Wellmann et al., 2008).
  In this homogenization process, the resultant inter-block contact forces
  and block displacement from the DEM simulations are converted to average
  stresses and strains for a continuum.

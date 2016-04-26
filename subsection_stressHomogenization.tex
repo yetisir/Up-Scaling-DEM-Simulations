@@ -1,11 +1,3 @@
-%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
-\documentclass{article}
-\usepackage[latin9]{inputenc}
-\usepackage{amsbsy}
-\usepackage{esint}
-\begin{document}
-
 \subsection{Stress Homogenization}
 
 The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$,
@@ -13,7 +5,7 @@ is derived from the definition of the spatial average of the stress,
 $\boldsymbol{\sigma}$, over the homogenization domain $\Omega^{h}$,
 with an area $A^{h}$: 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}dA\label{eqn:stress1}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}{dA}\label{eqn:stress1}
 \end{equation}
 
 
@@ -23,7 +15,7 @@ Here, the integration over the homogenization domain can be decomposed
 into two seperate integrations over the block subdomain and the void
 subdomain: 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\left[\int\boldsymbol{\sigma}dA+\int_{\Omega^{v}}\boldsymbol{\sigma}dA\right]\label{eqn:stress2}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\bigg\lbrack{\int_{\Omega^{b}}\boldsymbol{\sigma}{dA}+\int_{\Omega^{v}}\boldsymbol{\sigma}{dA}}\bigg\rbrack\label{eqn:stress2}
 \end{equation}
 
 
@@ -33,7 +25,7 @@ space, resulting in a negligable contribution to the overall stress
 state. This allows for the void subdomain integration term to be dropped
 from the formulation: 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}{dA}\label{eqn:stress2a}
 \end{equation}
 
 
@@ -66,5 +58,3 @@ for deformable DEM blocks:
 
 %In the case that the blocks are considered as rigid bodies, the determination of the block stresses is less trivial. Becasue a rigid body cannot undergo deformation, and therfore not experience any strain, the concept of stress in a undeformable block is unreasonable. In this case, the stress homogenization procedure focuses on reducing the block boundary contact forces to a resultant force-moment pair acting on the center of mass of the block. 
 
-%elaborate on rigid body homogenization?
-\end{document}
