@@ -1,0 +1,252 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection
+Stress Homogenization
+\end_layout
+
+\begin_layout Standard
+The homogenized Cauchy stress, 
+\begin_inset Formula $\langle\boldsymbol{\sigma}\rangle$
+\end_inset
+
+, is derived from the definition of the spatial average of the stress, 
+\begin_inset Formula $\boldsymbol{\sigma}$
+\end_inset
+
+, over the homogenization domain 
+\begin_inset Formula $\Omega^{h}$
+\end_inset
+
+, with an area 
+\begin_inset Formula $A^{h}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}dA\label{eqn:stress1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As previously mentioned, there exists a necessary distinction between the
+ block subdomain and the void subdomain when dealing with stress.
+ Here, the integration over the homogenization domain can be decomposed
+ into two seperate integrations over the block subdomain and the void subdomain:
+ 
+\begin_inset Formula 
+\begin{equation}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\left[\int\boldsymbol{\sigma}dA+\int_{\Omega^{v}}\boldsymbol{\sigma}dA\right]\label{eqn:stress2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This distinction is made due to the fact that in a purely mechanical model,
+ there isn't any pressure or stress being retained in the void space, resulting
+ in a negligable contribution to the overall stress state.
+ This allows for the void subdomain integration term to be dropped from
+ the formulation: 
+\begin_inset Formula 
+\begin{equation}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the block subdomain is inherently discretized, the integration of
+ the stress over the block subdomain can be written as a summation of the
+ average stress in each block, 
+\begin_inset Formula $\boldsymbol{\sigma}_{i}^{b}$
+\end_inset
+
+, of area 
+\begin_inset Formula $A_{i}^{b}$
+\end_inset
+
+over 
+\begin_inset Formula $N^{b}$
+\end_inset
+
+ number of blocks in the block subdomain: 
+\begin_inset Formula 
+\begin{equation}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{i=1}^{N^{b}}\boldsymbol{\sigma}_{i}^{b}A_{i}^{b}\label{eqn:stress3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the case where the blocks are considered as deformable bodies, the average
+ stress in a given block can be assessed by taking a spatially weighted
+ average of the zone stresses (
+\begin_inset Formula $\boldsymbol{\sigma}_{ij}^{z}$
+\end_inset
+
+).
+ For a given block with 
+\begin_inset Formula $N_{i}^{z}$
+\end_inset
+
+ zones, the average stress can be weighted based on the zone area, 
+\begin_inset Formula $A_{ij}^{z}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\sigma}_{i}^{b}=\frac{1}{A_{i}^{b}}\sum_{j=1}^{N_{i}^{z}}\boldsymbol{\sigma}_{ij}^{z}A_{ij}^{z}\label{eqn:stress3a}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combining equations 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn:stress3"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn:stress3a"
+
+\end_inset
+
+ yield the final form for assessing the homogenized Cauchy stress tensor
+ for deformable DEM blocks: 
+\begin_inset Formula 
+\begin{equation}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{i=1}^{N^{b}}\sum_{j=1}^{N_{i}^{z}}\boldsymbol{\sigma}_{ij}^{z}A_{ij}^{z}\label{eqn:stress4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%In the case that the blocks are considered as rigid bodies, the determination
+ of the block stresses is less trivial.
+ Becasue a rigid body cannot undergo deformation, and therfore not experience
+ any strain, the concept of stress in a undeformable block is unreasonable.
+ In this case, the stress homogenization procedure focuses on reducing the
+ block boundary contact forces to a resultant force-moment pair acting on
+ the center of mass of the block.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%elaborate on rigid body homogenization?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

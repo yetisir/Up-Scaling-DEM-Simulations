@@ -1,60 +1,81 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[latin9]{inputenc}
+\usepackage{amsbsy}
+\usepackage{esint}
+\begin{document}
+
 \subsection{Strain Homogenization}
-The derivation for the homogenized strain tensor starts much like the homogenized stress tensor derivation with the familiar definition of the spatial average:
+
+The derivation for the homogenized strain tensor, $\langle\boldsymbol{\epsilon}\rangle$
+begins in a similar manner to the homogenized stress tensor derivation
+with the familiar definition of the spatial average:
 
 \begin{equation}
-\label{eqn:strain2}
-\langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{A} \int_\Omega \boldsymbol{\epsilon} {dA}
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\epsilon}dA\label{eqn:strain2}
 \end{equation}
+Again, the homogenization domain integral needs to be decomposed into
+domain integrals of the block subdomain and the void subdomain due
+to the inherently different behviour of the block strain and the domain
+strain:
 
 \begin{equation}
-\label{eqn:strain3}
-\langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{A} \bigg \lbrack {\int_{\Omega_{b}} \boldsymbol{\epsilon} { dA} + 
-\int_{\Omega_{v}} \boldsymbol{\epsilon} {dA}} \bigg \rbrack
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{A^{h}}\left[\int_{\Omega_{b}}\boldsymbol{\epsilon}dA+\int_{\Omega_{v}}\boldsymbol{\epsilon}dA\right]\label{eqn:strain3}
 \end{equation}
+At this point, it becomes convenient to assume a small displacement
+formulation of strain. This displacement assumtion limits the appliciability
+of the strain homogenization, but in the context of large scale geomechanics,
+this assumtion becomes reaonable. As such, the linear infinitesimal
+strain tensor can be written in terms of dispalcements, $\mathbf{u}$:
 
 \begin{equation}
-\label{eqn:strain4}
-\langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\int_{\Omega_{b}} \left[ \nabla \mathbf{u} + 
-\left( \nabla \mathbf{u} \right)^{T} \right] {dA} +
-\int_{\Omega_{v}} \left[ \nabla \mathbf{u} + 
-\left( \nabla \mathbf{u} \right)^{T} \right] {dA}} \bigg \rbrack
+\boldsymbol{\epsilon}=\frac{1}{2}\left[\nabla\mathbf{u}+\left(\nabla\mathbf{u}\right)^{T}\right]\label{eqn:strain1}
 \end{equation}
+The following relationship, which is derived from the divergence theorem,
+allows for the simplification of the domain integral to a boundary
+integral based on the displacements and the boundary outward normals,
+$\mathbf{n}$ (Wellman et al., 2008):
 
 \begin{equation}
-\label{eqn:strain5}
-\langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\oint_{\Gamma_{b}} \left[ \mathbf{u} \otimes \mathbf{n} + 
-\mathbf{n} \otimes \mathbf{u} \right] {d \Gamma} +
-\oint_{\Gamma_{v}} \left[ \mathbf{u} \otimes \mathbf{n} + 
-\mathbf{n} \otimes \mathbf{u} \right] { d \Gamma}} \bigg \rbrack
+\int_{\Omega}\left[\nabla\mathbf{u}+\left(\nabla\mathbf{u}\right)^{T}\right]dA=\oint_{\Gamma}\left[\mathbf{u}\otimes\mathbf{n}+\mathbf{n}\otimes\mathbf{u}\right]d\Gamma\label{eqn:strain1-1}
 \end{equation}
+Substitution of \ref{eqn:strain1} and \ref{eqn:strain1-1} into \ref{eqn:strain3}
+allows one to write the homogenized strain tensor as follows, where
+$\mathbf{u}^{b}$and $\mathbf{u}^{v}$ represent the average displacements
+along the block and void boundaries respectively, and $\mathbf{n}^{b}$and
+$\mathbf{n}^{v}$represent the outward normals of the block and void
+boundaries repsectively:
 
 \begin{equation}
-\label{eqn:strain6}
-\langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \bigg \lbrack {\sum_{i=1}^{N_{b}} \left[ \mathbf{u}_{b}^i \otimes \mathbf{n}_{b}^i + 
-\mathbf{n}_{b}^i \otimes \mathbf{u}_{b}^i \right] {L_{b}^i} +
-\sum_{i=1}^{N_{v}} \left[ \mathbf{u}_{v}^i \otimes \mathbf{n}_{v}^i + 
-\mathbf{n}_{v}^i \otimes \mathbf{u}_{v}^i \right] {L_{v}^i}} \bigg \rbrack
-\end{equation}
-
-\begin{equation}
-\label{eqn:strain7}
-\langle \boldsymbol{\epsilon} \rangle = 
-\frac{1}{2 A} \sum_{i=1}^{N_{b}} \left[ \mathbf{u}^i \otimes \mathbf{n}^i + 
-\mathbf{n}^i \otimes \mathbf{u}_{b}^i \right] {L^i} 
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\left[\oint_{\Gamma^{b}}\left[\mathbf{u}^{b}\otimes\mathbf{n}^{b}+\mathbf{n}^{b}\otimes\mathbf{u}^{b}\right]d\Gamma+\oint_{\Gamma^{v}}\left[\mathbf{u}^{v}\otimes\mathbf{n}^{v}+\mathbf{n}^{v}\otimes\mathbf{u}^{v}\right]d\Gamma\right]\label{eqn:strain5}
 \end{equation}
 
 
-
-
-
+If one considers the strain behaviour of the block boundary and the
+void boundary, the displacement and normal of a particular segment
+will be identical regardless of weather it is a block boundary segment
+or a void boundary segment. As such, the two boundary integrals can
+be combined to yeild the following:
 
 \begin{equation}
-\label{eqn:strain1}
-\boldsymbol{\epsilon} = 
-\frac{1}{2}  \left[ \nabla \mathbf{u} + \left( \nabla \mathbf{u} \right)^{T} \right]
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\oint_{\Gamma^{h}}\left[\mathbf{u}\otimes\mathbf{n}+\mathbf{n}\otimes\mathbf{u}\right]d\Gamma\label{eqn:strain5-1}
 \end{equation}
+
+
+Here, one can again take advantage of the discontinuous nature of
+the DEM simulations, allowing for the continuous boundary integrals
+to be written as a summation over boundary with $N$ boundary segments,
+where $\mathbf{u}_{i}$ represents the average displacement along
+the $i^{th}$ boundary segment on the homogenization boundary. The
+average displacement along a boundary segment is calculated as a linear
+average of the two nodal displacements defining the boundary segment.
+Furthermore, and $\mathbf{n}_{i}$ represents the outward normal of
+the $i^{th}$ boundary segment on the homogenization boundary with
+a length of $L_{i}$:
+
+\begin{equation}
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\sum_{i=1}^{N}\left[\mathbf{u}_{i}\otimes\mathbf{n}_{i}+\mathbf{n}_{i}\otimes\mathbf{u}_{i}\right]L_{i}\label{eqn:strain7}
+\end{equation}
+
+\end{document}

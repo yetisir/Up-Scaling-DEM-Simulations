@@ -1,46 +1,70 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[latin9]{inputenc}
+\usepackage{amsbsy}
+\usepackage{esint}
+\begin{document}
+
 \subsection{Stress Homogenization}
-The homogenized Cauchy stress, $\langle \boldsymbol{\sigma} \rangle$, is derived from the definition of the spatial average of the stress, $\boldsymbol{\sigma}$, over the homogenization domain $\Omega^h$, with an area $A^h$:
+
+The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$,
+is derived from the definition of the spatial average of the stress,
+$\boldsymbol{\sigma}$, over the homogenization domain $\Omega^{h}$,
+with an area $A^{h}$: 
 \begin{equation}
-\label{eqn:stress1}
-\langle \boldsymbol{\sigma} \rangle = \frac{1}{A^h} \int_{\Omega^h} \boldsymbol{\sigma} {dA}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}dA\label{eqn:stress1}
 \end{equation}
 
-As previously mentioned, there exists a necessary distinction between the block subdomain and the void subdomain when dealing with stress. Here, the integration over the homogenization domain can be decomposed into two seperate integrations over the block subdomain and the void subdomain:
+
+As previously mentioned, there exists a necessary distinction between
+the block subdomain and the void subdomain when dealing with stress.
+Here, the integration over the homogenization domain can be decomposed
+into two seperate integrations over the block subdomain and the void
+subdomain: 
 \begin{equation}
-\label{eqn:stress2}
-\langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \bigg \lbrack {\int_{\Omega^{b}} \boldsymbol{\sigma} {dA} + 
-\int_{\Omega^{v}} \boldsymbol{\sigma} {dA}} \bigg \rbrack
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\left[\int\boldsymbol{\sigma}dA+\int_{\Omega^{v}}\boldsymbol{\sigma}dA\right]\label{eqn:stress2}
 \end{equation}
 
-This distinction is made due to the fact that in a purely mechanical model, there isn't any pressure or stress being retained in the void space, resulting in a negligable contribution to the overall stress state. This allows for the void subdomain integration term to be dropped from the formulation:
+
+This distinction is made due to the fact that in a purely mechanical
+model, there isn't any pressure or stress being retained in the void
+space, resulting in a negligable contribution to the overall stress
+state. This allows for the void subdomain integration term to be dropped
+from the formulation: 
 \begin{equation}
-\label{eqn:stress2a}
-\langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \int_{\Omega^{b}} \boldsymbol{\sigma} {dA}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
 \end{equation}
 
-Since the block subdomain is inherently discretized, the integration of the stress over the block subdomain can be written as a summation of the average stress in each block, $\boldsymbol{\sigma}^b_i$, of area $A^b_i$over $N^b$ number of blocks in the block subdomain:
+
+Since the block subdomain is inherently discretized, the integration
+of the stress over the block subdomain can be written as a summation
+of the average stress in each block, $\boldsymbol{\sigma}_{i}^{b}$,
+of area $A_{i}^{b}$over $N^{b}$ number of blocks in the block subdomain:
 \begin{equation}
-\label{eqn:stress3}
-\langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \sum_{i=1}^{N^{b}} \boldsymbol{\sigma}_{i}^b A^{b}_{i} 
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{i=1}^{N^{b}}\boldsymbol{\sigma}_{i}^{b}A_{i}^{b}\label{eqn:stress3}
 \end{equation}
 
-In the case where the blocks are considered as deformable bodies, the average stress in a given block can be assessed by taking a spatially weighted average of the zone stresses ($\boldsymbol{\sigma}^z_{ij}$). For a given block with $N_i^z$ zones, the average stress can be weighted based on the zone area, $A^{z}_{ij}$:
+
+In the case where the blocks are considered as deformable bodies,
+the average stress in a given block can be assessed by taking a spatially
+weighted average of the zone stresses ($\boldsymbol{\sigma}_{ij}^{z}$).
+For a given block with $N_{i}^{z}$ zones, the average stress can
+be weighted based on the zone area, $A_{ij}^{z}$: 
 \begin{equation}
-\label{eqn:stress3a}
-\boldsymbol{\sigma}_{i}^b = 
-\frac{1}{A^b_i} \sum_{j=1}^{N^{z}_i} \boldsymbol{\sigma}^z_{ij} A^{z}_{ij} 
+\boldsymbol{\sigma}_{i}^{b}=\frac{1}{A_{i}^{b}}\sum_{j=1}^{N_{i}^{z}}\boldsymbol{\sigma}_{ij}^{z}A_{ij}^{z}\label{eqn:stress3a}
 \end{equation}
 
-Combining equations \ref{eqn:stress3} and \ref{eqn:stress3a} yield the final form for assessing the homogenized Cauchy stress tensor for deformable DEM blocks:
+
+Combining equations \ref{eqn:stress3} and \ref{eqn:stress3a} yield
+the final form for assessing the homogenized Cauchy stress tensor
+for deformable DEM blocks: 
 \begin{equation}
-\label{eqn:stress4}
-\langle \boldsymbol{\sigma} \rangle = 
-\frac{1}{A^h} \sum_{i=1}^{N^{b}} \sum_{j=1}^{N^{z}_i} \boldsymbol{\sigma}^z_{ij} A^{z}_{ij} 
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{i=1}^{N^{b}}\sum_{j=1}^{N_{i}^{z}}\boldsymbol{\sigma}_{ij}^{z}A_{ij}^{z}\label{eqn:stress4}
 \end{equation}
+
 
 %In the case that the blocks are considered as rigid bodies, the determination of the block stresses is less trivial. Becasue a rigid body cannot undergo deformation, and therfore not experience any strain, the concept of stress in a undeformable block is unreasonable. In this case, the stress homogenization procedure focuses on reducing the block boundary contact forces to a resultant force-moment pair acting on the center of mass of the block. 
 
 %elaborate on rigid body homogenization?
+\end{document}
