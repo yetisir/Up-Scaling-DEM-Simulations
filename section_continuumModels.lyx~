@@ -1,0 +1,231 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Plasticity Based Damage Mechanics
+\end_layout
+
+\begin_layout Standard
+Damage mechanics allow for the 
+\end_layout
+
+\begin_layout Standard
+Plasticity based damage mechanics models attempt to incorporate the theories
+ of plasticy and damage machanics into a unified approach to the damage
+ evolution and constituive relationships (Zhang and Cai, 2010).
+ These 
+\end_layout
+
+\begin_layout Standard
+Damage plasticity model based on Strain can be decomposed into elastic and
+ plastic components: 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking the time derivative gives the decomposition of the strain rate, 
+\begin_inset Formula $\boldsymbol{\dot{\epsilon}}$
+\end_inset
+
+ : 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\dot{\epsilon}}=\boldsymbol{\dot{\epsilon}}^{el}+\boldsymbol{\dot{\epsilon}}^{pl}\label{eqn:const2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The constitutive stress-strain relationship including a scalar damage parameter,
+ 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ can be written as follows: 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\sigma}=(1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For simplicity, the damaged elastic stiffness is described as the reduced
+ stiffness due to the damage: 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{E^{d}}=(1-\mathbf{D})\mathbf{E}\label{eqn:const4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substituting 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn:const1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn:const4"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn:const3"
+
+\end_inset
+
+ results in the following: 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\sigma}=\mathbf{E^{d}}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the "usual notions of CDM" (find reference), the effective stress.
+ 
+\begin_inset Formula $\boldsymbol{\bar{\sigma}}$
+\end_inset
+
+, can be defined as: 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\bar{\sigma}}=\mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Such that the cauchy stress tensor can be realted to the effective stress
+ tensor as follows: 
+\begin_inset Formula 
+\begin{equation}
+\boldsymbol{\sigma}=(1-\mathbf{D})\boldsymbol{\bar{\sigma}}\label{eqn:const7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The nature of the damage evolution is assumed to be a function of the effective
+ stress and the equivalent plastic strain, 
+\begin_inset Formula $\boldsymbol{\bar{\epsilon}^{pl}}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{D}=\mathbf{D}(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}})\label{eqn:const8}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+brittle vs ductile damage...
+\end_layout
+
+\end_body
+\end_document

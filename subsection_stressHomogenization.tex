@@ -5,7 +5,7 @@ is derived from the definition of the spatial average of the stress,
 $\boldsymbol{\sigma}$, over the homogenization domain $\Omega^{h}$,
 with an area $A^{h}$: 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}{dA}\label{eqn:stress1}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}dA\label{eqn:stress1}
 \end{equation}
 
 
@@ -15,7 +15,7 @@ Here, the integration over the homogenization domain can be decomposed
 into two seperate integrations over the block subdomain and the void
 subdomain: 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\bigg\lbrack{\int_{\Omega^{b}}\boldsymbol{\sigma}{dA}+\int_{\Omega^{v}}\boldsymbol{\sigma}{dA}}\bigg\rbrack\label{eqn:stress2}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\left[\int\boldsymbol{\sigma}dA+\int_{\Omega^{v}}\boldsymbol{\sigma}dA\right]\label{eqn:stress2}
 \end{equation}
 
 
@@ -25,7 +25,7 @@ space, resulting in a negligable contribution to the overall stress
 state. This allows for the void subdomain integration term to be dropped
 from the formulation: 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}{dA}\label{eqn:stress2a}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
 \end{equation}
 
 

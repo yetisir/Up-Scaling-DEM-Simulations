@@ -1,36 +1,66 @@
-\section{Continuum Damage Mechanics Models}
-The constitutive stress-strain relationship including a scalar damage parameter, $\mathbf{D}$ can be written as follows:
+\section{Plasticity Based Damage Mechanics}
+
+Damage mechanics allow for the 
+
+Plasticity based damage mechanics models attempt to incorporate the
+theories of plasticy and damage machanics into a unified approach
+to the damage evolution and constituive relationships (Zhang and Cai,
+2010). These 
+
+Damage plasticity model based on Strain can be decomposed into elastic
+and plastic components: 
 \begin{equation}
-\label{eqn:const3}
-\boldsymbol{\sigma} = (1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}
+\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
 \end{equation}
 
-For simplicity, the damaged elastic stiffness is described as the reduced stiffness due to the damage:
+
+Taking the time derivative gives the decomposition of the strain rate,
+$\boldsymbol{\dot{\epsilon}}$ : 
 \begin{equation}
-\label{eqn:const4}
-\mathbf{E^d} = (1-\mathbf{D})\mathbf{E}
+\boldsymbol{\dot{\epsilon}}=\boldsymbol{\dot{\epsilon}}^{el}+\boldsymbol{\dot{\epsilon}}^{pl}\label{eqn:const2}
 \end{equation}
 
-Substituting \ref{eqn:const1} and \ref{eqn:const4} into \ref{eqn:const3} results in the following:
+
+The constitutive stress-strain relationship including a scalar damage
+parameter, $\mathbf{D}$ can be written as follows: 
 \begin{equation}
-\label{eqn:const5}
-\boldsymbol{\sigma} = \mathbf{E^d}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
+\boldsymbol{\sigma}=(1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3}
 \end{equation}
 
-Using the "usual notions of CDM" (find reference), the effective stress. $\boldsymbol{\bar{\sigma}}$, can be defined as:
+
+For simplicity, the damaged elastic stiffness is described as the
+reduced stiffness due to the damage: 
 \begin{equation}
-\label{eqn:const6}
-\boldsymbol{\bar{\sigma}} = \mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
+\mathbf{E^{d}}=(1-\mathbf{D})\mathbf{E}\label{eqn:const4}
 \end{equation}
 
-Such that the cauchy stress tensor can be realted to the effective stress tensor as follows:
+
+Substituting \ref{eqn:const1} and \ref{eqn:const4} into \ref{eqn:const3}
+results in the following: 
 \begin{equation}
-\label{eqn:const7}
-\boldsymbol{\sigma} = (1-\mathbf{D})\boldsymbol{\bar{\sigma}}
+\boldsymbol{\sigma}=\mathbf{E^{d}}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const5}
 \end{equation}
 
-The nature of the damage evolution is assumed to be a function of the effective stress and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
+
+Using the \textquotedbl{}usual notions of CDM\textquotedbl{} (find
+reference), the effective stress. $\boldsymbol{\bar{\sigma}}$, can
+be defined as: 
 \begin{equation}
-\label{eqn:const8}
-\mathbf{D} = \mathbf{D}(\boldsymbol{\bar{\sigma}}, \boldsymbol{\bar{\epsilon}^{pl}})
+\boldsymbol{\bar{\sigma}}=\mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const6}
 \end{equation}
+
+
+Such that the cauchy stress tensor can be realted to the effective
+stress tensor as follows: 
+\begin{equation}
+\boldsymbol{\sigma}=(1-\mathbf{D})\boldsymbol{\bar{\sigma}}\label{eqn:const7}
+\end{equation}
+
+
+The nature of the damage evolution is assumed to be a function of
+the effective stress and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
+\begin{equation}
+\mathbf{D}=\mathbf{D}(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}})\label{eqn:const8}
+\end{equation}
+
+

@@ -109,7 +109,7 @@ As previously mentioned, there exists a necessary distinction between the
  
 \begin_inset Formula 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\left[\int\boldsymbol{\sigma}dA+\int_{\Omega^{v}}\boldsymbol{\sigma}dA\right]\label{eqn:stress2}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\left[\int_{\Omega^{b}}\boldsymbol{\sigma}dA+\int_{\Omega^{v}}\boldsymbol{\sigma}dA\right]\label{eqn:stress2}
 \end{equation}
 
 \end_inset
@@ -211,6 +211,10 @@ reference "eqn:stress3a"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Rigid Body Formulation
 \end_layout
 
 \begin_layout Standard

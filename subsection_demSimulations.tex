@@ -1,39 +1,72 @@
 \subsection{DEM Simulations}
-The DEM simulations used in this investigation consist of a DFN within a 10m×10m virtual block subject to uniaxial and triaxial testing procedures (Fig \ref{fig:vorDFN}). The nature of numerical modelling allows one the luxury of conducting physically impractical material tests such as direct tensile tests in order to characterize the material properties of the NFR.
+
+The DEM simulations used in this investigation consist of a DFN within
+a 10m×10m virtual block subject to uniaxial and triaxial testing
+procedures (Fig \ref{fig:vorDFN}). The nature of numerical modelling
+allows one the luxury of conducting physically impractical material
+tests such as direct tensile tests in order to characterize the material
+properties of the NFR.
 
 \begin{figure}
-	\label{fig:vorDFN}
-	\caption{Two dimensional DFN used for the DEM simulations. A 10m×10m Voronoi tessellation with an average block size of 0.5m was used to characterize the DFN.}
+\label{fig:vorDFN} \caption{Two dimensional DFN used for the DEM simulations. A 10m x 10m Voronoi
+tessellation with an average block size of 0.5m was used to characterize
+the DFN.}
 \end{figure}
 
-The 10m×10m model size was determined to be sufficient to represent the DFN, which was characterized by a Voronoi tessellation with a block size of approximately 0.5m. Since the material model used in this investigation can only consider an isotropic NFR, a inherently isotropic randomly generated Voronoi tessellation was chosen to represent the DFN in the DEM simulation. The rock and joint properties for the model, given in Table \ref{tab:demProp}, were chosen to be representative of a reservoir rock (Pirayehgar and Dusseault, 2015).
+
+The 10m x� 10m model size was determined to be sufficient to represent
+the DFN, which was characterized by a Voronoi tessellation with a
+block size of approximately 0.5m. Since the material model used in
+this investigation can only consider an isotropic NFR, a inherently
+isotropic randomly generated Voronoi tessellation was chosen to represent
+the DFN in the DEM simulation. The rock and joint properties for the
+model, given in Table \ref{tab:demProp}, were chosen to be representative
+of a reservoir rock (Pirayehgar and Dusseault, 2015).
 
 \begin{table}[!htbp]
-	\centering
-	\caption{Rock and joint properties for the DEM simulations}
-	\label{tab:demProp}
-	\begin{tabular}{c c}
-		\hline
-		Property & Value\\
-		\hline
-		Rock Density & $2.7 kg/m^3$\\
-		Rock Young's Modulus & $12 GPa$\\
-		Rock Poisson's Ratio & $0.3$\\
-		Joint Normal Stiffness & $10 GPa$\\
-		Joint Shear Stiffness & $1 GPa$\\
-		Joint Friction Angle & $30^\circ$\\
-		Joint Cohesion & $0.1 MPa$\\
-		Joint Tensile Strength & $10 MPa$\\
-		Joint Dilation Angle & $10^\circ$\\
-		\hline
-	\end{tabular}
+\centering \caption{Rock and joint properties for the DEM simulations}
+\label{tab:demProp} %
+\begin{tabular}{c c}
+\hline 
+Property  & Value & \tabularnewline
+\hline 
+Rock Density  & $2.7kg/m^{3}$ & \tabularnewline
+Rock Young's Modulus  & $12GPa$ & \tabularnewline
+Rock Poisson's Ratio  & $0.3$ & \tabularnewline
+Joint Normal Stiffness  & $10GPa$ & \tabularnewline
+Joint Shear Stiffness  & $1GPa$ & \tabularnewline
+Joint Friction Angle  & $30^{\circ}$ & \tabularnewline
+Joint Cohesion  & $0.1MPa$ & \tabularnewline
+Joint Tensile Strength  & $10MPa$ & \tabularnewline
+Joint Dilation Angle  & $10^{\circ}$ & \tabularnewline
+\hline 
+\end{tabular}
 \end{table}
 
-The DEM model was subjected to uniaxial tension and compression cycles as well as triaxial tension and compression cycles under different confining stresses to calibrate the continuum model. The triaxial tests were conducted at confining stresses of 5MPa and 10MPa. These numerical tests were constrained in such a way to imitate the laboratory testing procedures. The only procedural difference in these virtual laboratory tests was that the axial strain is brought back to the initial configuration in order to characterize the damage evolution. 
 
-The compression cycles were run at a target strain rate of 0.001/s for a period of 10s in compression followed by a period of 10s in tension to return the strain to zero. The transition from the compression part of the load path to the tension part of the load path was conducted over a period of 2s to avoid shocking the system.
+The DEM model was subjected to uniaxial tension and compression cycles
+as well as triaxial tension and compression cycles under different
+confining stresses to calibrate the continuum model. The triaxial
+tests were conducted at confining stresses of 5MPa and 10MPa. These
+numerical tests were constrained in such a way to imitate the laboratory
+testing procedures. The only procedural difference in these virtual
+laboratory tests was that the axial strain is brought back to the
+initial configuration in order to characterize the damage evolution.
 
-Because the tension cycles reach failure at a much lower strain, the tension cycles were run at a target strain rate of 0.0001/s for a period of 5s in each direction. In this case, the transition period from tension to compression was  1s.
+The compression cycles were run at a target strain rate of 0.001/s
+for a period of 10s in compression followed by a period of 10s in
+tension to return the strain to zero. The transition from the compression
+part of the load path to the tension part of the load path was conducted
+over a period of 2s to avoid shocking the system.
 
-The aim of the compression and tension cycles is to strain the model past the yield stress in order to investigate the post-yield behavior, but not strain the model so much that the RVE loses all of its strength. It is noted that the strain rate was chosen to be sufficiently small so as to avoid strain rate effects. The appropriate amount of strain for a given DEM simulation will depend upon the DEM geometry in addition to the rock and joint properties. 
+Because the tension cycles reach failure at a much lower strain, the
+tension cycles were run at a target strain rate of 0.0001/s for a
+period of 5s in each direction. In this case, the transition period
+from tension to compression was 1s.
 
+The aim of the compression and tension cycles is to strain the model
+past the yield stress in order to investigate the post-yield behavior,
+but not strain the model so much that the RVE loses all of its strength.
+It is noted that the strain rate was chosen to be sufficiently small
+so as to avoid strain rate effects. The appropriate amount of strain
+for a given DEM simulation will depend upon the DEM geometry in addition
