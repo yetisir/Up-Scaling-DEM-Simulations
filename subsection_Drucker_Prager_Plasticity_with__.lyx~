@@ -69,46 +69,44 @@
 
 \begin_body
 
-\begin_layout Section
-Model Parameterization
+\begin_layout Subsection
+Drucker-Prager Plasticity with Ductile Damage
 \end_layout
 
 \begin_layout Standard
-The model parameterization is divided into three distinct parameter sets:
+The Drucker-Prager plasticity model can be written in terms of 4 individual
+ components: The friction angle, dilation angle, initial tensile strength,
+ and the hardening rule.
+ The hardening rule assumes a functional form in terms of a power law:
 \end_layout
 
 \begin_layout Standard
-*elastic parameters
-\end_layout
+\begin_inset Formula 
+\begin{equation}
+\sigma_{y}=A+B\left(\bar{\epsilon}^{pl}\right)^{n}\label{eqn:param5}
+\end{equation}
 
-\begin_layout Standard
-*plastic parameters
-\end_layout
-
-\begin_layout Standard
-*damage parameters
-\end_layout
-
-\begin_layout Standard
--for both materials, the elastic parameters are the same with scalar quantities:
- 
-\begin_inset Formula $E$
 \end_inset
 
- and 
-\begin_inset Formula $\nu$
-\end_inset
 
-.
- with these two parameters, the elastic stiffness of the material is fully
- charcterized.
- 
 \end_layout
 
 \begin_layout Standard
--for the plastic and damage parameters, due to the differing nature of the
- plastic and damage behaviour, the parameterization of theses parameters
- is different: 
+This yields a total of 6 parameters for the plasticity characterization.
+ The damage characterization is comprised of two main components, the damage
+ initiation and the damage evolution.
+ The damage initiation is based on the Johnson-Cook model as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:param6}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
