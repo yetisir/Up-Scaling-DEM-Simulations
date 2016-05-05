@@ -3,27 +3,9 @@
 The Drucker-Prager plasticity model can be written in terms of 4 individual
 components: The friction angle, dilation angle, initial tensile strength,
 and the hardening rule. The hardening rule assumes a functional form
-in terms of a power law according to (Ruzicka et al.):
+in terms of a power law according to \cite{prantl_identification_2013}:
 
 \begin{equation}
 \sigma_{y}=A+B\left(\bar{\epsilon}^{pl}\right)^{n}\label{eqn:param5}
 \end{equation}
 
-
-This yields a total of 6 parameters for the plasticity characterization.
-The damage characterization is comprised of two main components, the
-damage initiation and the damage evolution. The damage initiation
-is based on the Johnson-Cook model as follows (from before):
-
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:param6}
-\end{equation}
-
-
-To minimize the number of parameters that need to be estimated, the
-above is simplified to the following by neglecting the first Johnson-Cook
-Constant:
-
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{2}e^{D_{3}\eta}\label{eqn:param6-1}
-\end{equation}
