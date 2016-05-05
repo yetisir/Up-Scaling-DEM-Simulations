@@ -3,7 +3,7 @@ section_introduction.tex
 figures/DFN_boundary_only/DFN_boundary_only.png
 section_distinctElementMethod.tex
 section_upscalingMethodology.tex
-subsection_parameterEstimation.tex
+section_parameterEstimation.tex
 section_homogenizationApproach.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
