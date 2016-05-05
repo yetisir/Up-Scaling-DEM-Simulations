@@ -18,7 +18,6 @@ subsection_parameterization.tex
 subsection_Concrete_Damaged_Plasticity_The__.tex
 figures/concretecompressionparameters/concretetensionparameters.png
 figures/concretedamageparameters/concretedamageparameters.png
-figures/concretetensionparameters/concretetensionparameters.png
 subsection_Drucker_Prager_Plasticity_with__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
