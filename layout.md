@@ -5,7 +5,6 @@ section_distinctElementMethod.tex
 section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
 section_parameterEstimation.tex
-figures/inelasticplasticstrain/inelasticplasticstrain.png
 section_homogenizationApproach.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
