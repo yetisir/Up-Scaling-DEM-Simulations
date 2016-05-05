@@ -3,6 +3,7 @@ section_introduction.tex
 figures/DFN_boundary_only/DFN_boundary_only.png
 section_distinctElementMethod.tex
 section_upscalingMethodology.tex
+subsection_parameterEstimation.tex
 section_homogenizationApproach.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
@@ -10,7 +11,6 @@ section_continuumModels.tex
 subsection_concreteDamage.tex
 subsection_druckerDamage.tex
 subsection_parameterization.tex
-section_parameterEstimation.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
 section_applicationToCAES.tex
