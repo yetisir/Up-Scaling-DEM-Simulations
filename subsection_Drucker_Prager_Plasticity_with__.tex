@@ -1,0 +1,23 @@
+\subsection{Drucker-Prager Plasticity with Ductile Damage}
+
+Elastic parameters are same as above. Young's Modulus and Poisson's
+Ratio - 2 elastic parameters
+
+The Drucker-Prager plasticity model can be written in terms of 4 individual
+components: The friction angle, dilation angle, initial tensile strength,
+and the hardening rule. The hardening rule assumes a functional form
+in terms of a power law:
+
+\begin{equation}
+\sigma_{y}=A+B\left(\bar{\epsilon}^{pl}\right)^{n}\label{eqn:param5}
+\end{equation}
+
+
+This yields a total of 6 parameters for the plasticity characterization.
+The damage characterization is comprised of two main components,
+the damage initiation and the damage evolution. The damage initiation
+is based on the Johnson-Cook model as follows: 
+
+\begin{equation}
+\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:param6}
+\end{equation}
