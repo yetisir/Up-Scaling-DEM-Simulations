@@ -6,6 +6,7 @@ section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
+figures/homogenizationboundary/homogenizationboundary.png
 figures/homogenizationarea/homogenizationarea.png
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
