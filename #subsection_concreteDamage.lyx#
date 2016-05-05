@@ -151,7 +151,22 @@ r\left(\hat{\boldsymbol{\bar{\sigma}}}\right)=\frac{\sum_{i=1}^{3}\left\langle \
 \end_layout
 
 \begin_layout Standard
-and <> are mcauley brackets as such....
+and 
+\begin_inset Formula $\left\langle \cdotp\right\rangle $
+\end_inset
+
+ are Macauley brackets as such....
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle x\right\rangle =\frac{1}{2}\left(\left|x\right|+x\right)\label{eqn:const9-3}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -166,7 +181,7 @@ F\left(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}}\right)=\frac{1
 
 \end_inset
 
-flow rule for this model from drucker=p:
+flow rule for this model from drucker-prager:
 \end_layout
 
 \begin_layout Standard

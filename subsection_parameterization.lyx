@@ -290,13 +290,14 @@ The Drucker-Prager plasticity model can be written in terms of 4 individual
 This yeilds a total of 6 parameters for the plasticity characterization.
  The damage charachterization is comprised of two main components, the damage
  initiation and the damage evolution.
- The damage initiation is based on the Johnson-Cook model as follows: 
+ The damage initiation is based on the Johnson-Cook model as follows: (refer
+ to material section)
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bar{\epsilon}_{D}^{pl}=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:param6}
+\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:param6}
 \end{equation}
 
 \end_inset

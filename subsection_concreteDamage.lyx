@@ -151,7 +151,22 @@ r\left(\hat{\boldsymbol{\bar{\sigma}}}\right)=\frac{\sum_{i=1}^{3}\left\langle \
 \end_layout
 
 \begin_layout Standard
-and <> are mcauley brackets as such....
+and 
+\begin_inset Formula $\left\langle \cdotp\right\rangle $
+\end_inset
+
+ are Macauley brackets as such....
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\langle x\right\rangle =\frac{1}{2}\left(\left|x\right|+x\right)\label{eqn:const9-3}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -229,7 +244,7 @@ The damage in both compression and tension is a neccesarily increasing function
 \begin_inset Formula $\boldsymbol{\mathbf{\sigma}_{c}}$
 \end_inset
 
- is positive in compression, as with the respectiove strains.
+ is positive in compression, as with the respective strains.
  
 \begin_inset Formula 
 \begin{equation}

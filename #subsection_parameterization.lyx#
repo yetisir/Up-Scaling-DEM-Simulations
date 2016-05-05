@@ -296,7 +296,7 @@ This yeilds a total of 6 parameters for the plasticity characterization.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bar{\epsilon}_{D}^{pl}=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:param6}
+\bar{\epsilon}_{f}^{pl}\left(\eta,\dot{\bar{\epsilon}}^{pl},\hat{T}\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\left[1+D_{4}\ln\left(\frac{\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{\epsilon}}}\right)\right]\left[1+D_{5}\hat{T}\right]\label{eqn:param6}
 \end{equation}
 
 \end_inset

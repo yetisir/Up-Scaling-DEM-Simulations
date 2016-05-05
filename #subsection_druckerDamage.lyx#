@@ -380,18 +380,7 @@ asuming a linear form, the plastic displacement at at complete damage (
 \begin_inset Formula $D=1$
 \end_inset
 
-) can be specified, and the damage evolution can be written as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\dot{d}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
-\end{equation}
-
-\end_inset
-
-
+) can be specified
 \end_layout
 
 \end_body

@@ -308,85 +308,13 @@ isotropic hardening is assumed, treating friction angle constant wrt stress
 \end_layout
 
 \begin_layout Standard
-assume the form of the Johnson-Cook Model:
+assume the form of the isothermal Johnson-Cook Model:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta,\dot{\bar{\epsilon}}^{pl},\hat{T}\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\left[1+D_{4}\ln\left(\frac{\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{\epsilon}}}\right)\right]\left[1+D_{5}\hat{T}\right]\label{eqn:druc7}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-assuming isothermal conditions and neglecting strain rate effects because
- of reasons:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-*Damage evolution:
-\end_layout
-
-\begin_layout Standard
-- assumes damage is a progressive degredation of the material stiffness
-\end_layout
-
-\begin_layout Standard
-- assume isotropic damage
-\end_layout
-
-\begin_layout Standard
-- uses mesh independant measure of plastic dispalcement to drive evolution
- of damage
-\end_layout
-
-\begin_layout Standard
-- damage manifests itself in two forms: softenin of the yeild stress and
- degredation of the elastisity.
-\end_layout
-
-\begin_layout Standard
-Damage evolution equation based on effective plastic displacement:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\dot{\bar{u}}^{pl}=L\dot{\bar{\epsilon}}^{pl}\label{eqn:druc9}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-asuming a linear form, the plastic displacement at at complete damage (
-\begin_inset Formula $D=1$
-\end_inset
-
-) can be specified, and the damage evolution can be written as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\dot{d}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
+\bar{\epsilon}_{f}^{pl}\left(\eta,\dot{\bar{\epsilon}}^{pl}\right)=\left[D_{1}+D_{2}e^{-D_{3}\eta}\right]\left[1+D_{4}\ln\left(\frac{\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{\epsilon}}}\right)\right]\label{eqn:druc7}
 \end{equation}
 
 \end_inset
