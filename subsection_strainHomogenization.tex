@@ -57,12 +57,12 @@ be combined to yeild the following:
 
 Here, one can again take advantage of the discontinuous nature of
 the DEM simulations, allowing for the continuous boundary integrals
-to be written as a summation over boundary with $N$ boundary segments,
+to be written as a summation over the boundary with $N$ boundary segments,
 where $\mathbf{u}_{i}$ represents the average displacement along
-the $i^{th}$ boundary segment on the homogenization boundary. The
-average displacement along a boundary segment is calculated as a linear
+the $i^{th}$ boundary segment on the homogenization boundary. This conversion assumes that the boundary segment is linear and the displacement field along the boundary segment is also linear. The
+average displacement along a boundary segment is thus calculated as a linear
 average of the two nodal displacements defining the boundary segment.
-Furthermore, and $\mathbf{n}_{i}$ represents the outward normal of
+Furthermore, $\mathbf{n}_{i}$ represents the outward normal of
 the $i^{th}$ boundary segment on the homogenization boundary with
 a length of $L_{i}$:
 
