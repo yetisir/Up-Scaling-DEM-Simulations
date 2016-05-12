@@ -6,18 +6,7 @@ Plasticity based damage mechanics models attempt to incorporate the
 theories of plasticy and damage machanics into a unified approach
 to the damage evolution and constituive relationships \cite{zhang_continuum_2010}. These 
 
-Damage plasticity model based on Strain can be decomposed into elastic
-and plastic components: 
-\begin{equation}
-\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
-\end{equation}
 
-
-Taking the time derivative gives the decomposition of the strain rate,
-$\boldsymbol{\dot{\epsilon}}$ : 
-\begin{equation}
-\boldsymbol{\dot{\epsilon}}=\boldsymbol{\dot{\epsilon}}^{el}+\boldsymbol{\dot{\epsilon}}^{pl}\label{eqn:const2}
-\end{equation}
 
 
 The constitutive stress-strain relationship including a scalar damage
@@ -62,4 +51,16 @@ the effective stress and the equivalent plastic strain, $\boldsymbol{\bar{\epsil
 \mathbf{D}=\mathbf{D}(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}})\label{eqn:const8}
 \end{equation}
 
+\subsubsection{misc}
+Damage plasticity model based on Strain can be decomposed into elastic
+and plastic components: 
+\begin{equation}
+\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
+\end{equation}
 
+
+Taking the time derivative gives the decomposition of the strain rate,
+$\boldsymbol{\dot{\epsilon}}$ : 
+\begin{equation}
+\boldsymbol{\dot{\epsilon}}=\boldsymbol{\dot{\epsilon}}^{el}+\boldsymbol{\dot{\epsilon}}^{pl}\label{eqn:const2}
+\end{equation}
