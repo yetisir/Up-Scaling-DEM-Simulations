@@ -4,16 +4,15 @@ Continuum Damage Mechanics (CDM) is a branch of continuum mechanics that is conc
 
 A CDM model is comprised of two main components to describe the material degradation: a damage initiation criteria, which dictates the conditions required for the material to first yield, as well as a damage evolution function, which indicates how the damage variables will progress subsequent to the damage initiation. 
 
-The damage variables in a CDM model can take a number of forms. Often, for mathematical and physical simplicity, a single scalar damage variable is used to characterize the the state of damage in the material. A scalar description of damage does limit the applicability of the CDM model to an isotropically damaged state. More sophisticated CDM models use 2nd and 4th order tensorial representations of the damage variables as well as distinguishing between compressive damage and tensile damage states. 
+The damage variables in a CDM model can take a number of forms. Often, for mathematical and physical simplicity, a single scalar damage variable is used to characterize the the state of damage in the material. In this case, the damage variable takes a value between 0 and 1 to represent the degree of damage to the material, where 0 represents a completely undamaged material (original stiffness) and 1 represents a completely damaged material (0 stiffness). A scalar description of damage does limit the applicability of the CDM model to an isotropically damaged state, which may not be appropriate in some circumstances. More sophisticated CDM models use 2\textsuperscript{nd} and 4\textsuperscript{th} order tensorial representations of the damage variables as well as distinguishing between compressive damage and tensile damage states in order to more accurately characterize anisotropic damage conditions. 
 
 In terms of a constitutive relationship, one can modify the standard elastic constitutive relationship to include a scalar damage
-parameter, $\mathbf{D}$ and can be written as follows: 
+parameter, $\mathbf{D}$, which can be written as follows: 
 \begin{equation}
 \boldsymbol{\sigma}=(1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3}
 \end{equation}
 
-
-For simplicity, the damaged elastic stiffness is described as the
+Such that the damage variable is acting a scaling factor for the elastic stiffness, $\mathbf{E}$. For simplicity, the damaged elastic stiffness is described as the
 reduced stiffness due to the damage: 
 \begin{equation}
 \mathbf{E^{d}}=(1-\mathbf{D})\mathbf{E}\label{eqn:const4}
