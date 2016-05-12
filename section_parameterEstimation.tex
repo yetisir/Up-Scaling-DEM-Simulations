@@ -6,9 +6,11 @@ A combination of two optimization algorithms were used in this paper to assess t
 
 The PSO algorithm was developed by \citet{Kennedy} as a byproduct of modeling the cooperative-competitive nature of social behaviour in birds as they flocked searching for food. The PSO algorithm, in a conceptual sense, consists of a series of 'particles' (birds) which 'swarm' through the entire parameter space (sky) searching for the global optima (food) using a combination of individual 'particle' knowledge and global 'swarm' (flock) knowledge.
 
-The parameter estimation algorithm that was used for this investigation is known as the Levenburg-Marquardt Algorithm (LMA) which was proposed by \citet{marquardt_algorithm_1963} and aims to minimize non-linear least-squares problems. This investigation uses an implementation by \citet{matott_ostrich:_2008} in the form of model-independent optimization software, OSTRICH.
+The Levenburg-Marquardt Algorithm (LMA) was proposed by \citet{marquardt_algorithm_1963} which builds off of the work of \citet{levenberg_method_1944}. This calibration algorithm combines a quasi-Newton approach with a conjugate gradient technique in order to efficiently minimize non-linear least-squares problems. 
 
-The LMA works by iteratively running the CDM model on a single element model, subject to the same boundary conditions as the DEM model, with successive parameter sets that intelligently adapt in order to converge to the DEM data. The axial stress-strain data was taken to be the most indicative of the material response and thus used for the parameter estimation datasets.
+%This investigation uses an implementation by \citet{matott_ostrich:_2008} in the form of model-independent optimization software, OSTRICH.
+
+The parameter estimation works by iteratively running a single element continuum model, subject to the same boundary conditions as the DEM model, with successive parameter sets that intelligently adapt in order to converge to the DEM data. The axial stress-strain data was taken to be the most indicative of the material response and thus used for the parameter estimation datasets.
 
 %In order to accurately assess the optimal parameter set, the parameter estimation of the CDM material model was conducted in two steps. The first step consisted of a uniaxial tension test to estimate the elastic and tensile plastic properties of the material. The test direction reverses to compression before complete yield of the material in order to assess the tensile damage parameter. 
 
