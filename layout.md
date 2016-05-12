@@ -1,6 +1,5 @@
 abstract.tex
 section_introduction.tex
-figures/DFN_boundary_only/DFN_boundary_only.png
 section_distinctElementMethod.tex
 section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
