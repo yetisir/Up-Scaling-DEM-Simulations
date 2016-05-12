@@ -21,7 +21,11 @@ Plasticity based damage mechanics models attempt to incorporate CDM into elasto-
 theories of plasticy and damage machanics into a unified approach to the damage evolution and constituive relationships \cite{zhang_continuum_2010}. These 
 
 
-
+Damage plasticity model based on Strain can be decomposed into elastic
+and plastic components: 
+\begin{equation}
+\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
+\end{equation}
 
 
 Substituting \ref{eqn:const1} and \ref{eqn:const4} into \ref{eqn:const3}
@@ -50,18 +54,4 @@ The nature of the damage evolution is assumed to be a function of
 the effective stress and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
 \begin{equation}
 \mathbf{D}=\mathbf{D}(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}})\label{eqn:const8}
-\end{equation}
-
-\subsubsection{misc}
-Damage plasticity model based on Strain can be decomposed into elastic
-and plastic components: 
-\begin{equation}
-\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
-\end{equation}
-
-
-Taking the time derivative gives the decomposition of the strain rate,
-$\boldsymbol{\dot{\epsilon}}$ : 
-\begin{equation}
-\boldsymbol{\dot{\epsilon}}=\boldsymbol{\dot{\epsilon}}^{el}+\boldsymbol{\dot{\epsilon}}^{pl}\label{eqn:const2}
 \end{equation}
