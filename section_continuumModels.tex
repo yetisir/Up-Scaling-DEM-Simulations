@@ -6,8 +6,7 @@ A CDM model is comprised of two main components to describe the material degrada
 
 The damage variables in a CDM model can take a number of forms. Often, for mathematical and physical simplicity, a single scalar damage variable is used to characterize the the state of damage in the material. In this case, the damage variable takes a value between 0 and 1 to represent the degree of damage to the material, where 0 represents a completely undamaged material (original stiffness) and 1 represents a completely damaged material (0 stiffness). A scalar description of damage does limit the applicability of the CDM model to an isotropically damaged state, which may not be appropriate in some circumstances. More sophisticated CDM models use 2\textsuperscript{nd} and 4\textsuperscript{th} order tensorial representations of the damage variables as well as distinguishing between compressive damage and tensile damage states in order to more accurately characterize anisotropic damage conditions. 
 
-In terms of a constitutive relationship relating the Cauchy stress, $\boldsymbol{\sigma}$, to the elastic strain, $\boldsymbol{\epsilon^{el}}$, one can modify the standard elastic constitutive relationship to include a scalar damage
-parameter, $\mathbf{D}$, which can be written as follows: 
+Using the principles of CDM, one can modify the standard elastic constitutive relationship to include a scalar damage parameter, $\mathbf{D}$, which helps relate the Cauchy stress, $\boldsymbol{\sigma}$, to the elastic strain, $\boldsymbol{\epsilon^{el}}$ and can be written as follows: 
 \begin{equation}
 \boldsymbol{\sigma}=(1-\mathbf{D})\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3}
 \end{equation}
