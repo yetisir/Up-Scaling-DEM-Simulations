@@ -76,8 +76,9 @@ assuming the stress-strain curves can be converted into stress vs
 plastic strain curves where the tensile and compressive stresses are
 treated seperately: 
 \begin{equation}
-\begin{aligned}\boldsymbol{\sigma}_{t}=\boldsymbol{\sigma}_{t}\left(\boldsymbol{\bar{\epsilon}_{t}^{pl}},\boldsymbol{\dot{\bar{\epsilon}}_{t}^{pl}}\right)\\
-\boldsymbol{\sigma}_{c}=\boldsymbol{\sigma}_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}},\boldsymbol{\dot{\bar{\epsilon}}_{c}^{pl}}\right)
+\begin{aligned}
+\boldsymbol{\sigma}_{t}=\boldsymbol{\sigma}_{t}\left(\boldsymbol{\bar{\epsilon}_{t}^{pl}},\boldsymbol{\dot{\bar{\epsilon}}_{t}^{pl}}\right)\\
+\boldsymbol{\sigma}_{c}=\boldsymbol{\sigma}_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}},\boldsymbol{\dot{\bar{\epsilon}}_{c}^{pl}}\right)\\
 \end{aligned}
 \label{eqn:dam1}
 \end{equation}
@@ -89,8 +90,9 @@ unloading response. This damage is characterized by two damage variables,
 one of which represents the damage due to tensile loading, the other
 represents damage due to compressive loading. 
 \begin{equation}
-\begin{aligned}D_{t}=D_{t}\left(\boldsymbol{\bar{\epsilon}_{t}^{pl}}\right),\qquad0\leq D_{t}\leq1\\
-D_{c}=D_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}}\right),\qquad0\leq D_{c}\leq1
+\begin{aligned}
+D_{t}=D_{t}\left(\boldsymbol{\bar{\epsilon}_{t}^{pl}}\right),\qquad0\leq D_{t}\leq1\\
+D_{c}=D_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}}\right),\qquad0\leq D_{c}\leq1\\
 \end{aligned}
 \label{eqn:dam2}
 \end{equation}
@@ -101,8 +103,9 @@ function of the equivalent plastic strains. This formulation will
 adopt the convention where $\boldsymbol{\mathbf{\sigma}_{c}}$ is
 positive in compression, as with the respective strains. 
 \begin{equation}
-\begin{aligned}\boldsymbol{\sigma}_{t}=(1-D_{t})\mathbf{E}:(\boldsymbol{\epsilon_{t}}-\boldsymbol{\bar{\epsilon}_{t}^{pl}})\\
-\boldsymbol{\sigma}_{c}=(1-D_{c})\mathbf{E}:(\boldsymbol{\epsilon_{c}}-\boldsymbol{\bar{\epsilon}_{c}^{pl}})
+\begin{aligned}
+\boldsymbol{\sigma}_{t}=(1-D_{t})\mathbf{E}:(\boldsymbol{\epsilon_{t}}-\boldsymbol{\bar{\epsilon}_{t}^{pl}})\\
+\boldsymbol{\sigma}_{c}=(1-D_{c})\mathbf{E}:(\boldsymbol{\epsilon_{c}}-\boldsymbol{\bar{\epsilon}_{c}^{pl}})\\
 \end{aligned}
 \label{eqn:dam3}
 \end{equation}
