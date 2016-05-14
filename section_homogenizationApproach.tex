@@ -20,25 +20,22 @@ D\gg d\gg\delta\label{eqn:hom1a}
 \end{equation}
 
 
-% To avoid a lengthy discussion of the statistics required to formally define an REV for a particular DFN, an REV is assumed for the purposes of this investigation. The REV is chosen to be a circular subsection of the DEM model. This representative subsection aims to be as large as possible, while being a sufficiently small REV so as to reduce the influence of boundary effects.
+To avoid a lengthy discussion of the statistics required to formally define an REV for a particular DFN, an REV is assumed for the purposes of this investigation. The REV is chosen to be a circular subsection of the DEM model. This representative subsection aims to be as large as possible, while being a sufficiently small REV so as to reduce the influence of boundary effects.
 
-{*}Given a circular REV, due to the discontinuous nature of the DEM
+Given a circular REV, due to the discontinuous nature of the DEM
 simulations, the circular REV cannot be used directly. Because the
 calculated displacements and contact forces from the DEM are known
 at the block edges, the homogenization domain boundary must follow
 the block boundaries. In order to define a homogenization domain based
 on the REV, but subscribing to the block boundaries, the homogenization
 domain is taken to be the domain defined by the outside boundaries
-of the blocks that intersect the REV boundary, as illustrated in \ref{fig:vorDFN}.
-The homogenization domain is characterized by a series of block corners
+of the blocks that intersect the REV boundary, as illustrated in \ref{fig:homoarea}.
+The homogenization domain is characterized byf a series of block corners
 which are identified for the initial (zero strain) state. These corners
 continue to define the homogenization domain once deformation occurs,
 allowing for a consistent homogenization domain definition as the
 model is deformed. The algorithm that was developed to assess the
 homogenization domain boundary is presented as follows: 
-\begin{figure}
-\label{fig:vorDFN} \caption{Figure illustrating the assessment of the homogenization domain}
-\end{figure}
 
 \begin{enumerate}
 \item \label{hli:1} Identify all blocks that lie on the REV boundary. 
@@ -84,7 +81,7 @@ However, one must also note the potential displacement jumps that
 may occur between blocks on the boundary as the model deforms. In
 the case where the blocks become physically separated, there exists
 a discontinuity along the homogenization boundary as can be seen in
-\ref{fig:vorDFN}. These discontinuities along the homogenization
+\ref{fig:homoboundary}. These discontinuities along the homogenization
 boundary were considered by adding boundary segments to the homogenization
 boundary between the corners of the adjacent blocks. As such, steps
 \ref{hli:9} and \ref{hli:10} find coincident corners on adjacent
