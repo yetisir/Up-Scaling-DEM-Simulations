@@ -1,6 +1,10 @@
 \section{ModelParameterization}
-parameterization of the material models is essential to effective upscaling of the system. parameterization needs to be conducted in susch a way as to minimize the number of parameters, while still yeilding a sufficiently accurate response. in addition, it is ideal, but not necessary for the parameters to have physical meaning in order to specify realistic bounds with less difficulty.
+parameterization of the material models is essential to effective upscaling of the system. parameterization needs to be conducted in susch a way as to minimize the number of parameters, while still yielding a sufficiently accurate response. in addition, it is ideal, but not necessary for the parameters to have physical meaning in order to specify realistic bounds with less difficulty.
 
 In order to accurately assess the optimal parameter set, the parameter estimation of the CDM material model was conducted in two steps. The first step consisted of a uniaxial tension test to estimate the elastic and tensile plastic properties of the material. The test direction reverses to compression before complete yield of the material in order to assess the tensile damage parameter. 
 
-Parameterization of plastic CDM models involves the parameterization of all five key components of plastic CDM models:
+Parameterization of plastic CDM models involves the parameterization of all six key components of plastic CDM models:
+
+For both the concrete damaged plasticity model and the Drucker-Prager model, the elastic behaviour is able to be parameterized with just Young's elastic modulus and Poisson's ratio. These two parameters are able to fully characterize the elastic stiffness tensor.
+
+The plastic and damage behaviour for the two models differs in approach and assumptions and are described below:
