@@ -4,27 +4,33 @@ This damage-plasticity model was developed by \citet{lubliner_plastic-damage_198
 as a plasticity based damage model for non-linear analysis of concrete
 failure. Subsequently, \citet{lee_plastic-damage_1998} further developed the
 model to facilitate cyclic loading by adding a second damage variable
-and introducing a new yeild function to account for the additional
+and introducing a new yield function to account for the additional
 damage variable. 
 
-This model was specifically formulated for modelling quasi-brittle
+This model was specifically formulated for modeling quasi-brittle
 materials under low confining stresses subject to cyclic loading.
-In addition to the seperate damage variables governing the stiffness
-degredation, the stiffness recovery and material hardening/softening
-is also treated seperately in both compression and tension. Because
+In addition to the separate damage variables governing the stiffness
+degradation, the stiffness recovery and material hardening/softening
+is also treated separately in both compression and tension. Because
 the formulation does not consider the effects of large hydrostatic
-stressses, the applicability of this plastic to in-situ geomechanics
+stresses, the applicability of this plastic to in-situ geomechanics
 at depth may not be sufficiently accurate. As such, this model is
 more appropriate for shallow geological models that require cyclic
 loading paths to be considered. 
 
+The yield function for this model is:
+
+\begin{equation}
+F\left(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}}\right)=\frac{1}{1-\alpha}\left(\bar{q}-3\alpha\bar{p}+\beta\bar{\epsilon}^{pl}\left\langle \hat{\boldsymbol{\bar{\sigma}}}_{max}\right\rangle -\gamma\left\langle -\hat{\boldsymbol{\bar{\sigma}}}_{max}\right\rangle \right)-\bar{\boldsymbol{\sigma}}_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}}\right)\label{eqn:const10}
+\end{equation}
+
 In this formulation of damage-plasticity, the brittle nature of rock
-neccessitates seperate characterization of tensile and compressive
+necessitates separate characterization of tensile and compressive
 damage. In the case where a rock sample fails completely in tension,
 (i.e. the tensile stiffness becomes effectively 0), the compressive
-strength can remain intact to a fairly high degree such that two seperate
+strength can remain intact to a fairly high degree such that two separate
 scalar damage values can exist for the given system. As such, the
-equivalent plastic strain is also considered seperately for tension
+equivalent plastic strain is also considered separately for tension
 and compression and is represented as follows: 
 \begin{equation}
 \boldsymbol{\bar{\epsilon}^{pl}}=\begin{bmatrix}\boldsymbol{\bar{\epsilon}_{t}^{pl}}\\
@@ -57,11 +63,6 @@ such....
 \end{equation}
 
 
-yeild function for this model:
-
-\begin{equation}
-F\left(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}}\right)=\frac{1}{1-\alpha}\left(\bar{q}-3\alpha\bar{p}+\beta\bar{\epsilon}^{pl}\left\langle \hat{\boldsymbol{\bar{\sigma}}}_{max}\right\rangle -\gamma\left\langle -\hat{\boldsymbol{\bar{\sigma}}}_{max}\right\rangle \right)-\bar{\boldsymbol{\sigma}}_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}}\right)\label{eqn:const10}
-\end{equation}
 flow rule for this model from drucker-prager:
 
 \begin{equation}
