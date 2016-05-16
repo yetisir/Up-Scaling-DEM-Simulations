@@ -10,7 +10,6 @@ section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
 This_algorithm_for_defining_the__1.tex
 figures/homogenizationboundary/homogenizationboundary.png
-This_algorithm_for_defining_the__.tex
 The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
