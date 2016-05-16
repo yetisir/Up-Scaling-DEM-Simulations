@@ -3,8 +3,8 @@ section_introduction.tex
 section_distinctElementMethod.tex
 figures/dempartsdescription/dempartsdescription.png
 section_upscalingMethodology.tex
-The_next_piece_of_software__.tex
 figures/upscalingworkflow/upscalingworkflow.png
+The_next_piece_of_software__.tex
 section_parameterEstimation.tex
 figures/homogenizationarea/homogenizationarea.png
 figures/homogenizationboundary/homogenizationboundary.png
