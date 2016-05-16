@@ -122,68 +122,45 @@ m=d_{c}\min_{\bar{\epsilon}^{in}}\left\{\frac{\sigma_{c}^{iy}+2E\bar{\epsilon}^{
 \end{equation}
 
 
-where the range of limits:
+Where the compressive damage scaling factor has the following limits:
 
 \begin{equation}
 0<d_{c}<1\label{eqn:param15}
 \end{equation}
 
 
-Similarly for the conversion from cracking strain to tesnile plastic
-strain: Substituting in the damage evolution equation:
+The tensile damage evolution curve has the same numerical constraints when converting form cracking strain to plastic strain. Substituting equation \ref{eqn:param4} into equation \ref{eqn:param11} yields the following expression for the plastic strain:
 
 \begin{equation}
 \bar{\epsilon}_{t}^{pl}=\bar{\epsilon}^{ck}-\left[\left(1+\bar{\epsilon}^{ck}\right)^{n}-1\right]\frac{\sigma_{t}^{iy}}{E}\label{eqn:param5-1}
 \end{equation}
 
 
-Solving for $n$ yeilds the following inequality:
+Solving for $n$ with equations \ref{eqn:param6-1} and \ref{eqn:param5-1} yeilds the following inequality governing the upper bound of the tensile damage rate parameter:
 
 \begin{equation}
 n<\frac{W\left(\frac{E\left(\bar{\epsilon}^{ck}+1\right)}{\sigma_{t}^{iy}}\ln\left(\bar{\epsilon}^{ck}+1\right)\right)}{\ln\left(\bar{\epsilon}^{ck}+1\right)}\label{eqn:param7}
 \end{equation}
 
-
-where $W\left(x\right)$is the Lambert W function defined implicitly as follows:
+Where $W\left(x\right)$ is the Lambert W function defined implicitly as \cite{Corless_1996}:
 
 \begin{equation}
 x=W\left(x\right)e^{W(x)}\label{eqn:param8}
 \end{equation}
 
+Using the same methodology as was used to derive equation \ref{eqn:param14}, the tensile damage scaling factor can be written as:
 
-However, since the parameter estimation algorithm requires absolute
-bounds, and the upper bound for the parameter $n$ is variable wrt
-the state of the model, a scaling parameter, $d_{t}$ is introduced:
 
 \begin{equation}
-n=d_{t}\frac{W\left(\frac{E\left(\bar{\epsilon}^{ck}+1\right)}{\sigma_{t}^{iy}}\ln\left(\bar{\epsilon}^{ck}+1\right)\right)}{\ln\left(\bar{\epsilon}^{ck}+1\right)}\label{eqn:param9}
+n=d_{t}\min_{\bar{\epsilon}^{ck}}\left\{\frac{W\left(\frac{E\left(\bar{\epsilon}^{ck}+1\right)}{\sigma_{t}^{iy}}\ln\left(\bar{\epsilon}^{ck}+1\right)\right)}{\ln\left(\bar{\epsilon}^{ck}+1\right)}\right\}
+\label{eqn:param9}
 \end{equation}
 
 
-where:
+where the tensile damage scaling factor has the following limits:
 
 \begin{equation}
 0<d_{t}<1\label{eqn:param10}
 \end{equation}
 
-
-such that the scaling parameter can considered to be ... word. This
-constraint removes the numerical instability resulting from converstion
-from cracking strain to plastic strain. 
-
-
-\subsubsection{misc}
-
-Converting form cracking strain to plastic strain:
-
-\begin{equation}
-\bar{\epsilon}_{t}^{pl}=\bar{\epsilon}^{ck}-\frac{D_{t}}{1-D_{t}}\frac{\sigma_{t}^{iy}}{E}\label{eqn:param5}
-\end{equation}
-
-
-In order for plastic strain to be monotonically increasing wrt tensile
-damage, the following condition is applied:
-
-\begin{equation}
-\frac{d\bar{\epsilon}_{t}^{pl}}{dD_{t}}>0\label{eqn:param6}
-\end{equation}
+The parameterization of the concrete damaged-plasticity model yielded a total of 9 required parameters to characterize the model:2 elastic parameters, 5 plastic parameters and 2 damage parameters. 
