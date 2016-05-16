@@ -11,8 +11,8 @@ section_homogenizationApproach.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
 section_continuumModels.tex
-subsection_concreteDamage.tex
 figures/concreteconstitutivemodel/concreteconstitutivemodel.png
+subsection_concreteDamage.tex
 subsection_druckerDamage.tex
 subsection_parameterization.tex
 subsection_Concrete_Damaged_Plasticity_The__.tex
