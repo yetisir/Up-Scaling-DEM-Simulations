@@ -9,6 +9,7 @@ section_parameterEstimation.tex
 figures/homogenizationboundary/homogenizationboundary.png
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
+begin_enumerate_item_label_hli__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
 section_continuumModels.tex
