@@ -6,10 +6,10 @@ section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
 The_next_piece_of_software__.tex
 section_parameterEstimation.tex
-figures/homogenizationboundary/homogenizationboundary.png
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
 This_algorithm_for_defining_the__.tex
+figures/homogenizationboundary/homogenizationboundary.png
 The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
