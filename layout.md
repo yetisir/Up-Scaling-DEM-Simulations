@@ -1,7 +1,7 @@
 abstract.tex
 section_introduction.tex
-section_distinctElementMethod.tex
 figures/dempartsdescription/dempartsdescription.png
+section_distinctElementMethod.tex
 section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
 section_parameterEstimation.tex
