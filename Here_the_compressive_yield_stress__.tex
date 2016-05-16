@@ -1,0 +1,23 @@
+Here, the compressive yield stress, $\sigma_{c}$, is written as function
+of the inelastic strain, $\bar{\epsilon}^{in}$, and three additional
+parameters. The three parameters are the initial compressive yield
+stress ($\sigma_{c}^{iy}$), the peak compressive yield stress ($\sigma_{c}^{p}$),
+and the plastic strain at the peak compressive yield stress ($\sigma_{c}^{iy}$).
+The physical significance of each of these parameters can be seen
+in Fig \ref{fig:conccomp}, where they define the y-intercept and the peak of the curve.
+
+The tensile hardening rule has a fundamentally different behavior
+than the compressive hardening rule, and was therefore approximated
+using an exponential function (Fig \ref{fig:conctens}). The exponential function required
+only two parameters to characterize the curve completely. The first
+parameter was the initial tensile yield stress, $\sigma_{t}^{iy}$,
+which defines the y-intercept of the curve, while the second parameter
+was the tensile yield stress decay parameter,$\lambda$. These parameters
+describe the relationship between the tensile yield stress, $\sigma_{t}$,
+and the cracking strain, $\bar{\epsilon}^{ck}$, and has the form:
+
+\begin{equation}
+\sigma_{t}\left(\bar{\epsilon}^{ck}\right)=\sigma_{t}^{iy}e^{\lambda\bar{\epsilon}^{ck}}\label{eqn:param2}
+\end{equation}
+
+
