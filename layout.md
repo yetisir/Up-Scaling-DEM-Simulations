@@ -5,8 +5,8 @@ figures/dempartsdescription/dempartsdescription.png
 section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
 section_parameterEstimation.tex
-section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
+section_homogenizationApproach.tex
 figures/homogenizationboundary/homogenizationboundary.png
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
