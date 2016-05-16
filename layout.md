@@ -8,7 +8,7 @@ The_next_piece_of_software__.tex
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
-begin_enumerate_item_label_hli__.tex
+This_algorithm_for_defining_the__1.tex
 This_algorithm_for_defining_the__.tex
 figures/homogenizationboundary/homogenizationboundary.png
 The_homogenization_boundary_Gamma__h__.tex
