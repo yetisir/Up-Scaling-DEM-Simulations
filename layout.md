@@ -23,6 +23,7 @@ figures/concretedamageparameters/concretedamageparameters.png
 subsection_Concrete_Damaged_Plasticity_The__.tex
 figures/concretecompressionparameters1/concretecompressionparameters.png
 Here_the_compressive_yield_stress__.tex
+In_addition_to_the_hardening__.tex
 subsection_Drucker_Prager_Plasticity_with__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
