@@ -29,102 +29,11 @@ at the block edges, the homogenization domain boundary must follow
 the block boundaries. In order to define a homogenization domain based
 on the REV, but subscribing to the block boundaries, the homogenization
 domain is taken to be the domain defined by the outside boundaries
-of the blocks that intersect the REV boundary, as illustrated in \ref{fig:homoarea}.
-The homogenization domain is characterized byf a series of block corners
+of the blocks that intersect the REV boundary, as illustrated in figure \ref{fig:homoarea}.
+The homogenization domain is characterized by a series of block corners
 which are identified for the initial (zero strain) state. These corners
 continue to define the homogenization domain once deformation occurs,
 allowing for a consistent homogenization domain definition as the
 model is deformed. The algorithm that was developed to assess the
 homogenization domain boundary is presented as follows: 
 
-\begin{enumerate}
-\item \label{hli:1} Identify all blocks that lie on the REV boundary. 
-\item \label{hli:2} Identify all blocks that lie completely outside the
-REV boundary. 
-\item \label{hli:3} Find all contacts corresponding to the intersection
-between blocks in \ref{hli:1} and \ref{hli:2}. 
-\item \label{hli:4} Find all corners corresponding to the contacts in \ref{hli:3}. 
-\item \label{hli:5} Find all contacts of blocks in \ref{hli:1}. 
-\item \label{hli:6} Find all blocks corresponding to the intersection of
-contacts in \ref{hli:3} and \ref{hli:5}. 
-\item \label{hli:7} Find all corners corresponding to blocks in \ref{hli:6}. 
-\item \label{hli:8} Find intersection of corners in \ref{hli:4} and \ref{hli:7}. 
-\item \label{hli:9} Find corners that initially (at zero strain) coincided
-with the corners in \ref{hli:8} 
-\item \label{hli:10} Find union of corners in \ref{hli:8} and \ref{hli:9}. 
-\item \label{hli:11} Order corners from \ref{hli:10} such that they form
-the boundary of the homogenization area
-\end{enumerate}
-This algorithm for defining the homogenization domain was developed
-to provide an unambiguous method for assessing a unique homogenization
-domain for a given circle radius and location. In steps \ref{hli:1}
-and \ref{hli:2}, two mutually exclusive block sets are identified,
-which necessarily share contacts. It is the boundary between these
-two block sets that is the homogenization domain boundary which is
-characterized by this algorithm. Ultimately, the goal of this process
-is to identify the corners on this boundary that are on the blocks
-that intersect with the REV boundary and not the blocks that are outside
-the REV boundary. As such, the corners (step \ref{hli:4}) corresponding
-to the contacts (step \ref{hli:3}) between the two sets of blocks
-are determined. Step \ref{hli:5} is necessary to help eliminate some
-blocks from the set of boundary block which intersect the REV boundary,
-but only have contact with blocks inside the homogenization domain
-boundary, and thus do not have any overall contribution to the definition.
-Step \ref{hli:6} determines this resultant set of boundary blocks
-of which every member is connected to the boundary in some capacity.
-Finding the set of corners that is mutually shared by these blocks
-in step \ref{hli:7} and the boundary contact corners in step \ref{hli:4}
-allow for the determination of the initial set of boundary corners
-(step \ref{hli:8}).
-
-However, one must also note the potential displacement jumps that
-may occur between blocks on the boundary as the model deforms. In
-the case where the blocks become physically separated, there exists
-a discontinuity along the homogenization boundary as can be seen in
-\ref{fig:homoboundary}. These discontinuities along the homogenization
-boundary were considered by adding boundary segments to the homogenization
-boundary between the corners of the adjacent blocks. As such, steps
-\ref{hli:9} and \ref{hli:10} find coincident corners on adjacent
-boundary blocks to allow for the blocks to become separated on the
-boundary, while still maintaining connectivity along the homogenization
-domain boundary. It is also necessary to order the corners (step \ref{hli:11})
-as they would appear along the homogenization boundary in order to
-define the boundary segments along which integration can be performed.
-
-The homogenization boundary, $\Gamma_{h}$, can be described in terms
-of $n$ ordered boundary vertices, $V_{i}^{h}=(x_{i}^{h},y_{i}^{h})$,
-representing the $i$th set of vertex coordinates along the boundary,
-such that the homogenization area, $A^{h}$, can be calculated using
-the following formulation for the area of an arbitrary, non-self-intersecting
-polygon(find reference): 
-\begin{equation}
-A^{h}=\dfrac{1}{2}\sum_{i=1}^{n}x_{i}^{h}(y_{i+1}^{h}-y_{i-1}^{h})\label{eqn:hom1}
-\end{equation}
-
-
-At this point, within the homogenization domain, one must differentiate
-between the blocks and the void space between the blocks as they have
-fundamentally different behaviour. As such, the homogenization domain
-can be decomposed into two mutually exclusive subdomains representing
-the voids and blocks, $\Omega^{v}$ and $\Omega^{b}$, respectively.
-The total block area associated with the block subdomain, $A^{b}$,
-can be assessed as a summation of $m$ block areas within the homogenization
-domain, while the individual block area can be assessed in a similar
-manner to \ref{eqn:hom1}. For $n^{j}$ block boundary vertices, $V_{i,j}^{b}=(x_{i,j}^{b},y_{i,j}^{b})$
-representing the $i$th set of vertex coordinates on the $j$th block,
-the total block area can be calculated as: 
-\begin{equation}
-A^{b}=\dfrac{1}{2}\sum_{j=0}^{m}\sum_{i=1}^{n_{j}}x_{i,j}^{b}(y_{i+1,j}^{b}-y_{i-1,j}^{b})\label{eqn:hom2}
-\end{equation}
-
-
-Assuming that the block domain and the void domain are jointly exhaustive
-of the total homogenization domain, the total area associated with
-the void subdomain, $A^{v}$, can be written as the difference of
-the homogenization domain area and the block subdomain area: 
-\begin{equation}
-A^{v}=A^{h}-A^{b}\label{eqn:hom3}
-\end{equation}
-\begin{equation}
-A^{v}=\dfrac{1}{2}\sum_{i=1}^{n}x_{i}^{h}(y_{i+1}^{h}-y_{i-1}^{h})-\dfrac{1}{2}\sum_{j=0}^{m}\sum_{i=1}^{n_{j}}x_{i,j}^{b}(y_{i+1,j}^{b}-y_{i-1,j}^{b})\label{eqn:hom4}
-\end{equation}
