@@ -7,6 +7,7 @@ figures/upscalingworkflow/upscalingworkflow.png
 The_next_piece_of_software__.tex
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
+begin_enumerate_item_label_hli__.tex
 figures/homogenizationarea/homogenizationarea.png
 This_algorithm_for_defining_the__.tex
 figures/homogenizationboundary/homogenizationboundary.png
