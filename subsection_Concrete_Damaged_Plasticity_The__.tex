@@ -114,10 +114,11 @@ Combining \ref{eqn:param12} and \ref{eqn:param6-1} yields the following expressi
 m<\frac{\sigma_{c}^{iy}+2E\bar{\epsilon}^{in}-\sqrt{\sigma_{c}^{iy}\left(\sigma_{c}^{iy}+4E\bar{\epsilon}^{in}\right)}}{2E\left(\bar{\epsilon}^{in}\right)^{2}}\label{eqn:param13}
 \end{equation}
 
-However, since this upper bound for $m$ is functional on several of the parameterization parameters, which are not constant, the upper bound varies depending on the other input parameters. Because of this, a compressive damage scaling factor, $d_c$, is introduced. In addition, the strain rate requires minimization of the funciton ***
+However, since this upper bound for $m$ is functional on several of the parameterization parameters, which are not constant, the upper bound varies depending on the other input parameters. Because of this, a compressive damage scaling factor, $d_c$, is introduced. In addition, the upper bound for $m$ is dependent on the inelastic strain which is not constant throughout the model. Since only one value of $m$ can be specified for a given simulation, the chosen value of $m$ should be the smallest value over the range of the expected inelastic strain experienced. As can be seen from equation \ref{eqn:param13}, as $\bar{\epsilon}^{in} \rightarrow \infty$, $m\rightarrow0$ such that for very large inelastic strains the conversion to plastic strain becomes very unstable. Thus, the compressive damage rate parameter can be written as:
 
 \begin{equation}
-m=d_{c}\frac{\sigma_{c}^{iy}+2E\bar{\epsilon}^{in}-\sqrt{\sigma_{c}^{iy}\left(\sigma_{c}^{iy}+4E\bar{\epsilon}^{in}\right)}}{2E\left(\bar{\epsilon}^{in}\right)^{2}}\label{eqn:param14}
+m=d_{c}\min_{\bar{\epsilon}^{in}}\left\{\frac{\sigma_{c}^{iy}+2E\bar{\epsilon}^{in}-\sqrt{\sigma_{c}^{iy}\left(\sigma_{c}^{iy}+4E\bar{\epsilon}^{in}\right)}}{2E\left(\bar{\epsilon}^{in}\right)^{2}}\right\}
+\label{eqn:param14}
 \end{equation}
 
 
