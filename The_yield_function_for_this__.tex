@@ -16,14 +16,12 @@ The yield function for this model is based on the yield function proposed by \ci
 \label{eqn:const10}
 \end{equation}
 
+Where $\alpha$ and $\gamma$ are dimensionless material constants. Experimental testing has yielded values of $\alpha$ between 0.08 and 0.12, as well as a typical $\gamma$ value of approximately 3 \cite{lubliner_plastic-damage_1989}. 
+
 In this formulation of damage-plasticity, the brittle nature of rock
 necessitates separate characterization of tensile and compressive
-damage. In the case where a rock sample fails completely in tension,
-(i.e. the tensile stiffness becomes effectively 0), the compressive
-strength can remain intact to a fairly high degree such that two separate
-scalar damage values can exist for the given system. As such, the
-equivalent plastic strain is also considered separately for tension
-and compression and is represented as follows: 
+damage. With quasi-brittle materials such as rock, it has been found that compressive stiffness can be recovered upon crack closure. Conversely, in these materials, tensile stiffness is not recovered after compressive cracks have developed. This behaviour implies that two separate scalar damage values should exist for the given system to account for both the compressive stiffness degradation and the tensile stiffness degradation. As such, the equivalent plastic strain is also considered separately for tension ($\boldsymbol{\bar{\epsilon}_{t}^{pl}}$) and compression ($\boldsymbol{\bar{\epsilon}_{c}^{pl}}$) and is represented as follows: 
+
 \begin{equation}
 \boldsymbol{\bar{\epsilon}^{pl}}=\begin{bmatrix}\boldsymbol{\bar{\epsilon}_{t}^{pl}}\\
 \boldsymbol{\bar{\epsilon}_{c}^{pl}}
