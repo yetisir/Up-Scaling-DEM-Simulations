@@ -16,6 +16,7 @@ subsection_strainHomogenization.tex
 section_continuumModels.tex
 subsection_General_Assumptions_etc_The__.tex
 subsection_concreteDamage.tex
+The_yield_function_for_this__.tex
 figures/concreteconstitutivemodel/concreteconstitutivemodel.png
 subsection_druckerDamage.tex
 subsection_parameterization.tex
