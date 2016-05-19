@@ -14,6 +14,7 @@ The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
 section_continuumModels.tex
+subsection_General_Assumptions_etc_The__.tex
 subsection_concreteDamage.tex
 figures/concreteconstitutivemodel/concreteconstitutivemodel.png
 subsection_druckerDamage.tex
