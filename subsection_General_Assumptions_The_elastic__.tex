@@ -5,11 +5,17 @@ The elastic response of the material can be fully characterized with just Young'
 \label{eqn:const8a}
 \end{equation}
 
-Furthermore, the plasticity models used here are assumed to comprise of three key components: The flow rule, the hardening rule and the yield function. The flow rule, in general, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
+Furthermore, the plasticity models used here are assumed to comprise of three key components: The flow rule, the hardening rule and the yield function. The flow rule, in general, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following incremental form:
 
 \begin{equation}
-d\boldsymbol{\epsilon_p}=d\lambda \frac{\partial f}{\partial \boldsymbol{\sigma}}
+d\boldsymbol{\epsilon_p}=d\lambda \frac{\partial G(\bar{\boldsymbol{\sigma}})}{\partial \boldsymbol{\sigma}}
 \label{eqn:const8b}
+\end{equation}
+
+Where $\epsilon_p$ is the plastic strain, $\lambda$ is a hardening parameter, and $G(\bar{\boldsymbol{\sigma}}$ is the flow potential function. In both models presented here, the flow potential function is taken from the Drucker-Prager model:
+
+\begin{equation}
+G\left(\boldsymbol{\bar{\sigma}}\right)=\sqrt{\left(\varepsilon\sigma_{t0}\tan\psi\right)^{2}-\bar{q}^{2}}-\bar{p}\tan\psi\label{eqn:const11}
 \end{equation}
 
 
