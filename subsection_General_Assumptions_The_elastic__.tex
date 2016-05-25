@@ -1,9 +1,19 @@
 \subsection{General Assumptions}
-The elastic response of the material can be fully characterized with just Young's modulus and Poisson's ratio $\nu$. Assuming plane strain conditions, the elastic stiffness tensor can be written as:
+The elastic response of the material can be fully characterized with just Young's modulus, $E$, and Poisson's ratio $\nu$. Assuming plane strain conditions, the elastic response can be written in terms of these two parameters:
 \begin{equation}
 \boldsymbol{\sigma}_{ij}=\frac{1+v}{E}\left\{\boldsymbol{\epsilon}_{ij}+\frac{\nu}{1-2\nu}\boldsymbol{\epsilon}_{kk}\delta_{ij}\right\}
 \label{eqn:const8a}
 \end{equation}
+
+Furthermore, the plasticity models used here are assumed to comprise of three key components: The flow rule, the hardening rule and the yield function. The flow rule, in general, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
+
+\begin{equation}
+d\boldsymbol{\epsilon_p}=d\lambda \frac{\partial f}{\partial \boldsymbol{\sigma}}
+\label{eqn:const8b}
+\end{equation}
+
+
+%In rock mechanics, the material models assume that the plastic strain increment and the and the normal to the yield surface have the same direction.
 etc..
 
 The nature of the damage evolution is assumed to be a function of the effective stress, $\boldsymbol{\bar{\sigma}}$, and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
