@@ -22,34 +22,34 @@ In this formulation of damage-plasticity, the brittle nature of rock
 necessitates separate characterization of tensile and compressive
 damage. With quasi-brittle materials such as rock, it has been found that compressive stiffness can be recovered upon crack closure. Conversely, in these materials, tensile stiffness is not recovered after compressive cracks have developed. This behaviour implies that two separate scalar damage values should exist for the given system to account for both the compressive stiffness degradation and the tensile stiffness degradation. 
 
-%As such, the equivalent plastic strain is also considered separately for tension ($\boldsymbol{\bar{\epsilon}_{t}^{pl}}$) and compression ($\boldsymbol{\bar{\epsilon}_{c}^{pl}}$) and is represented as follows: 
+As such, the equivalent plastic strain is also considered separately for tension ($\boldsymbol{\bar{\epsilon}_{t}^{pl}}$) and compression ($\boldsymbol{\bar{\epsilon}_{c}^{pl}}$) and is represented as follows: 
 
-%\begin{equation}
-%\boldsymbol{\bar{\epsilon}^{pl}}=\begin{bmatrix}\boldsymbol{\bar{\epsilon}_{t}^{pl}}\\
-%\boldsymbol{\bar{\epsilon}_{c}^{pl}}
-%\end{bmatrix}\label{eqn:const9}
-%\end{equation}
+\begin{equation}
+\boldsymbol{\bar{\epsilon}^{pl}}=
+\left[
+\begin{array}{c}
+    \boldsymbol{\bar{\epsilon}_{t}^{pl}}\\
+    \boldsymbol{\bar{\epsilon}_{c}^{pl}}
+\end{array}
+\right]
+\label{eqn:const9}
+\end{equation}
 
 
-The hardening rule for this model is slightly modified from equation \ref{eqn:const8d} to accomodate two hardening variables for tension and compression. The hardening rule can thus be written in matrix form:
+The hardening rule for this model is slightly modified from equation \ref{eqn:const8d} to accommodate two hardening variables (equivalent plastic strains) for tension and compression. The hardening rule can thus be written in matrix form:
 
 \begin{equation}
 \mathbf{h}\left(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}}\right)=\left[\begin{array}{ccc}
-r\left(\boldsymbol{\hat{\bar{\sigma}}}\right)\frac{\sigma^y_t}{g_t} & 0 & 0\\
-0 & 0 & -\left(r\left(\boldsymbol{\hat{\bar{\sigma}}}\right)-1\right)\frac{\sigma^y_c}{g_c}
+r\left(\boldsymbol{\hat{\bar{\sigma}}}\right)\frac{\sigma^y_t\left(\boldsymbol{\bar{\epsilon}_{t}^{pl}}\right)}{g_t} & 0 & 0\\
+0 & 0 & -\left(r\left(\boldsymbol{\hat{\bar{\sigma}}}\right)-1\right)\frac{\sigma^y_c\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}}\right)}{g_c}
 \end{array}\right]\label{eqn:const9-1}
 \end{equation}
 
-where:
+Where $\sigma^y_t$ and $\sigma^y_c$ are the yield stresses in tension and compression and $g_t$ and $g_c$ represent the dissipated fracture energy density during micro-cracking. Furthermore, the weighting function, $r\left(\hat{\boldsymbol{\bar{\sigma}}}\right)$, which weights the hardening functions depending on the degree of tension or compression that the model is experiencing:
 
 \begin{equation}
 r\left(\hat{\boldsymbol{\bar{\sigma}}}\right)=\frac{\sum_{i=1}^{3}\left\langle \hat{\boldsymbol{\bar{\sigma}}}_{i}\right\rangle }{\sum_{i=1}^{3}\left|\hat{\boldsymbol{\bar{\sigma}}}_{i}\right|},\qquad0\leq r\left(\hat{\boldsymbol{\bar{\sigma}}}\right)\leq1\label{eqn:const9-2}
 \end{equation}
-
-
-
-
-{*}{*}{*}{*}{*}Damage Evolution and Stiffness Degredation
 
 The evolution of the equivalent plastic strains are formulated by
 assuming the stress-strain curves can be converted into stress vs
