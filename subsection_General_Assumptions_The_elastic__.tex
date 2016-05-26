@@ -5,20 +5,32 @@ The elastic response of the material can be fully characterized with just Young'
 \label{eqn:const8a}
 \end{equation}
 
-Furthermore, the plasticity models used here are assumed to comprise of three key components: The flow rule, the hardening rule and the yield function. The flow rule, in general, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
+Furthermore, the plasticity models used here are assumed to comprise of three key components: The yield function, the flow rule and the hardening rule. The yield function indicates whether or not the material has experienced yield given a particular stress state. The yield function varies between the two models but can be written in general as a function of effective stress and equivalent plastic strain:
 
 \begin{equation}
-\dot{\boldsymbol{\epsilon_p}}=\dot{\lambda} \frac{\partial G\left(\bar{\boldsymbol{\sigma}}\right)}{\partial \boldsymbol{\sigma}}
+    F = 
+    F
+    \left(
+        \boldsymbol{\bar{\sigma}},\bar{\boldsymbol{\epsilon}}^{pl}
+    \right)
+   
+\label{eqn:const8c}
+\end{equation}
+
+In addition, the flow rule, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
+
+\begin{equation}
+\dot{\boldsymbol{\epsilon^{pl}}}=\dot{\lambda} \frac{\partial G\left(\bar{\boldsymbol{\sigma}}\right)}{\partial \boldsymbol{\sigma}}
 \label{eqn:const8b}
 \end{equation}
 
-Where $\dot{\epsilon_p}$ is the plastic strain rate, $\dot{\lambda}$ is referred to as the plastic consistency parameter, and $G\left(\bar{\boldsymbol{\sigma}}\right)$ is the flow potential function. In both models presented here, the flow potential function is taken from the Drucker-Prager model:
+Where $\dot{\epsilon^{pl}}$ is the plastic strain rate, $\dot{\lambda}$ is referred to as the plastic consistency parameter, and $G\left(\bar{\boldsymbol{\sigma}}\right)$ is the flow potential function. In both models presented here, the flow potential function is taken from the Drucker-Prager model:
 
 \begin{equation}
-G\left(\boldsymbol{\bar{\sigma}}\right)=\sqrt{\left[\epsilon\bar{\sigma}_{0}\tan\left(\psi\right)\right]^{2}+q^{2}}-p\tan\left(\psi\right)\label{eqn:const11}
+G\left(\boldsymbol{\sigma}\right)=\sqrt{\left[\epsilon\bar{\sigma}_{0}\tan\left(\psi\right)\right]^{2}+q^{2}}-p\tan\left(\psi\right)\label{eqn:const11}
 \end{equation}
 
-Where $\Psi$ is the dilation angle of the material, $\bar{\sigma}_{0}$ is the initial yield stress, while $p$ and $q$ stress invariants represent the mises
+Where $\Psi$ is the dilation angle of the material, $\sigma^{iy}$ is the initial yield stress, while $p$ and $q$ stress invariants represent the mises
 equivalent stress and the equivalent pressure stress (hydrostatic stress) and are defined as follows:
 
 \begin{equation}
@@ -35,32 +47,30 @@ Where $S$ is known as the stress deviator with $I$ being the second order identi
 \mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}\label{eqn:druc4-1}
 \end{equation}
 
-In addition, to the flow rule, the hardening rule is prescribed to govern the increase/decrease in yield stress as the plastic strain increases. The hardening rule
+In addition, to the yield function and the flow rule, the hardening rule is prescribed to govern the increase/decrease in yield stress as the plastic strain increases. More specifically, the hardening rule ($H\left(\bar{\boldsymbol{\sigma}}$) in these models is used to relate the equivalent plastic strain rate to the plastic strain rate: 
 
-
-
+\begin{equation}
+    \dot{\bar{\epsilon}}^{pl} = H\left(\bar{\boldsymbol{\sigma}}, \bar\boldsymbol{\epsilon}}^{pl}\right)\bullet \dot{\epsilon}
+   
+\label{eqn:const8d}
+\end{equation}
 
 %In rock mechanics, the material models assume that the plastic strain increment and the and the normal to the yield surface have the same direction.
 etc..
 
-The nature of the damage evolution is assumed to be a function of the effective stress, $\boldsymbol{\bar{\sigma}}$, and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
+for the damage, the damage initiation criteria and evolution equations are different for each material model. In general though, The damage initiation criteria for both material models is strain based and the nature of the damage evolution is assumed to be a function of the effective stress, $\boldsymbol{\bar{\sigma}}$, and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
 \begin{equation}
 D=D(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}})\label{eqn:const8}
 \end{equation}
 
 
 
-Here, the effective stress,  can be described as a stress that the system would be experiencing without any stiffness degradation or damage. This stress can be related to the actual Cauchy stress through the damage variable: 
-\begin{equation}
-\boldsymbol{\sigma}=(1-D)\boldsymbol{\bar{\sigma}}\label{eqn:const7}
-\end{equation}
-
 etc..
 
 
-Also, algebraically maximum eigenvalue of effective stress, $\hat{\bar{\sigma}}$
+%Also, algebraically maximum eigenvalue of effective stress, $\hat{\bar{\sigma}}$
 
 
-etc...
+%etc...
 
-For both of the material models presented here, the plasticity models are similar. 
+%For both of the material models presented here, the plasticity models are similar. 
