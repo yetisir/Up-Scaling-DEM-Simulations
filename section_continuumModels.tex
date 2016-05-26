@@ -18,10 +18,6 @@ Using the principles of CDM, one can modify the standard elastic constitutive re
 \boldsymbol{\sigma}=(1-D)\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3}
 \end{equation}
 
-Here, the effective stress, can be described as a stress that the system would be experiencing without any stiffness degradation or damage. This stress can be related to the actual Cauchy stress through the damage variable: 
-\begin{equation}
-\boldsymbol{\sigma}=(1-D)\boldsymbol{\bar{\sigma}}\label{eqn:const7}
-\end{equation}
 %From equations \ref{eqn:const3a} and \ref{eqn:const3}, it follows that the damaged elastic stiffness tensor, $\mathbf{E^{d}}$, can be described as the degraded stiffness due to the damage: 
 %\begin{equation}
 %\mathbf{E^{d}}=(1-\mathbf{D})\mathbf{E}\label{eqn:const4}
@@ -51,13 +47,15 @@ For plastic damage, the constitutive relation can be written as:
 \boldsymbol{\sigma}=(1-D)\mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const5}
 \end{equation}
 
+etc...
+
+The effective stress ($\boldsymbol{\bar{\sigma}}$) as defined by CDM, can be described as a stress that the system would be experiencing without any stiffness degradation or damage. This stress can be related to the actual Cauchy stress through the damage variable: 
+\begin{equation}
+\boldsymbol{\sigma}=(1-D)\boldsymbol{\bar{\sigma}}\label{eqn:const7}
+\end{equation}
+
 A plasticity model requires three distinct components to fully characterize the constitutive behaviour of the plastic material: the flow rule, the hardening rule and the yield function. etc.. 
 
-
-
-
-
-
-In this paper, ABAQUS was used for the CDM simulations. Using the built-in material models, two plasticity based damage mechanics models were chosen to be investigated as each had their respective limitations. For the plasticity models presented here, 
+In this paper, ABAQUS was used for the CDM simulations. Using the built-in material models, two plasticity based damage mechanics models were chosen to be investigated as each had their respective limitations. The first model presented is the concrete-damaged plasticity model designed for modeling cyclic loading of concrete at low confining pressures. The issue with this material model is the lack of a pressure dependent yield criterion. This limitation prevents accurate modeling of the materials at high confining stresses, as one would expect to experience in-situ in geomaterials. As such, the second model addresses this pressure dependent limitation by combining a Drucker-Prager plasticity model with a ductile damage model. Here, the yield function is pressure dependent, but cyclical loading is not accounted for sufficiently. etc..
 
 
