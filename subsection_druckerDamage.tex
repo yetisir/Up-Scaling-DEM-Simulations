@@ -1,23 +1,14 @@
 \subsection{Drucker-Prager Plasticty Model With Ductile Damage}
 
-{*}drucker prager plsticity model used for modelling frictional materailas
-like granual soils and rock.\cite{drucker_implications_1950}
+the Drucker-Prager plasticity model was developed by by \citet{drucker_implications_1950} for modeling frictional materials like granular soils and rock. These materials tend  to exhibit pressure dependent yielding (as confining
+pressure increases, so does the strength of the rock) which was incorporated as a pressure dependent yield criterion in the Drucker-Prager plasticity model. 
 
-{*} these materials exhibit pressure dependant yeilding (as confining
-presure increases, so does the strength of the rock) which is accounted
-for in this model
+Specifically, the Drucker-Prager material model is formulated and used for materials of which the compressive yield strength is much greater than the tensile yield strength such as one would find in soils and rocks. Howewver, one drawback with this material model is that it is intended to simulate material response under essentially monotonic loading which limits the potential of modeling cyclic loading tonight.
 
-{*}used for materials in which the compressive yeild strength is much
-greater than the tensile yeild strength (again, rocks and soils)
+In addition, the Drucker-Prager model is suitable for using in conjunction with progressive damage and failure models. In this formulation, the Johnson-Cook Damage model is used to model the ductile damage of the rock mass \cite{johnson_fracture_1985}. At a sufficiently large scale, the damage behaviour of NFR can be thought of as behaving in a ductile capacity. 
 
-{*}D-P can be used in conjunction with the models of progressive damage
-and failure.
-
-{*}one drawback with this material model is that it is intended to
-simulate material response under essentially monotonic loading. 
-
-The linear Drucker-Prager yeild function, which defines the pressure
-dependant behaviour of the material can be written as follows:
+The linear Drucker-Prager yield function, which defines the pressure
+dependent behaviour of the material can be written as follows:
 
 \begin{equation}
 F=t-p\tan\left(\beta\right)-d\label{eqn:druc1}
