@@ -18,103 +18,21 @@ In addition, the Drucker-Prager model is suitable for using in conjunction with 
 In this paper, the hyperbolic Drucker-Prager yeild function was chosen to represent the material yeild behaviour and is expressed as a function of the mises equivalent stress and hydrostatic stress:
 
 \begin{equation}
-F\left(p,q\right)=\sqrt{l_{0}^{2}+q^{2}}-p\tan\left(\beta\right)-d'\label{eqn:druc2}
+F\left(bar{\sigma}\right)=\sqrt{l_{0}^{2}+q^{2}}-p\tan\left(\beta\right)-d'\left(\bar{\sigma}\right)\label{eqn:druc2}
 \end{equation}
 
 Where $\beta$ is the friction angle, and d is a hardening parameter defined as a function of the uniaxial compressive yield stress, $\sigma_c$:
 
 \begin{equation}
-d'=\sqrt{l_{0}^{2}+q^{2}}-\frac{\sigma_c}{3}\tan\left(\beta\right)
+d'\left(\bar{\sigma}\right)=\sqrt{l_{0}^{2}+q^{2}}-\frac{\sigma_c}{3}\tan\left(\beta\right)
 \label{eqn:druc2-2}
 \end{equation}
 
-Furthermore, $l_0$ is a variable introduced for simplicity that helps describes the behaviour of the tensile portion of the yield function: 
+Furthermore, $l_0$ is a variable introduced for simplicity that helps describes the behaviour of the tensile portion of the yield function in terms of the initial hydrostatic tension strength of the material, $p_{0}^{t}$ and the initial value of $d'$ before hardening, $d'_{0}$: 
 
 \begin{equation}
 l_{0}=d'_{0}-p_{0}^{t}\tan\left(\beta\right)\label{eqn:druc2-1}
 \end{equation}
 
-This hyperbolic yield criterion is a combination of Rankine's maximum tensile stress condition at low confining stress and the linear Drucker-Prager condition at high confining stress. In the deviatoric stress plane, a von Mises section is used and and a hyperbolic flow potential in the meridontal plane. This hyperbolic model assumes a linear dependence between deviatoric stress and hydrostatic stress at high confining stresses, but allows for a non-linear relationship at low confining stress to allow for more accurate tensile yield behaviour.
+This hyperbolic yield criterion (igure )is a combination of Rankine's maximum tensile stress condition at low confining stress and the linear Drucker-Prager condition at high confining stress. In the deviatoric stress plane, a von Mises section is used and and a hyperbolic flow potential in the meridontal plane. This hyperbolic model assumes a linear dependence between deviatoric stress and hydrostatic stress at high confining stresses, but allows for a non-linear relationship at low confining stress to allow for more accurate tensile yield behaviour.
 
-%Flow Rule, same as concrete damage. should bring to main d-p material
-%description:
-
-%\begin{equation}
-%G=\sqrt{\left[\epsilon\bar{\sigma}_{0}\tan\left(\psi\right)\right]^{2}+q^{2}}-p\tan\left(\psi\right)\label{eqn:druc5}
-%\end{equation}
-
-
-%default value of eccentricity: maybe
-
-%\begin{equation}
-%\epsilon=\label{eqn:druc5-1}
-%\end{equation}
-
-
-Hardening Rule -> not sure best way to write this
-
-\begin{equation}
-h=h\left(d',\bar{\sigma}\right)\label{eqn:druc6}
-\end{equation}
-
-
-where:
-
-\begin{equation}
-d'=\sqrt{l_{0}^{2}+\sigma_{c}^{2}}-\frac{\sigma_{c}}{3}\tan\left(\beta\right)\label{eqn:druc6-1}
-\end{equation}
-
-
-isotropic hardening is assumed, treating friction angle constant wrt
-stress
-
-{*}Damage initiation
-
-- assume ductile damage. at large confining pressures at large scale,
-the behaviour of rock is more ductile than brittle.
-
-- onset of damage due to `` nucleation, growth, and coalescnce of
-voids''. Model assumes PEEQ when damage is initiated is a function
-of triaxiality, eta.
-
-assume the form of the Johnson-Cook Model:
-
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta,\dot{\bar{\epsilon}}^{pl},\hat{T}\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\left[1+D_{4}\ln\left(\frac{\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{\epsilon}}}\right)\right]\left[1+D_{5}\hat{T}\right]\label{eqn:druc7}
-\end{equation}
-
-
-assuming isothermal conditions and neglecting strain rate effects
-because of reasons:
-
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
-\end{equation}
-
-
-{*}Damage evolution:
-
-- assumes damage is a progressive degredation of the material stiffness
-
-- assume isotropic damage
-
-- uses mesh independant measure of plastic dispalcement to drive evolution
-of damage
-
-- damage manifests itself in two forms: softenin of the yeild stress
-and degredation of the elastisity.
-
-Damage evolution equation based on effective plastic displacement:
-
-\begin{equation}
-\dot{\bar{u}}^{pl}=L\dot{\bar{\epsilon}}^{pl}\label{eqn:druc9}
-\end{equation}
-
-
-asuming a linear form, the plastic displacement at at complete damage
-($D=1$) can be specified, and the damage evolution can be written
-as:
-
-\begin{equation}
-\dot{d}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
-\end{equation}
