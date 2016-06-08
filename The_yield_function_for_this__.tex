@@ -21,7 +21,7 @@ In this formulation of damage-plasticity, the brittle nature of rock necessitate
 As such, the equivalent plastic strain is also considered separately for tension ($\bar{\epsilon}_{t}^{pl}$) and compression ($\bar{\epsilon}_{c}^{pl}$) and is represented as follows: 
 
 \begin{equation}
-\boldsymbol{\bar{\epsilon}^{pl}}=
+\bar{\epsilon}^{pl}=
 \left[
 \begin{array}{c}
     \bar{\epsilon}_{t}^{pl}\\
@@ -64,25 +64,25 @@ one of which represents the damage due to tensile loading, the other
 represents damage due to compressive loading. 
 \begin{equation}
 \begin{array}{c}
-D_{t}=D_{t}\left(\boldsymbol{\bar{\epsilon}_{t}^{pl}}\right),\qquad0\leq D_{t}\leq1\\
-D_{c}=D_{c}\left(\boldsymbol{\bar{\epsilon}_{c}^{pl}}\right),\qquad0\leq D_{c}\leq1\end{array}
+D_{t}=D_{t}\left(\bar{\epsilon}_{t}^{pl}\right),\qquad0\leq D_{t}\leq1\\
+D_{c}=D_{c}\left(\bar{\epsilon}_{c}^{pl}\right),\qquad0\leq D_{c}\leq1\end{array}
 \label{eqn:dam2}
 \end{equation}
 
 
-The damage in both compression and tension is a necessarily increasing
-function of the equivalent plastic strains. This formulation will
-adopt the convention where $\boldsymbol{\mathbf{\sigma}_{c}}$ is
-positive in compression, as with the respective strains. 
-\begin{equation}
-\begin{array}{c}
-\boldsymbol{\sigma}_{t}=(1-D_{t})\mathbf{E}:(\boldsymbol{\epsilon_{t}}-\boldsymbol{\bar{\epsilon}_{t}^{pl}})\\
-\boldsymbol{\sigma}_{c}=(1-D_{c})\mathbf{E}:(\boldsymbol{\epsilon_{c}}-\boldsymbol{\bar{\epsilon}_{c}^{pl}})
-\end{array}
-\label{eqn:dam3}
-\end{equation}
+%This formulation will
+%adopt the convention where $\boldsymbol{\mathbf{\sigma}_{c}}$ is
+%positive in compression, as with the respective strains. 
+%\begin{equation}
+%\begin{array}{c}
+%\sigma_{t}=(1-D_{t})\mathbf{E}:(\epsilon_{t}-\bar{\epsilon}_{t}^{pl})\\
+%\sigma_{c}=(1-D_{c})\mathbf{E}:(\epsilon_{c}-\bar{\epsilon}_{c}^{pl})
+%\end{array}
+%\label{eqn:dam3}
+%\end{equation}
 
-For cyclic loading, both the compressive and tensile damage need to
+The damage in both compression and tension is a necessarily increasing
+function of the equivalent plastic strains. For cyclic loading, both the compressive and tensile damage need to
 be considered. Two stiffness recovery factors are introduced, $s_{t}$
 and $s_{c}$, which represent the stiffness recovery effects associated
 with stress reversals. The damage can be said to take the form of:
