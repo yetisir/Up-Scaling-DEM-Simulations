@@ -54,11 +54,11 @@ In addition to the yield function and the flow rule, the hardening rule is presc
 \begin{equation}
     \dot{\bar{\epsilon}}^{pl} 
     = 
-    h
+    h_{ij}
     \left(
-        \boldsymbol{\sigma}, \bar{\sigma}, \bar{\epsilon}^{pl}
+        \bar{\sigma}_{ij}, \bar{\epsilon}^{pl}
     \right)
-    \bullet \dot{\epsilon}^{pl}
+    \bullet \dot{\epsilon}^{pl}_{ij}
 \label{eqn:const8d}
 \end{equation}
 
@@ -67,7 +67,7 @@ etc..
 
 For the damage models, the damage initiation criteria and evolution equations are different for each material model. In general though, the damage initiation criteria for both material models is strain based and the nature of the damage evolution is assumed to be a function of the effective stress, $\boldsymbol{\bar{\sigma}}$, and the equivalent plastic strain, $\boldsymbol{\bar{\epsilon}^{pl}}$:
 \begin{equation}
-D=D(\boldsymbol{\bar{\sigma}},\boldsymbol{\bar{\epsilon}^{pl}})\label{eqn:const8}
+D=D\left(\bar{\sigma}_{ij},\bar{\epsilon}^{pl}\right)\label{eqn:const8}
 \end{equation}
 
 
