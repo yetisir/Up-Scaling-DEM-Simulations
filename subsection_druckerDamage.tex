@@ -7,54 +7,48 @@ Specifically, the Drucker-Prager material model is formulated and used for mater
 
 In addition, the Drucker-Prager model is suitable for using in conjunction with progressive damage and failure models. In this formulation, the Johnson-Cook Damage model is used to model the ductile damage of the rock mass \cite{johnson_fracture_1985}. At a sufficiently large scale, the damage behaviour of NFR can be thought of as behaving in a ductile capacity. 
 
-The linear Drucker-Prager yield function, which defines the pressure
-dependent behaviour of the material can be written as follows:
+%The linear Drucker-Prager yield function, which defines the pressure
+%dependent behaviour of the material can be written as follows:
+
+%\begin{equation}
+%F=t-p\tan\left(\beta\right)-d\label{eqn:druc1}
+%\end{equation}
+
+
+In this paper, the hyperbolic Drucker-Prager yeild function was chosen to represent the material yeild behaviour and is expressed as a function of the mises equivalent stress and hydrostatic stress:
 
 \begin{equation}
-F=t-p\tan\left(\beta\right)-d\label{eqn:druc1}
+F\left(p,q\right)=\sqrt{l_{0}^{2}+q^{2}}-p\tan\left(\beta\right)-d'\label{eqn:druc2}
 \end{equation}
 
-
-In this paper, the hyperbolic Drucker-Prager yeild function is chosen
-to represent the material behaviour:
+Where $\Beta$ is the friction angle, and d is a hardening parameter defined as a function of the uniaxial compressive yield stress, $\sigma_c$:
 
 \begin{equation}
-F\left(p,q\right)=\sqrt{l_{0}^{2}+q^{2}}-p\tan\left(\beta\right)-d\label{eqn:druc2}
+d'=\sqrt{l_{0}^{2}+q^{2}}-frac{\sigma_c}{3}\tan\left(\beta\right)
+\label{eqn:druc2-2}
 \end{equation}
 
-
-where:
+Furthermore, $l_0$ is a variable introduced for simplicity that helps describes the behaviour of the tensile portion of the yield function: 
 
 \begin{equation}
 l_{o}=d'_{0}-p_{0}^{t}\tan\left(\beta\right)\label{eqn:druc2-1}
 \end{equation}
 
-This hyperbolic yeild critereon is a combination of Rankine's maximum tensile stress condition at low confining stress anf the linear Drucker-Prager condition at high
-confining stress.
+This hyperbolic yield criterion is a combination of Rankine's maximum tensile stress condition at low confining stress and the linear Drucker-Prager condition at high confining stress. In the deviatoric stress plane, a von Mises section is used and and a hyperbolic flow potential in the meridontal plane. This hyperbolic model assumes a linear dependence between deviatoric stress and hydrostatic stress at high confining stresses, but allows for a non-linear relationship at low confining stress to allow for more accurate tensile yield behaviour.
 
-The hyperbolic model uses a von Mises section in the deviatoric stress
-plane and a hyperbolic flow potential in the meridontal plane. This
-means non-associated flow. Hyperbolic model assumes a linear dependance
-between deviatoric stress and hydrostatic stress at high confining
-stresses, but allows for a non-linear relationship at low confining
-stress. If tensile stresses are significant, the hyperbolic model
-should be used.
+%Flow Rule, same as concrete damage. should bring to main d-p material
+%description:
+
+%\begin{equation}
+%G=\sqrt{\left[\epsilon\bar{\sigma}_{0}\tan\left(\psi\right)\right]^{2}+q^{2}}-p\tan\left(\psi\right)\label{eqn:druc5}
+%\end{equation}
 
 
+%default value of eccentricity: maybe
 
-Flow Rule, same as concrete damage. should bring to main d-p material
-description:
-
-\begin{equation}
-G=\sqrt{\left[\epsilon\bar{\sigma}_{0}\tan\left(\psi\right)\right]^{2}+q^{2}}-p\tan\left(\psi\right)\label{eqn:druc5}
-\end{equation}
-
-
-default value of eccentricity: maybe
-
-\begin{equation}
-\epsilon=\label{eqn:druc5-1}
-\end{equation}
+%\begin{equation}
+%\epsilon=\label{eqn:druc5-1}
+%\end{equation}
 
 
 Hardening Rule -> not sure best way to write this
