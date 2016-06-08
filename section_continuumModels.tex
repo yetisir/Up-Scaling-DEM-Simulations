@@ -8,14 +8,18 @@ A CDM model is comprised of two main components to describe the material degrada
 
 The damage variables in a CDM model can take a number of forms. Often, for mathematical and physical simplicity, a single scalar damage variable is used to characterize the the state of damage in the material. In this case, the damage variable takes a value between 0 and 1 to represent the degree of damage to the material, where 0 represents a completely undamaged material (original stiffness) and 1 represents a completely damaged material (0 stiffness). A scalar description of damage does limit the applicability of the CDM model to an isotropically damaged state, which may not be appropriate in some circumstances. More sophisticated CDM models use 2\textsuperscript{nd} and 4\textsuperscript{th} order tensorial representations of the damage variables as well as distinguishing between compressive damage and tensile damage states in order to more accurately characterize anisotropic damage conditions. This paper only investigates isotropic damage and scalar damage variables. 
 
-Consider the standard linear elastic constitutive relationship relating the Cauchy stress tensor, $\boldsymbol{\sigma}$, to the elastic strain tensor, $\boldsymbol{\epsilon^{el}}$, through the 4\textsuperscript{th} order elastic stiffness tensor, $\mathbf{E}$:
+Consider the standard linear elastic constitutive relationship relating the Cauchy stress tensor, $\sigma_ij$, to the elastic strain tensor, $\epsilon^{el}_ij$, through the 4\textsuperscript{th} order elastic stiffness tensor, $E_ijkl$:
 \begin{equation}
-\boldsymbol{\sigma}=\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3a}
+%\boldsymbol{\sigma}=\mathbf{E}:\boldsymbol{\epsilon^{el}}
+\sigma_{ij} =E_{ijkl}:\epsilon^el_{kl}
+\label{eqn:const3a}
 \end{equation}
 
 Using the principles of CDM, one can modify the standard elastic constitutive relationship (\ref{eqn:const3a}) to include a scalar damage parameter, $D$, such that the damage variable can be considered as acting a scaling factor for the elastic stiffness tensor: 
 \begin{equation}
-\boldsymbol{\sigma}=(1-D)\mathbf{E}:\boldsymbol{\epsilon^{el}}\label{eqn:const3}
+%\boldsymbol{\sigma}=(1-D)\mathbf{E}:\boldsymbol{\epsilon^{el}}
+\sigma_{ij}=\left(1-D\right)E_{ijkl}:\espilon^{el}_{kl}
+\label{eqn:const3}
 \end{equation}
 
 %From equations \ref{eqn:const3a} and \ref{eqn:const3}, it follows that the damaged elastic stiffness tensor, $\mathbf{E^{d}}$, can be described as the degraded stiffness due to the damage: 
@@ -44,14 +48,18 @@ Plasticity based damage mechanics models, in a similar capacity, attempt to inco
 
 For plastic damage, the constitutive relation can be written as:
 \begin{equation}
-\boldsymbol{\sigma}=(1-D)\mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const5}
+%\boldsymbol{\sigma}=(1-D)\mathbf{E}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})
+\sigma_{ij}=\left(1-D\right)E_{ijkl}:\left(\espilon-\espilon^{pl}_{kl}\right)
+\label{eqn:const5}
 \end{equation}
 
 etc...
 
 The effective stress ($\boldsymbol{\bar{\sigma}}$) as defined by CDM, can be described as a stress that the system would be experiencing without any stiffness degradation or damage. This stress can be related to the actual Cauchy stress through the damage variable: 
 \begin{equation}
-\boldsymbol{\sigma}=(1-D)\boldsymbol{\bar{\sigma}}\label{eqn:const7}
+%\boldsymbol{\sigma}=(1-D)\boldsymbol{\bar{\sigma}}
+\sigma_{ij}=\left(1-D\right)\bar{\sigma}_{ij}
+\label{eqn:const7}
 \end{equation}
 
 A plasticity model requires three distinct components to fully characterize the constitutive behaviour of the plastic material: the flow rule, the hardening rule and the yield function. etc.. 
