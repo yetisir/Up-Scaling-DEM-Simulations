@@ -1,7 +1,7 @@
 \subsection{General Assumptions}
 The elastic response of the material can be fully characterized with just Young's modulus, $E$, and Poisson's ratio $\nu$. Assuming plane strain conditions, the elastic response can be written in terms of these two parameters:
 \begin{equation}
-\boldsymbol{\sigma}_{ij}=\frac{1+v}{E}\left\{\boldsymbol{\epsilon}_{ij}+\frac{\nu}{1-2\nu}\boldsymbol{\epsilon}_{kk}\delta_{ij}\right\}
+\sigma_{ij}=\frac{1+v}{E}\left\{\epsilon_{ij}+\frac{\nu}{1-2\nu}\epsilon_{kk}\delta_{ij}\right\}
 \label{eqn:const8a}
 \end{equation}
 
@@ -11,7 +11,7 @@ Furthermore, the plasticity models used here are assumed to comprise of three ke
     F = 
     F
     \left(
-        \boldsymbol{\bar{\sigma}},\bar{\boldsymbol{\epsilon}}^{pl}
+        \bar{\sigma}_{ij},\bar{\epsilon}^{pl}
     \right)
 \label{eqn:const8c}
 \end{equation}
@@ -19,33 +19,37 @@ Furthermore, the plasticity models used here are assumed to comprise of three ke
 In addition, the flow rule, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
 
 \begin{equation}
-\dot{\boldsymbol{\epsilon^{pl}}}=\dot{\lambda} \frac{\partial G\left(\bar{\boldsymbol{\sigma}}\right)}{\partial \boldsymbol{\sigma}}
+\dot{\epsilon}^{pl}_{ij}=\dot{\lambda} \frac{\partial G\left(\bar{\sigma}_{ij}\right)}{\partial \bar{\sigma}_{ij}}
 \label{eqn:const8b}
 \end{equation}
 
-Where $\dot{\epsilon^{pl}}$ is the plastic strain rate, $\dot{\lambda}$ is referred to as the plastic consistency parameter, and $G\left(\bar{\boldsymbol{\sigma}}\right)$ is the flow potential function. In both models presented here, the flow potential function is taken from the Drucker-Prager model:
+Where $\dot{\epsilon}^{pl}_{ij}$ is the plastic strain rate, $\dot{\lambda}$ is referred to as the plastic consistency parameter, and $G$ is the flow potential function. In both models presented here, the flow potential function is taken from the Drucker-Prager model:
 
 \begin{equation}
-G\left(\boldsymbol{\sigma}\right)=\sqrt{\left[\varepsilon\bar{\sigma}_{0}\tan\left(\psi\right)\right]^{2}+q^{2}}-p\tan\left(\psi\right)\label{eqn:const11}
+G\left(\sigma_{ij}\right)=\sqrt{\left[\varepsilon\sigma^{iy}\tan\left(\psi\right)\right]^{2}+q\left(\sigma_{ij}\right)^{2}}-p\left(\sigma_{ij}\right)\tan\left(\psi\right)\label{eqn:const11}
 \end{equation}
 
 Where $\psi$ is the dilation angle of the material, $\sigma^{iy}$ is the initial yield stress, $\varepsilon$ is the eccentricity of the flow potential, while $p$ and $q$ stress invariants represent the mises equivalent stress and the equivalent pressure stress (hydrostatic stress) and are defined as follows:
 
 \begin{equation}
-p=-\frac{1}{3}tr\left(\boldsymbol{\sigma}\right)\label{eqn:druc3}
+%-\frac{1}{3}tr\left(\boldsymbol{\sigma}\right)
+p\left(\sigma_{ij}\right)=frac{1}{3}\sigma_kk
+\label{eqn:druc3}
 \end{equation}
 
 \begin{equation}
-q=\sqrt{\frac{3}{2}}\left(\mathbf{S}:\mathbf{S}\right)\label{eqn:druc4}
+%\sqrt{\frac{3}{2}}\left(\mathbf{S}:\mathbf{S}\right)
+q\left(\sigma_{ij}\right)=\sqrt{frac{3}{2}S_{ij}S_{ij}}\label{eqn:druc4}
 \end{equation}
 
-Where $S$ is known as the stress deviator with $I$ being the second order identity tensor:
+Where $S_{ij}$ is known as the stress deviator with $\delta_{ij}$ being the Kronecker Delta:
 
 \begin{equation}
-\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}\label{eqn:druc4-1}
+%\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}\label{eqn:druc4-1}
+S_{ij} = \sigma_ij + p\left(\sigma_{ij}\right)\delta_{ij}
 \end{equation}
 
-In addition to the yield function and the flow rule, the hardening rule is prescribed to govern the increase/decrease in yield stress as the plastic strain increases. More specifically, the hardening rule, $\mathbf{h}\left(\bar{\boldsymbol{\sigma}}\right)$,in these models is used to relate the equivalent plastic strain rate to the plastic strain rate: 
+In addition to the yield function and the flow rule, the hardening rule is prescribed to govern the increase/decrease in yield stress as the plastic strain increases. More specifically, the hardening function, $h$, in these models is used to relate the equivalent plastic strain to the plastic strain in rate form: 
 
 \begin{equation}
     \dot{\bar{\epsilon}}^{pl} 
