@@ -85,23 +85,26 @@ where the tensile damage scaling factor has the following limits:
 
 The parameterization of the concrete damaged-plasticity model yielded a total of 9 required parameters to characterize the model:2 elastic parameters, 5 plastic parameters and 2 damage parameters. 
 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
 \begin{table}[]
 \centering
 \caption{My caption}
 \label{my-label}
-\begin{tabular}{cccc}
-\hline
-\multicolumn{2}{c}{Parameter Type}                         & Name                               & Symbol              \\ \hline
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{2}{c}{Parameter Type}                         & Name                               & Symbol              \\ \midrule
 \multicolumn{2}{c}{\multirow{2}{*}{Elastic}}               & Young's Modulus                    & $E$                 \\
-\multicolumn{2}{c}{}                                       & Poisson's Ratio                    & $\nu$               \\ \cline{1-2}
+\multicolumn{2}{c}{}                                       & Poisson's Ratio                    & $\nu$               \\ \cmidrule(r){1-2}
 \multirow{7}{*}{Plastic} & \multirow{2}{*}{Flow Rule}      & Dilation Angle                     & $\psi$              \\
-                         &                                 & Flow Eccentricity                  & $\varepsilon$       \\ \cline{2-2}
+                         &                                 & Flow Eccentricity                  & $\varepsilon$       \\ \cmidrule(lr){2-2}
                          & \multirow{2}{*}{Yield Function} & Second Stress Invariant Ratio      & K                   \\
-                         &                                 & Initial Equibiaxial Stress Ratio   & $\frac{fb_0}{fc_o}$ \\ \cline{2-2}
+                         &                                 & Initial Equibiaxial Stress Ratio   & $\frac{fb_0}{fc_o}$ \\ \cmidrule(lr){2-2}
                          & \multirow{3}{*}{Hardening Rule} & Initial Compressive Yield Strength & $\sigma_c^{iy}$     \\
                          &                                 & Peak Compressive Yield Strength    & $\sigma_c^{p}$      \\
-                         &                                 & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$   \\ \cline{1-2}
-\multirow{2}{*}{Damage}  & Compressive                     & Compressive Damage Scaling Factor  & $d_c$               \\ \cline{2-2}
-                         & Tensile                         & Tensile Damage Scaling Factor      & $d_t$               \\ \hline
+                         &                                 & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$   \\ \cmidrule(r){1-2}
+\multirow{2}{*}{Damage}  & Compressive                     & Compressive Damage Scaling Factor  & $d_c$               \\ \cmidrule(lr){2-2}
+                         & Tensile                         & Tensile Damage Scaling Factor      & $d_t$               \\ \bottomrule
 \end{tabular}
 \end{table}
