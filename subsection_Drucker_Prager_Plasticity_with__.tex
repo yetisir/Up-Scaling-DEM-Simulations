@@ -26,3 +26,29 @@ Constant:
 \begin{equation}
 \bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{2}e^{D_{3}\eta}\label{eqn:dparam6-1}
 \end{equation}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\multicolumn{2}{c}{Parameter Type}                         & Name                               & Symbol                   \\ \midrule
+\multicolumn{2}{c}{\multirow{2}{*}{Elastic}}               & Young's Modulus                    & $E$                      \\
+\multicolumn{2}{c}{}                                       & Poisson's Ratio                    & $\nu$                    \\ \cmidrule(r){1-2}
+\multirow{7}{*}{Plastic} & \multirow{2}{*}{Flow Rule}      & Dilation Angle                     & $\psi$                   \\
+                         &                                 & Flow Eccentricity                  & $\varepsilon$            \\ \cmidrule(lr){2-2}
+                         & \multirow{2}{*}{Yield Function} & Friction Angle                     & $\beta$                  \\
+                         &                                 & Initial Tensile Strength           & \$p\_0\textasciicircum t \\ \cmidrule(lr){2-2}
+                         & \multirow{3}{*}{Hardening Rule} & Initial Compressive Yield Strength & $\sigma_c^{iy}$          \\
+                         &                                 & Peak Compressive Yield Strength    & $\sigma_c^{p}$           \\
+                         &                                 & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$        \\ \cmidrule(r){1-2}
+\multirow{4}{*}{Damage}  & \multirow{3}{*}{Initiation}     & Johnson-Cook D1                    & $D_1$                    \\
+                         &                                 & Johnson-Cook D2                    & $D_2$                    \\
+                         &                                 & Johnson-Cook D3                    & $D_3$                    \\ \cmidrule(lr){2-2}
+                         & Evolution                       & Plastic Displacement at Failure    & $\bar{u}^{pl}_f$         \\ \bottomrule
+\end{tabular}
+\end{table}
