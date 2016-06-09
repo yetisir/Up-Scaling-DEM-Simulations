@@ -41,16 +41,17 @@ Because the expected loading for these geomaterials does not have a high degree 
 \bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
 \end{equation}
 
-the damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression.  In general, damage manifests itself in two forms: softening of the yield stress and degradation of the elasticity. Here, a mesh independent measure of the plastic displacement, $\bar{u}^{pl}$ is used to to govern the evolution of damage to make the formulation more universal:
+After the material has experienced yield and material damage has occurred, the stress-strain relationship becomes strongly mesh-dependant due to strain localization due to the energy dissipation decreasing as the mesh is refined. As such, \citet{Hillerborg_1976} proposed a stress-displacement response based on fracture energy after damage initiation. The effective plastic strain rate is related to the plastic displacement rate, $\dot{\bar{u}}^{pl}$, by the characteristic element length, $L$, as follows:
 
 \begin{equation}
 \dot{\bar{u}}^{pl}=L\dot{\bar{\epsilon}}^{pl}\label{eqn:druc9}
 \end{equation}
 
+The damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression.  Here, a mesh independent measure of the plastic displacement, $\bar{u}^{pl}$ is used to to govern the evolution of damage to make the formulation more universal:
 
-Assuming a linear form, the plastic displacement at at complete damage
-$(\bar{u}^{pl}_f)$ can be specified, and the damage evolution can be written as:
+
+Assuming a linear form, the plastic displacement when the material is completely damaged, $(\bar{u}^{pl}_f)$, can be specified, and the damage evolution can then be written as:
 
 \begin{equation}
-\dot{d}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
+\dot{D}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
 \end{equation}
