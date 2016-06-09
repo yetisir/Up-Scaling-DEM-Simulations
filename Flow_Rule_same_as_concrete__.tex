@@ -13,10 +13,10 @@
 %\end{equation}
 
 
-The hardening rule can be written as
+Here, isotropic hardening is assumed, such that the friction angle remains constant with respect to changing stresses. The hardening function in this formulation is considered tensorially as a function of the effective stress and the equivalent plastic strain which can be written as:
 
 \begin{equation}
-h\left(\bar{\sigma}_{ij},\bar{\epsilon}^{pl}\right)=\frac{1}{\sigma_c\left(\bar{\boldsymbol{\epsilon}}^{pl}\right)}\sigma_{ij}
+h_{ij}\left(\bar{\sigma}_{ij},\bar{\epsilon}^{pl}\right)=\frac{1}{\sigma_c\left(\bar{\boldsymbol{\epsilon}}^{pl}\right)}\sigma_{ij}
 \label{eqn:druc6}
 \end{equation}
 
@@ -28,55 +28,28 @@ h\left(\bar{\sigma}_{ij},\bar{\epsilon}^{pl}\right)=\frac{1}{\sigma_c\left(\bar{
 %\end{equation}
 
 
-isotropic hardening is assumed, treating friction angle constant wrt
-stress
 
-{*}Damage initiation
-
-- assume ductile damage. at large confining pressures at large scale,
-the behaviour of rock is more ductile than brittle.
-
-- onset of damage due to `` nucleation, growth, and coalescnce of
-voids''. Model assumes PEEQ when damage is initiated is a function
-of triaxiality, eta.
-
-assume the form of the Johnson-Cook Model:
+The damage initiation criterion for this material model was based off of the Johnson-Cook model of damage initiation \cite{Johnson_1985}. For this model, a ductile damage formulation was assumed. At large confining pressures at large scale, the damage behaviour of rock can be considered to be behaving in a ductile capacity. More specifically, the Johnson-Cook model assumes the equivalent plastic strain when damage is initiated is a function of triaxiality, $\eta$, equivalent plastic strain rate, $\dot{\bar{\epsilon}}^{pl}$, and temperature, $\hat{T}$:
 
 \begin{equation}
 \bar{\epsilon}_{f}^{pl}\left(\eta,\dot{\bar{\epsilon}}^{pl},\hat{T}\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\left[1+D_{4}\ln\left(\frac{\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{\epsilon}}}\right)\right]\left[1+D_{5}\hat{T}\right]\label{eqn:druc7}
 \end{equation}
 
-
-assuming isothermal conditions and neglecting strain rate effects
-because of reasons:
+Because the expected loading for these geomaterials does not have a high degree of thermal variance and the loading tends to be very slow, isothermal conditions and negligible strain rate effects are assumed to yield the following form of the Johnson-Cook damage initiation model:
 
 \begin{equation}
 \bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
 \end{equation}
 
-
-{*}Damage evolution:
-
-- assumes damage is a progressive degredation of the material stiffness
-
-- assume isotropic damage
-
-- uses mesh independant measure of plastic dispalcement to drive evolution
-of damage
-
-- damage manifests itself in two forms: softenin of the yeild stress
-and degredation of the elastisity.
-
-Damage evolution equation based on effective plastic displacement:
+the damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression.  In general, damage manifests itself in two forms: softening of the yield stress and degradation of the elasticity. Here, a mesh independent measure of the plastic displacement, $\bar{u}^{pl}$ is used to to govern the evolution of damage to make the formulation more universal:
 
 \begin{equation}
 \dot{\bar{u}}^{pl}=L\dot{\bar{\epsilon}}^{pl}\label{eqn:druc9}
 \end{equation}
 
 
-asuming a linear form, the plastic displacement at at complete damage
-($D=1$) can be specified, and the damage evolution can be written
-as:
+Assuming a linear form, the plastic displacement at at complete damage
+(\bar{u}^{pl}_f) can be specified, and the damage evolution can be written as:
 
 \begin{equation}
 \dot{d}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
