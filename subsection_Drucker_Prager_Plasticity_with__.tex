@@ -20,13 +20,23 @@ is based on the Johnson-Cook model as follows (from before):
 \end{equation}
 
 
-To minimize the number of parameters that need to be estimated, the
-above is simplified to the following by neglecting the first Johnson-Cook
-Constant:
+To do:
 
 \begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{2}e^{D_{3}\eta}\label{eqn:dparam6-1}
+D_1=\frac{\bar{\epsilon}^{pl}_{f_0}\cdot \bar{\epsilon}^{pl}_{f_1}-\left ( \bar{\epsilon}^{pl}_{f_{0.5}} \right )^2}{\bar{\epsilon}^{pl}_{f_0}+ \bar{\epsilon}^{pl}_{f_1}-2\bar{\epsilon}^{pl}_{f_{0.5}}}
+\label{eqn:dparam7}
 \end{equation}
+
+\begin{equation}
+D_2=\frac{\left (\bar{\epsilon}^{pl}_{f_0}- \bar{\epsilon}^{pl}_{f_{0.5}} \right )^2}{\bar{\epsilon}^{pl}_{f_0}+ \bar{\epsilon}^{pl}_{f_1}-2\bar{\epsilon}^{pl}_{f_{0.5}}}
+\label{eqn:dparam8}
+\end{equation}
+
+\begin{equation}
+D_3=\ln \left (\frac{\bar{\epsilon}^{pl}_{f_{0.5}}-\bar{\epsilon}^{pl}_{f_1}}{\bar{\epsilon}^{pl}_{f_0} -\bar{\epsilon}^{pl}_{f_{0.5}}}\right )
+\label{eqn:dparam9}
+\end{equation}
+
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
