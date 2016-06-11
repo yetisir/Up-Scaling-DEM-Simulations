@@ -12,9 +12,23 @@
 %The parameters of the CDM that were calibrated from DEM simulations
 %characterize the elastic and the plastic behavior and the damage evolution.
 %Young's modulus and Poisson's ratio parameterize the elastic behavior.
-For the concrete damaged-plasticity model, the plastic behavior of the material is largely determined by the
-parameters of the hardening rule. Different functions were used
-to characterize hardening in tension and compression. The shape of
-the curves were based on the laboratory data in \citet{wahalathantri_material_2011} and the aim was to mimic the curves with the least number of
-parameters. The compressive hardening rule, $\sigma_{c}\left(\bar{\epsilon}^{in}\right)$,
-was approximated using the Barcelona model as shown in Figure \ref{fig:conccomp}. 
+%For the concrete damaged-plasticity model, the plastic behavior of the material is largely determined by the
+%parameters of the hardening rule. 
+The yield function
+\begin{equation}
+\alpha = \frac{f_0-1}{2f_0-1}
+\label{eqn:param1}
+\end{equation}
+
+\begin{equation}
+\beta = \frac{\bar{\sigma}_c\left( \bar{\epsilon}^{pl}_c\right )}{\bar{\sigma}_t\left( \bar{\epsilon}^{pl}_t\right )}\left(1-\alpha \right )-\left( 1+\alpha \right)
+\label{eqn:param1-2}
+\end{equation}
+
+\begin{equation}
+\gamma = \frac{3\left(1-K_c \right)}{2K_c-1}
+\label{eqn:param1-3}
+\end{equation}
+
+
+Different functions were used to characterize hardening in tension and compression. The shape of the curves were based on the laboratory data in \citet{wahalathantri_material_2011} and the aim was to mimic the curves with the least number of parameters. The compressive hardening rule, $\sigma_{c}\left(\bar{\epsilon}^{in}\right)$, was approximated using the Barcelona model as shown in Figure \ref{fig:conccomp}. 
