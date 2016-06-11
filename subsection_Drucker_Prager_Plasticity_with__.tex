@@ -1,26 +1,26 @@
 \subsection{Drucker-Prager Plasticity with Ductile Damage}
-Yeild function is parameterized with friction angel and initial tensile strength
+The Drucker-Prager plasticity model with ductile damage was parameterized completely using 13 parameters to describe the elastic, plastic and damage behaviour of the up-scaled material. The elastic relationship, flow potential function, and compressive hardening function were parameterized as discussed previously. 
 
-The Drucker-Prager plasticity model can be written in terms of 4 individual
-components: The friction angle, dilation angle, initial tensile strength,
-and the hardening rule. The hardening rule assumes a functional form
-in terms of a power law according to \cite{prantl_identification_2013}:
+The hyperbolic Drucker-Prager yield function was parameterized using the two material parameters that govern the shape of the curve from equation \ref{eqn:druc2}: the friction angle at large confining stress and the initial hydrostatic tensile strength.
 
-\begin{equation}
-\sigma_{y}=A+B\left(\bar{\epsilon}^{pl}\right)^{n}\label{eqn:dparam5}
-\end{equation}
+%The Drucker-Prager plasticity model can be written in terms of 4 individual
+%components: The friction angle, dilation angle, initial tensile strength,
+%and the hardening rule. The hardening rule assumes a functional form
+%in terms of a power law according to \cite{prantl_identification_2013}:
 
-This yields a total of 6 parameters for the plasticity characterization.
-The damage characterization is comprised of two main components, the
-damage initiation and the damage evolution. The damage initiation
-is based on the Johnson-Cook model as follows (from before):
+%\begin{equation}
+%\sigma_{y}=A+B\left(\bar{\epsilon}^{pl}\right)^{n}\label{eqn:dparam5}
+%\end{equation}
 
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:dparam6}
-\end{equation}
+%This yields a total of 6 parameters for the plasticity characterization.
+%The damage characterization is comprised of two main components, the
+%damage initiation and the damage evolution. The damage initiation
+%is based on the Johnson-Cook model as follows (from before):
 
-
-To do:
+Furthermore, the damage initiation criterion from equation \ref{eqn:druc8} is described in terms of 3 material parameters, $D_1$, $D_2$, and $D_3$. These parameters describe the shape of the curve, but do not have any physical meaning. To make setting the bounding limits during the parameter estimation simpler, the Johnson-Cook parameters were written in terms of yield plastic strain at triaxialities of $0$, $1$, and $0.5$ ($\bar{\epsilon}^{pl}_{f_0}$, $\bar{\epsilon}^{pl}_{f_1}$, and $\bar{\epsilon}^{pl}_{f_0.5}$ respectively:
+%\begin{equation}
+%\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:dparam6}
+%\end{equation}
 
 \begin{equation}
 D_1=\frac{\bar{\epsilon}^{pl}_{f_0}\cdot \bar{\epsilon}^{pl}_{f_1}-\left ( \bar{\epsilon}^{pl}_{f_{0.5}} \right )^2}{\bar{\epsilon}^{pl}_{f_0}+ \bar{\epsilon}^{pl}_{f_1}-2\bar{\epsilon}^{pl}_{f_{0.5}}}
@@ -37,7 +37,10 @@ D_3=\ln \left (\frac{\bar{\epsilon}^{pl}_{f_{0.5}}-\bar{\epsilon}^{pl}_{f_1}}{\b
 \label{eqn:dparam9}
 \end{equation}
 
-
+In addition, the damage evolution was parameterized using only the plastic displacement at failure parameter.
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 % \usepackage{multirow}
@@ -50,19 +53,19 @@ D_3=\ln \left (\frac{\bar{\epsilon}^{pl}_{f_{0.5}}-\bar{\epsilon}^{pl}_{f_1}}{\b
 \label{my-label}
 \begin{tabular}{@{}cccc@{}}
 \toprule
-\multicolumn{2}{c}{Parameter Type}                         & Name                               & Symbol            \\ \midrule
-\multicolumn{2}{c}{\multirow{2}{*}{Elastic}}               & Young's Modulus                    & $E$               \\
-\multicolumn{2}{c}{}                                       & Poisson's Ratio                    & $\nu$             \\ \cmidrule(r){1-2}
-\multirow{7}{*}{Plastic} & \multirow{2}{*}{Flow Rule}      & Dilation Angle                     & $\psi$            \\
-                         &                                 & Flow Eccentricity                  & $\varepsilon$     \\ \cmidrule(lr){2-2}
-                         & \multirow{2}{*}{Yield Function} & Friction Angle                     & $\beta$           \\
-                         &                                 & Initial Tensile Strength           & $p_0^t$           \\ \cmidrule(lr){2-2}
-                         & \multirow{3}{*}{Hardening Rule} & Initial Compressive Yield Strength & $\sigma_c^{iy}$   \\
-                         &                                 & Peak Compressive Yield Strength    & $\sigma_c^{p}$    \\
-                         &                                 & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$ \\ \cmidrule(r){1-2}
-\multirow{4}{*}{Damage}  & \multirow{3}{*}{Initiation}     & Johnson-Cook D1                    & $D_1$             \\
-                         &                                 & Johnson-Cook D2                    & $D_2$             \\
-                         &                                 & Johnson-Cook D3                    & $D_3$             \\ \cmidrule(lr){2-2}
-                         & Evolution                       & Plastic Displacement at Failure    & $\bar{u}^{pl}_f$  \\ \bottomrule
+\multicolumn{2}{c}{Parameter Type}                         & Name                               & Symbol                                \\ \midrule
+\multicolumn{2}{c}{\multirow{2}{*}{Elastic}}               & Young's Modulus                    & $E$                                   \\
+\multicolumn{2}{c}{}                                       & Poisson's Ratio                    & $\nu$                                 \\ \cmidrule(r){1-2}
+\multirow{7}{*}{Plastic} & \multirow{2}{*}{Flow Rule}      & Dilation Angle                     & $\psi$                                \\
+                         &                                 & Flow Eccentricity                  & $\varepsilon$                         \\ \cmidrule(lr){2-2}
+                         & \multirow{2}{*}{Yield Function} & Friction Angle                     & $\beta$                               \\
+                         &                                 & Initial Tensile Strength           & $p_0^t$                               \\ \cmidrule(lr){2-2}
+                         & \multirow{3}{*}{Hardening Rule} & Initial Compressive Yield Strength & $\sigma_c^{iy}$                       \\
+                         &                                 & Peak Compressive Yield Strength    & $\sigma_c^{p}$                        \\
+                         &                                 & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$                     \\ \cmidrule(r){1-2}
+\multirow{4}{*}{Damage}  & \multirow{3}{*}{Initiation}     & Yeild Strain at 0 Triaxiality      & $\frac{\bar{\epsilon}^{pl}_{f_{0}}$   \\
+                         &                                 & Yeild Strain at 1 Triaxiality      & $\frac{\bar{\epsilon}^{pl}_{f_{1}}$   \\
+                         &                                 & Yeild Strain at 0.5 Triaxiality    & $\frac{\bar{\epsilon}^{pl}_{f_{0.5}}$ \\ \cmidrule(lr){2-2}
+                         & Evolution                       & Plastic Displacement at Failure    & $\bar{u}^{pl}_f$                      \\ \bottomrule
 \end{tabular}
 \end{table}
