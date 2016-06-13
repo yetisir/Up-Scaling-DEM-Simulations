@@ -2,6 +2,7 @@ abstract.tex
 section_introduction.tex
 section_distinctElementMethod.tex
 figures/dempartsdescription/dempartsdescription.png
+subsection_Block_Formulation__.tex
 section_upscalingMethodology.tex
 figures/upscalingworkflow/upscalingworkflow.png
 The_next_piece_of_software__.tex
