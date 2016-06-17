@@ -34,5 +34,6 @@ subsection_Drucker_Prager_Plasticity_with__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
 subsection_Parameter_Estimation_Results_blah__.tex
+figures/upscalingdruckergraniteresults/upscalingdruckergraniteresults.png
 section_applicationToCAES.tex
 section_conclusions.tex
