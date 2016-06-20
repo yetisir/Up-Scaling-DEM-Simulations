@@ -1,17 +1,20 @@
 \subsection{DEM Simulations}
 
-The DEM simulations used in this investigation consist of a DFN within
-a 10mx10m virtual block subject to uniaxial and triaxial testing
+The DEM models used in this investigation consisted of a pseudo-random isotropic fracture network which was represented by a Voronoi tessellation. The average block size was specified to be 0.5m using 20 iterations of LLoyd's method (\cite{Lloyd_1982}) in order to achieve a more even size distribution. A 10m x 10m model space was determined to be sufficiently large to represent the rock mass behaviour as an REV. 
+
+A Mohr-Coulomb Plasticity model was used as the constitutive model to describe the behaviour of the intact rock while the joint material behaviour was governed by a Coulomb area slip model. The parameters for the rock and joints were chosen to be representative of a fractured granitic rock mass. The
+
+subject to uniaxial and triaxial testing
 procedures (Fig \ref{fig:vorDFN}). The nature of numerical modelling
 allows one the luxury of conducting physically impractical material
 tests such as direct tensile tests in order to characterize the material
 properties of the NFR.
 
-\begin{figure}
-\label{fig:vorDFN} \caption{Two dimensional DFN used for the DEM simulations. A 10m x 10m Voronoi
-tessellation with an average block size of 0.5m was used to characterize
-the DFN.}
-\end{figure}
+%\begin{figure}
+%\label{fig:vorDFN} \caption{Two dimensional DFN used for the DEM simulations. A 10m x 10m Voronoi
+%tessellation with an average block size of 0.5m was used to characterize
+%the DFN.}
+%\end{figure}
 
 
 The 10m x 10m model size was determined to be sufficient to represent
@@ -23,22 +26,29 @@ the DFN in the DEM simulation. The rock and joint properties for the
 model, given in Table \ref{tab:demProp}, were chosen to be representative
 of a reservoir rock (Pirayehgar and Dusseault, 2015).
 
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
 \begin{table}[]
 \centering
-\caption{Rock and joint properties for the DEM simulations}
-\label{tab:demProp}
-\begin{tabular}{@{}ccl@{}}
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{@{}lll@{}}
 \toprule
-Name                   & Symbol  & Value        \\ \midrule
-Young's Modulus        & $E$     & $65 GPa$     \\
-Poisson's Ratio        & $\nu$   & $0.2$        \\
-Density                & $\rho$  & $2.7 g/cm^3$ \\
-Joint Friction Angle   & $\beta$ & $30^\circ$   \\
-Jonit Dilation Angle   & $\psi$  & $5^\circ$    \\
-Joint Cohesion         & $c$     & $200 kPa$    \\
-Joint Tensile Strength & $T$     & $100 kPa$    \\
-Joint Shear Stiffness  & $k_s$   & $20 GPa$     \\
-Joint Normal Stiffness & $k_n$   & $20 GPa$    
+Property Type          & Property         & Value        \\ \midrule
+\multirow{7}{*}{Rock}  & Young's Modulus  & $65 GPa$     \\
+                       & Poisson's Ratio  & $0.2$        \\
+                       & Density          & $2.7 g/cm^3$ \\
+                       & Friction Angle   & $51^{\circ}$ \\
+                       & DilationAngle    & $0^{\circ}$  \\
+                       & Cohesion         & $55.1 MPa$   \\
+                       & Tensile Strength & $11.7 MPa$   \\ \cmidrule(r){1-1}
+\multirow{6}{*}{Joint} & Friction Angle   & $32^{\circ}$ \\
+                       & Dilation Angle   & $5^{\circ}$  \\
+                       & Cohesion         & $100 kPa$    \\
+                       & Tensile Strength & $0 kPa$      \\
+                       & Normal Stiffness & $10 GPa/m$   \\
+                       & Shear Stiffness  & $1 GPa/m$    \\ \bottomrule
 \end{tabular}
 \end{table}
 
