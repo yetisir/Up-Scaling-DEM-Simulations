@@ -37,6 +37,7 @@ subsection_Parameter_Estimation_Results_blah__.tex
 figures/upscalingdruckergraniteresults/upscalingdruckergraniteresults.png
 section_applicationToCAES.tex
 subsection_Model_Description__1.tex
+figures/slope diagram1/slope diagram1.png
 subsection_Model_Description__.tex
 figures/slope diagram/slope diagram.png
 section_conclusions.tex
