@@ -40,4 +40,5 @@ subsection_Model_Description_The_slope__.tex
 figures/slope diagram1/slope diagram1.png
 DEM_meshing_same_as_for__.tex
 subsection_Slope_Failure_Comparison_A__.tex
+subsection_Up_Scaling_Computational_Efficiency__.tex
 section_conclusions.tex
