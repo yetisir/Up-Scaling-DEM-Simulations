@@ -1,0 +1,9 @@
+DEM meshing same as for REV simulations.
+
+4-node bilinear plane strain elements were used to mesh the continuum slope.
+
+The models were loaded with a gravity body force in the downward direction.
+
+The models in both DEM and FEM were allowed to find a static equilibrium after the gravity force had been applied. In order decrease the computational demands, the initial static equilibrium was purely elastic, as plastic yield would not have occurred from the gravitational load. Subsequently, a linearly increasing compressive stress along a 10m section at the top of the slope was applied to see at what time/applied stress the slope fails. The load was ramped up from 0MPa to 10 MPa over the course of 100s for a loading rate of 0.1 MPa/s. 
+
+Failure was deemed to have occurred when the....
