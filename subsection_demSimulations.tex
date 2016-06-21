@@ -55,6 +55,8 @@ Property Type          & Property         & Value        \\ \midrule
 
 The finite difference zones within the blocks were meshed with linear three-node triangular plane strain elements with an average side length of 0.5m. This discretization yielded 5-10 zones within each block. A rounding length of 10\% of the average block edge length (0.05m) was applied to the blocks in order to prevent numerical instabilities in the contact algorithm. In addition velocity-proportional viscous damping with a globally adaptive scheme was applied to the system in order to suppress any vibrational energy causing numerical instabilities in the contact algorithm. Alongside the damping, mass scaling was also applied to increase the stable timestep.
 
+State data was collected every 2 simulation seconds yeilding a total of 50 data points to fit the simulations to etc.. 
+
 The loading of the DEM simulations was conducted in such a way as to imitate triaxial laboratory tests. Here, a constant stress was applied on the lateral boundaries of the DEM model to represent the confining stress. The compression of the model was conducted by applying a specified displacement field in the vertical direction to the top boundary while keeping the bottom boundary fixed in the vertical direction. Two distinct sets of load cases were considered for the DEM simulations in order to observe key behavioural characteristics. In addition, these load cases were applied at confining stresses of $0.5MPa$, $1MPa$, $2MPa$, and $4MPa$:
 
 \begin{enumerate}
