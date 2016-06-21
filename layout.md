@@ -38,6 +38,7 @@ figures/upscalingdruckergraniteresults/upscalingdruckergraniteresults.png
 section_applicationToCAES.tex
 subsection_Model_Description_The_slope__.tex
 figures/slope diagram1/slope diagram1.png
+DEM_meshing_same_as_for__.tex
 subsection_Model_Description__.tex
 figures/slope diagram/slope diagram.png
 section_conclusions.tex
