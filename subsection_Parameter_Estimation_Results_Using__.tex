@@ -1,3 +1,29 @@
 \subsection{Parameter Estimation Results}
 
-Using a PSO algorithm followed by an LMA optimization, the Drucker-Prager plasticity model with ductile damage was fitted to the post-yield DEM simulation data in order to obtain an optimal parameter set. The stress-strain behaviour of the simulations using the optimal parameter set can be seen alongside the homogenized DEM simulation response in Figure \ref{fig:fitted1}. In this case, it can be see that the CDM fit is strongly correlated to the DEM data. In the DEM data, it can be seen that after the rock has yielded, oscillatory noise is observed in the data. This noise arises from the subsequent fracturing within the rock mass after the ultimate yield stress has been reached. The continuum model cannot account for this behaviour, and the oscilations noted in the CDM data result form dynamic instabilities during the softening. The loading cures are very strongly correlated here before yield showing a very strong capacity of the pressure dependent Drucker-Prager yeild criterion to handle pre-fracture yield at various confining stresses. The deviation in the results occurs more significantly during the post-fracture response, where the fracture points do exhibit slight inconsistencies between the DEM and CDM simulations. 
+Using a PSO algorithm followed by an LMA optimization, the Drucker-Prager plasticity model with ductile damage was fitted to the post-yield DEM simulation data in order to obtain an optimal parameter set. Each simulation was fit to 50 evenly spaced (temporally) data points resulting in a total of 200 data points for all four DEM simulations at different confining stresses. The PSO algorithm was run with a swarm size of 24 with a maximum of 50 generations(iterations).
+
+The parameter bounding limits as required by the optimization algorithms in order to limit the search space can be seen in Table \ref{tab:paramDrucker}. These parameter values were chosen based on two criteria: physical limitations and numerical stability. If there existed physical limitations that prevent parameters from exceeding certain values or if there existed a range of realistic values that the parameter should not deviate from, then those physical limitations were specified as the bounds. In other cases, the parameter bounds came from numerical limitations such that beyond a certain capacity, certain parameter values would cause the simulations to become unstable. In these cases, a combination of the two bounding methods was used. 
+
+\begin{table}[]
+\centering
+\caption{Parameter Estimation Results for Drucker-Prager Model with Ductile Damage}
+\label{tab:paramDrucker}
+\begin{tabular}{ccllll}
+\hline
+Parameter                                  & Symbol                            & Units      & Lower Bound & Upper Bound & Optimal Value \\ \hline
+Young's Modulus                            & $E$                               & $GPa$      & 1           & 25          &               \\
+Poisson's Ratio                            & $\nu$                             &            & 0.15        & 0.45        &               \\
+Dilation Angle                             & $\psi$                            & $^{\circ}$ & 5           & 15          &               \\
+Flow Eccentricity                          & $\varepsilon$                     &            &             &             &               \\
+Friction Angle                             & $\beta$                           & $^{\circ}$ & 45          & 70          &               \\
+Flow Stress Ratio                          &                                   &            &             &             &               \\
+Initial Compressive Yield Strength         & $\sigma_c^{iy}$                   & $kPa$      & 1           & 100         &               \\
+Peak Compressive Yield Strength Difference & $\sigma_c^{p}$                    & $MPa$      & 0.5         & 5           &               \\
+Strain at Peak Compressive Yield           & $\epsilon_c^{pp}$                 & $\%$       & 0.5         & 5           &               \\
+Yeild Strain at -0.5 Triaxiality           & $\bar{\epsilon}^{pl}_{f_{-0.5}}$  & $\%$       & 0.01        & 0.1         &               \\
+Yeild Strain at -0.75 Triaxiality          & $\bar{\epsilon}^{pl}_{f_{-0.75}}$ & $\%$       & 0.1         & 10          &               \\
+Plastic Displacement at Failure            & $\bar{u}^{pl}_f$                  & $m$        & 0.1         & 1           &               \\ \hline
+\end{tabular}
+\end{table}
+
+The stress-strain behaviour of the simulations using the optimal parameter set (Table \ref{tab:paramDrucker}) can be seen alongside the homogenized DEM simulation response in Figure \ref{fig:fitted1}. In this case, it can be seen that the CDM fit is strongly correlated to the DEM data. In the DEM data, it can be seen that after the rock has yielded, oscillatory noise is observed in the data. This noise arises from the subsequent fracturing within the rock mass after the ultimate yield stress has been reached. The continuum model cannot account for this behaviour, and the oscilations noted in the CDM data result form dynamic instabilities during the softening. The loading cures are very strongly correlated here before yield showing a very strong capacity of the pressure dependent Drucker-Prager yeild criterion to handle pre-fracture yield at various confining stresses. The deviation in the results occurs more significantly during the post-fracture response, where the fracture points do exhibit slight inconsistencies between the DEM and CDM simulations. 
