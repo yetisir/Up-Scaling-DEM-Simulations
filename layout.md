@@ -35,6 +35,7 @@ section_upscalingNFR.tex
 subsection_demSimulations.tex
 subsection_Parameter_Estimation_Results_Using__.tex
 figures/druckerDamage_voronoiGraniteReverse/test.svg
+figures/concreteDamage_voronoiGranite1/concreteDamage_voronoiGranite1.png
 section_applicationToCAES.tex
 subsection_Model_Description_The_slope__.tex
 figures/slope diagram1/slope diagram1.png
