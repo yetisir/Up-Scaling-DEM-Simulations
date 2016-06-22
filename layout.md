@@ -34,7 +34,6 @@ subsection_Drucker_Prager_Plasticity_with__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
 subsection_Parameter_Estimation_Results_Using__.tex
-figures/upscalingdruckergraniteresults/upscalingdruckergraniteresults.png
 figures/druckerDamage_voronoiGraniteReverse/test.svg
 section_applicationToCAES.tex
 subsection_Model_Description_The_slope__.tex
