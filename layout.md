@@ -18,7 +18,6 @@ section_continuumModels.tex
 subsection_General_Assumptions_The_elastic__.tex
 subsection_concreteDamage.tex
 figures/concreteconstitutivemodel/concreteconstitutivemodel.png
-The_yield_function_for_this__.tex
 subsection_druckerDamage.tex
 figures/druckeryieldfunction/druckeryieldfunction.png
 Flow_Rule_same_as_concrete__.tex
