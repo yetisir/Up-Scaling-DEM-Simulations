@@ -4,7 +4,7 @@ section_distinctElementMethod.tex
 figures/dempartsdescription/dempartsdescription.png
 subsection_Block_Formulation__.tex
 section_upscalingMethodology.tex
-figures/upscalingworkflow/upscalingworkflow.png
+figures/upscalingworkflow/flowChartUpScaling.png
 The_next_piece_of_software__.tex
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
