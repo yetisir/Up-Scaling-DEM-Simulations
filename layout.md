@@ -17,7 +17,6 @@ subsection_strainHomogenization.tex
 section_continuumModels.tex
 subsection_General_Assumptions_The_elastic__.tex
 subsection_concreteDamage.tex
-figures/concreteconstitutivemodel/concreteconstitutivemodel.png
 subsection_druckerDamage.tex
 figures/druckeryieldfunction/druckeryieldfunction.png
 Flow_Rule_same_as_concrete__.tex
