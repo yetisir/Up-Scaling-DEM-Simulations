@@ -25,7 +25,6 @@ Flow_Rule_same_as_concrete__.tex
 subsection_parameterization.tex
 subsection_Concrete_Damaged_Plasticity_The__.tex
 The_Barcelona_model_takes_the__.tex
-figures/concretecompressionparameters/concretetensionparameters.png
 In_addition_to_the_hardening__.tex
 figures/concretedamageparameters/concretedamageparameters.png
 At_this_point_there_are__.tex
