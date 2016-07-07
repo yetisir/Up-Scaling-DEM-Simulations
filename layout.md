@@ -44,5 +44,6 @@ figures/slope diagram1/slope diagram1.png
 DEM_meshing_same_as_for__.tex
 subsection_Slope_Failure_Comparison_A__.tex
 figures/S11Contours/S11Contours.png
+figures/S22Contours/S22Contours.png
 subsection_Up_Scaling_Computational_Efficiency__.tex
 section_conclusions.tex
