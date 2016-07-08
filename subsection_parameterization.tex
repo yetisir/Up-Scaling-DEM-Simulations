@@ -28,16 +28,15 @@ In addition, the damage evolution was parameterized using only the plastic displ
 \multicolumn{2}{c}{Parameter Type}                         & Name                               & Symbol                                \\ \midrule
 \multicolumn{2}{c}{\multirow{2}{*}{Elastic}}               & Young's Modulus                    & $E$                                   \\
 \multicolumn{2}{c}{}                                       & Poisson's Ratio                    & $\nu$                                 \\ \cmidrule(r){1-2}
-\multirow{7}{*}{Plastic} & \multirow{2}{*}{Flow Rule}      & Dilation Angle                     & $\psi$                                \\
-                         &                                 & Flow Eccentricity                  & $\varepsilon$                         \\ \cmidrule(lr){2-2}
-                         & \multirow{2}{*}{Yield Function} & Friction Angle                     & $\beta$                               \\
+\multirow{7}{*}{Plastic} & \multirow{4}{*}{Flow Rule/ }      & Dilation Angle                     & $\psi$                                \\
+                         & Yield Function                   & Flow Eccentricity                  & $\varepsilon$                         \\ 
+                         &                                  & Friction Angle                     & $\beta$                               \\
                          &                                 & Initial Tensile Strength           & $p_0^t$                               \\ \cmidrule(lr){2-2}
                          & \multirow{3}{*}{Hardening Rule} & Initial Compressive Yield Strength & $\sigma_c^{iy}$                       \\
                          &                                 & Peak Compressive Yield Strength    & $\sigma_c^{p}$                        \\
                          &                                 & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$                     \\ \cmidrule(r){1-2}
-\multirow{4}{*}{Damage}  & \multirow{3}{*}{Initiation}     & Yeild Strain at 0 Triaxiality      & $\bar{\epsilon}^{pl}_{f_{0}}$   \\
-                         &                                 & Yeild Strain at 1 Triaxiality      & $\bar{\epsilon}^{pl}_{f_{1}}$   \\
-                         &                                 & Yeild Strain at 0.5 Triaxiality    & $\bar{\epsilon}^{pl}_{f_{0.5}}$ \\ \cmidrule(lr){2-2}
+\multirow{4}{*}{Damage}  & \multirow{3}{*}{Initiation}     & Yeild Strain at -0.5 Triaxiality      & $\bar{\epsilon}^{pl}_{f_{-0.5}}$   \\
+                         &                                 & Yeild Strain at -0.75 Triaxiality    & $\bar{\epsilon}^{pl}_{f_{-0.75}}$ \\ \cmidrule(lr){2-2}
                          & Evolution                       & Plastic Displacement at Failure    & $\bar{u}^{pl}_f$                      \\ \bottomrule
 \end{tabular}
 \end{table}
