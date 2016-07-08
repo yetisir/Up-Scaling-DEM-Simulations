@@ -1,9 +1,5 @@
 \subsection{General Assumptions}
-The elastic response of the material can be fully characterized with just Young's modulus, $E$, and Poisson's ratio $\nu$. Assuming plane strain conditions, the elastic response can be written in terms of these two parameters:
-\begin{equation}
-\sigma_{ij}=\frac{1+v}{E}\left\{\epsilon_{ij}+\frac{\nu}{1-2\nu}\epsilon_{kk}\delta_{ij}\right\}
-\label{eqn:const8a}
-\end{equation}
+The elastic response of the material can be fully characterized with just Young's modulus, $E$, and Poisson's ratio $\nu$. Assuming plane strain conditions
 
 Furthermore, the plasticity models used here are assumed to comprise of three key components: The yield function, the flow rule and the hardening rule. The yield function indicates whether or not the material has experienced yield given a particular stress state. The yield function varies between the two models but can be written in general as a function of effective stress and equivalent plastic strain:
 
@@ -12,17 +8,10 @@ F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sig
 \label{eqn:const8c}
 \end{equation}
 
-In addition, the flow rule, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
+The flow potential function is taken from the Drucker-Prager model:
 
 \begin{equation}
-\dot{\epsilon}^{pl}_{ij}=\dot{\lambda} \frac{\partial G\left(\bar{\sigma}_{ij}\right)}{\partial \bar{\sigma}_{ij}}
-\label{eqn:const8b}
-\end{equation}
-
-Where $\dot{\epsilon}^{pl}_{ij}$ is the plastic strain rate, $\dot{\lambda}$ is referred to as the plastic consistency parameter, and $G$ is the flow potential function. In both models presented here, the flow potential function is taken from the Drucker-Prager model:
-
-\begin{equation}
-G\left(\bar{\sigma}_{ij}\right)=\sqrt{\left[\varepsilon\sigma^{iy}\tan\left(\psi\right)\right]^{2}+q\left(\bar{\sigma}_{ij}\right)^{2}}-p\left(\bar{\sigma}_{ij}\right)\tan\left(\psi\right)\label{eqn:const11}
+G\left(\bar{\sigma}_{ij}\right)=\sqrt{\left[\varepsilon\sigma^{iy}\tan\psi\right]^{2}+q\left(\bar{\sigma}_{ij}\right)^{2}}-p\left(\bar{\sigma}_{ij}\right)\tan\psi\label{eqn:const11}
 \end{equation}
 
 Where $\psi$ is the dilation angle of the material, $\sigma^{iy}$ is the initial yield stress, $\varepsilon$ is the eccentricity of the flow potential, while $p$ and $q$ stress invariants represent the mises equivalent stress and the equivalent pressure stress (hydrostatic stress) and are defined as follows:
