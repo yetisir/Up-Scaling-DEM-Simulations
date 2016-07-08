@@ -16,7 +16,7 @@ section_continuumModels.tex
 subsection_Drucker_Prager_Plasticty_Model__.tex
 Flow_Rule_same_as_concrete__.tex
 subsection_parameterization.tex
-The_Barcelona_model_takes_the__.tex
+The_tensile_hardening_rule_has__.tex
 subsection_Drucker_Prager_Plasticity_with__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
