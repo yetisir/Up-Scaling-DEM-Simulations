@@ -19,6 +19,8 @@ The parameterization of the yeild functions, and damage behaviour for the two mo
 
 In addition, the damage evolution was parameterized using only the plastic displacement at failure parameter. The complete list of all 13 parameters can be found in Table \ref{tab:paramdruc}
 
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
 \begin{table}[]
 \centering
 \caption{My caption}
@@ -35,8 +37,8 @@ In addition, the damage evolution was parameterized using only the plastic displ
                          & \multirow{3}{*}{Hardening Rule}                                                        & Initial Compressive Yield Strength & $\sigma_c^{iy}$                   \\
                          &                                                                                        & Peak Compressive Yield Strength    & $\sigma_c^{p}$                    \\
                          &                                                                                        & Strain at Peak Compressive Yield   & $\epsilon_c^{pp}$                 \\ \cline{1-2}
-\multirow{3}{*}{Damage}  & \multirow{2}{*}{Initiation}                                                            & Yield Strain at -0.5 Triaxiality   & $\bar{\epsilon}^{pl}_{f_{-0.5}}$  \\
-                         &                                                                                        & Yield Strain at -0.75 Triaxiality  & $\bar{\epsilon}^{pl}_{f_{-0.75}}$ \\
-                         & Evolution                                                                              & Plastic Displacement at Failure    & $\bar{u}^{pl}_f$                  \\ \cline{2-4} 
+\multirow{3}{*}{Damage}  & \multirow{2}{*}{Initiation}                                                            & Yield Strain at -0.5 Triaxiality   & $\bar{\epsilon}^{pl}_{y_{-0.5}}$  \\
+                         &                                                                                        & Yield Strain at -0.75 Triaxiality  & $\bar{\epsilon}^{pl}_{y_{-0.75}}$ \\
+                         & Evolution                                                                              & Plastic Displacement at Failure    & $\bar{u}^{pl}_f$                  \\ \hline
 \end{tabular}
 \end{table}
