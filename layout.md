@@ -14,7 +14,6 @@ subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
 section_continuumModels.tex
 subsection_Drucker_Prager_Plasticty_Model__.tex
-subsection_druckerDamage.tex
 Flow_Rule_same_as_concrete__.tex
 subsection_parameterization.tex
 The_Barcelona_model_takes_the__.tex
