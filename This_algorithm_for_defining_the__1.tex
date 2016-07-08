@@ -1,25 +1,3 @@
-This algorithm for defining the homogenization domain was developed
-to provide an unambiguous method for assessing a unique homogenization
-domain for a given circle radius and location. In steps \ref{hli:1}
-and \ref{hli:2}, two mutually exclusive block sets are identified,
-which necessarily share contacts. It is the boundary between these
-two block sets that is the homogenization domain boundary which is
-characterized by this algorithm. Ultimately, the goal of this process
-is to identify the corners on this boundary that are on the blocks
-that intersect with the REV boundary and not the blocks that are outside
-the REV boundary. As such, the corners (step \ref{hli:4}) corresponding
-to the contacts (step \ref{hli:3}) between the two sets of blocks
-are determined. Step \ref{hli:5} is necessary to help eliminate some
-blocks from the set of boundary block which intersect the REV boundary,
-but only have contact with blocks inside the homogenization domain
-boundary, and thus do not have any overall contribution to the definition.
-Step \ref{hli:6} determines this resultant set of boundary blocks
-of which every member is connected to the boundary in some capacity.
-Finding the set of corners that is mutually shared by these blocks
-in step \ref{hli:7} and the boundary contact corners in step \ref{hli:4}
-allow for the determination of the initial set of boundary corners
-(step \ref{hli:8}).
-
 However, one must also note the potential displacement jumps that
 may occur between blocks on the boundary as the model deforms. In
 the case where the blocks become physically separated, there exists
