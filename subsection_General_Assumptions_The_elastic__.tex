@@ -8,7 +8,8 @@ The elastic response of the material can be fully characterized with just Young'
 Furthermore, the plasticity models used here are assumed to comprise of three key components: The yield function, the flow rule and the hardening rule. The yield function indicates whether or not the material has experienced yield given a particular stress state. The yield function varies between the two models but can be written in general as a function of effective stress and equivalent plastic strain:
 
 \begin{equation}
-F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\beta-d\label{eqn:druc2}\label{eqn:const8c}
+F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\beta
+\label{eqn:const8c}
 \end{equation}
 
 In addition, the flow rule, describes the amount of plastic deformation that the material should exhibit given an applied stress. The flow rule in these models is assumed to be of the following form:
