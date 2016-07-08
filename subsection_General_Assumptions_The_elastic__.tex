@@ -1,4 +1,11 @@
-\subsection{General Assumptions}
+\subsection{Drucker-Prager Plasticty Model With Ductile Damage}
+the Drucker-Prager plasticity model was developed by by \citet{drucker_implications_1950} for modeling frictional materials like granular soils and rock. These materials tend  to exhibit pressure dependent yielding (as confining
+pressure increases, so does the strength of the rock) which was incorporated as a pressure dependent yield criterion in the Drucker-Prager plasticity model. 
+
+Specifically, the Drucker-Prager material model is formulated and used for materials of which the compressive yield strength is much greater than the tensile yield strength such as one would find in soils and rocks. Howewver, one drawback with this material model is that it is intended to simulate material response under essentially monotonic loading which limits the potential of modeling cyclic loading tonight.
+
+In addition, the Drucker-Prager model is suitable for using in conjunction with progressive damage and failure models. In this formulation, the Johnson-Cook Damage model is used to model the ductile damage of the rock mass \cite{johnson_fracture_1985}. At a sufficiently large scale, the damage behaviour of NFR can be thought of as behaving in a ductile capacity. 
+
 The elastic response of the material can be fully characterized with just Young's modulus, $E$, and Poisson's ratio $\nu$. Assuming plane strain conditions
 
 Furthermore, the plasticity models used here are assumed to comprise of three key components: The yield function, the flow rule and the hardening rule. The yield function indicates whether or not the material has experienced yield given a particular stress state. The yield function varies between the two models but can be written in general as a function of effective stress and equivalent plastic strain:
