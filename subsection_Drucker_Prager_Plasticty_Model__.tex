@@ -49,8 +49,17 @@ q\left(\bar{\sigma}_{ij}\right)=\sqrt{\frac{3}{2}S_{ij}S_{ij}}\label{eqn:druc4}
 Where $S_{ij}$ is known as the stress deviator with $\delta_{ij}$ being the Kronecker Delta:
 
 \begin{equation}
-%\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}\label{eqn:druc4-1}
+%\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}
 S_{ij} = \sigma_ij + p\left(\bar{\sigma}_{ij}\right)\delta_{ij}
+\label{eqn:druc4-1}
+\end{equation}
+
+the third invariant of deviatoric stress is key. ommiting this gives less desireable results:
+
+\begin{equation}
+%\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}
+r\left(\bar{\sigma}_{ij}\right)= \sqrt[3]{\frac{9}{2}S_{ij} S_{jk} S_{ki}}
+\label{eqn:druc4-2}
 \end{equation}
 
 In addition to the yield function and the flow rule, the hardening rule is prescribed to govern the increase/decrease in yield stress as the plastic strain increases. More specifically, the hardening function, $h$, in these models is used to relate the equivalent plastic strain, $\bar{\epsilon}^{pl}$,  to the plastic strain in rate form: 
