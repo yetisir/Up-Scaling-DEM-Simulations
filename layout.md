@@ -1,7 +1,6 @@
 abstract.tex
 section_introduction.tex
 section_distinctElementMethod.tex
-subsection_Block_Formulation__.tex
 section_upscalingMethodology.tex
 figures/upscalingworkflow/flowChartUpScaling.png
 The_next_piece_of_software__.tex
