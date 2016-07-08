@@ -23,7 +23,7 @@ subsection_Drucker_Prager_Plasticity_with__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
 subsection_Parameter_Estimation_Results_Using__.tex
-figures/druckerDamage_voronoiGranite/voronoiGranite_druckerDamage_lastFrame.png
+figures/druckerDamage_voronoiGranite/fittedCurves.png
 section_Impact_of_REV_Size__.tex
 figures/REVAnalysis/REVAnalysis.png
 section_applicationToCAES.tex
