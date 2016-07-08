@@ -26,7 +26,7 @@ section_applicationToCAES.tex
 subsection_Model_Description_The_slope__.tex
 figures/slope diagram1/SlopeSchematic.png
 DEM_meshing_same_as_for__.tex
-subsection_Slope_Failure_Comparison_A__.tex
+subsection_DNS_Comparison_A_comparison__.tex
 figures/S11Contours/S11Contours.png
 figures/S22Contours/S22Contours.png
 figures/S12Contours/S12Contours.png
