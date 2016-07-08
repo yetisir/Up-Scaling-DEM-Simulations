@@ -1,11 +1,5 @@
-\subsection{Drucker-Prager Plasticty Model With Ductile Damage}
 
-the Drucker-Prager plasticity model was developed by by \citet{drucker_implications_1950} for modeling frictional materials like granular soils and rock. These materials tend  to exhibit pressure dependent yielding (as confining
-pressure increases, so does the strength of the rock) which was incorporated as a pressure dependent yield criterion in the Drucker-Prager plasticity model. 
 
-Specifically, the Drucker-Prager material model is formulated and used for materials of which the compressive yield strength is much greater than the tensile yield strength such as one would find in soils and rocks. Howewver, one drawback with this material model is that it is intended to simulate material response under essentially monotonic loading which limits the potential of modeling cyclic loading tonight.
-
-In addition, the Drucker-Prager model is suitable for using in conjunction with progressive damage and failure models. In this formulation, the Johnson-Cook Damage model is used to model the ductile damage of the rock mass \cite{johnson_fracture_1985}. At a sufficiently large scale, the damage behaviour of NFR can be thought of as behaving in a ductile capacity. 
 
 %The linear Drucker-Prager yield function, which defines the pressure
 %dependent behaviour of the material can be written as follows:
@@ -21,18 +15,11 @@ In this paper, the hyperbolic Drucker-Prager yeild function was chosen to repres
 F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\beta-d\label{eqn:druc2}
 \end{equation}
 
-Where $\beta$ is the friction angle, and $d'$ is a hardening parameter defined as a function of the uniaxial compressive yield stress, $\sigma_c$:
+Where $\beta$ is the friction angle, and $d$ is a hardening parameter defined as a function of the uniaxial compressive yield stress, $\sigma_c$:
 
 \begin{equation}
 d'\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\sqrt{l_{0}^{2}+q\left(\bar{\sigma}_{ij}\right)^{2}}-\frac{\sigma_c\left(\bar{\epsilon}^{pl}\right)}{3}\tan\left(\beta\right)
 \label{eqn:druc2-2}
 \end{equation}
 
-Furthermore, $l_0$ is a variable introduced for simplicity that helps describes the behaviour of the tensile portion of the yield function in terms of the initial hydrostatic tension strength of the material, $p_{0}^{t}$ and the initial value of $d'$ before hardening, $d'_{0}$: 
-
-\begin{equation}
-l_{0}=d'_{0}-p_{0}^{t}\tan\left(\beta\right)\label{eqn:druc2-1}
-\end{equation}
-
-This hyperbolic yield criterion (Figure \ref{fig:druckeryield}) is a combination of Rankine's maximum tensile stress condition at low confining stress and the linear Drucker-Prager condition at high confining stress. In the deviatoric stress plane, a von Mises section is used and and a hyperbolic flow potential in the meridontal plane. This hyperbolic model assumes a linear dependence between deviatoric stress and hydrostatic stress at high confining stresses, but allows for a non-linear relationship at low confining stress to allow for more accurate tensile yield behaviour.
 
