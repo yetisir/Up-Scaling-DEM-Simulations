@@ -28,7 +28,7 @@ figures/voronoiGraniteReverse_druckerDamage_lastFrame/voronoiGraniteReverse_druc
 section_Impact_of_REV_Size__.tex
 section_applicationToCAES.tex
 subsection_Model_Description_The_slope__.tex
-figures/slope diagram1/slope diagram1.png
+figures/slope diagram1/SlopeSchematic.png
 DEM_meshing_same_as_for__.tex
 subsection_Slope_Failure_Comparison_A__.tex
 figures/S11Contours/S11Contours.png
