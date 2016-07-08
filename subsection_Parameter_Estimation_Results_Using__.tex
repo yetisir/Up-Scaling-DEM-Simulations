@@ -8,21 +8,19 @@ The parameter bounding limits as required by the optimization algorithms in orde
 \centering
 \caption{Parameter Estimation Results for Drucker-Prager Model with Ductile Damage}
 \label{tab:paramDrucker}
-\begin{tabular}{@{}ccllll@{}}
+\begin{tabular}{@{}cccccc@{}}
 \toprule
 Parameter                                  & Symbol                            & Units      & Lower Bound & Upper Bound & Optimal Value \\ \midrule
 Young's Modulus                            & $E$                               & $GPa$      & $1$         & $25$        & $1.77$        \\
 Poisson's Ratio                            & $\nu$                             &            & $0.15$      & $0.45$      & $1.55$        \\
 Dilation Angle                             & $\psi$                            & $^{\circ}$ & $5$         & $15$        & $7.16$        \\
-Flow Stress Ratio                          & $K$                               &            &             &             & $0.87$        \\
+Flow Stress Ratio                          & $K$                               &            & $0.78$      & $1$         & $0.87$        \\
 Friction Angle                             & $\beta$                           & $^{\circ}$ & $45$        & $70$        & $56.8$        \\
 Initial Compressive Yield Strength         & $\sigma_c^{iy}$                   & $kPa$      & $1$         & $100$       & $76.8$        \\
-Peak Compressive Yield Strength Difference & $\sigma_c^{p}$                    & $MPa$      & $0.5$       & $5$         & \$3.02        \\
+Peak Compressive Yield Strength Difference & $\sigma_c^{p}$                    & $MPa$      & $0.5$       & $5$         & $3.02$        \\
 Strain at Peak Compressive Yield           & $\epsilon_c^{pp}$                 & $\%$       & $0.5$       & $5$         & $2.62$        \\
 Yeild Strain at -0.5 Triaxiality           & $\bar{\epsilon}^{pl}_{f_{-0.5}}$  & $\%$       & $0.01$      & $0.1$       & $0.016$       \\
 Yeild Strain at -0.75 Triaxiality          & $\bar{\epsilon}^{pl}_{f_{-0.75}}$ & $\%$       & $0.1$       & $10$        & $6.97$        \\
-Plastic Displacement at Failure            & $\bar{u}^{pl}_f$                  & $m$        & $0.01$      & $1$         & \$0.0985      \\ \bottomrule
+Plastic Displacement at Failure            & $\bar{u}^{pl}_f$                  & $m$        & $0.01$      & $1$         & $0.0985$      \\ \bottomrule
 \end{tabular}
 \end{table}
-
-The stress-strain behaviour of the simulations using the optimal parameter set (Table \ref{tab:paramDrucker}) can be seen alongside the homogenized DEM simulation response in Figure \ref{fig:fitted1}. In this case, it can be seen that the CDM fit is strongly correlated to the DEM data. In the DEM data, it can be seen that after the rock has yielded, oscillatory noise is observed in the data. This noise arises from the subsequent fracturing within the rock mass after the ultimate yield stress has been reached. The continuum model cannot account for this behaviour, and the oscilations noted in the CDM data result form dynamic instabilities during the softening. The loading cures are very strongly correlated here before yield showing a very strong capacity of the pressure dependent Drucker-Prager yeild criterion to handle pre-fracture yield at various confining stresses. The deviation in the results occurs more significantly during the post-fracture response, where the fracture points do exhibit slight inconsistencies between the DEM and CDM simulations. 
