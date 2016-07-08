@@ -2,8 +2,8 @@ abstract.tex
 section_introduction.tex
 section_upscalingMethodology.tex
 figures/upscalingworkflow/flowChartUpScaling.png
-section_distinctElementMethod.tex
 The_next_piece_of_software__.tex
+section_distinctElementMethod.tex
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
