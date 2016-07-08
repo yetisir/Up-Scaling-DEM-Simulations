@@ -13,7 +13,7 @@ The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
 section_continuumModels.tex
-subsection_General_Assumptions_The_elastic__.tex
+subsection_Drucker_Prager_Plasticty_Model__.tex
 subsection_druckerDamage.tex
 Flow_Rule_same_as_concrete__.tex
 subsection_parameterization.tex
