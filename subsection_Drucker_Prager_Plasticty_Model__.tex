@@ -11,7 +11,7 @@ The elastic response of the material can be fully characterized with just Young'
 Furthermore, the plasticity models used here are assumed to comprise of three key components: The yield function, the flow rule and the hardening rule. The yield function indicates whether or not the material has experienced yield given a particular stress state. The yield function varies between the two models but can be written in general as a function of effective stress and equivalent plastic strain:
 
 \begin{equation}
-F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\beta -d
+F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=t-p\left(\bar{\sigma}_{ij}\right)\tan\beta -d
 \label{eqn:const8c}
 \end{equation}
 
@@ -24,7 +24,7 @@ d=\left(1-\frac{1}{3}\tan\beta \right)\sigma^y
 The flow potential function is taken from the Drucker-Prager model:
 
 \begin{equation}
-G\left(\bar{\sigma}_{ij}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\psi\label{eqn:const11}
+G\left(\bar{\sigma}_{ij}\right)=t-p\left(\bar{\sigma}_{ij}\right)\tan\psi\label{eqn:const11}
 \end{equation}
 
 Where $\psi$ is the dilation angle of the material, $\sigma^{iy}$ is the initial yield stress, $\varepsilon$ is the eccentricity of the flow potential, while $p$ and $q$ stress invariants represent the mises equivalent stress and the equivalent pressure stress (hydrostatic stress) and are defined as follows:
