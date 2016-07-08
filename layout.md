@@ -4,6 +4,7 @@ section_upscalingMethodology.tex
 figures/upscalingworkflow/flowChartUpScaling.png
 The_next_piece_of_software__.tex
 section_distinctElementMethod.tex
+figures/DEM/DEM.png
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
