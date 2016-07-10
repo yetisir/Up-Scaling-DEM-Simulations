@@ -1,49 +1,10 @@
 \section{Constitutive Model for Continuum Approximation}
-***********This section is still a mess after amalgamation******************
 
-Continuum Damage Mechanics (CDM) is a branch of continuum mechanics that is concerned with modeling the progressive failure and stiffness degradation in solid materials. CDM is traditionally applied to describe the micro-mechanical degradation of metals due to the nucleation and growth of micro-cracks and micro-voids. This micro-mechanical degradations is represented in a CDM model by using macroscopic state variables to represent a spatial average of the effects of this degradation. These state variables used in this context with respect to CDM are known as damage variables. 
+A Continuum Damage Mechanics (CDM) constitutive model was chosen to represent the NFR as a continuum material. CDM is a branch of continuum mechanics that is concerned with modeling the progressive failure and stiffness degradation in solid materials. CDM in this investigation is used to help describe the micro-mechanical degradation of the rock mass due to the nucleation and growth of cracks and voids. This micro-mechanical degradation is represented in a CDM model by using macroscopic state variables to represent a spatial average of the effects of this degradation. These state variables used in this context with respect to CDM are known as damage variables. 
 
-CDM, when applied to NFR, can be used to describe the growth and nucleation of the fractures and cracks in the rock mass. etc...
+The damage variables in a CDM model can be described in different capacities. Often, for mathematical and physical simplicity, a single scalar damage variable is used to characterize the the state of damage in the material. In this case, the damage variable, $D$ takes a value between 0 and 1 to represent the degree of damage to the material, where $D=0$ represents a completely undamaged material (original stiffness) and $D=1$ represents a completely damaged material with no stiffness. A scalar description of damage does limit the applicability of the CDM model to an isotropically damaged state, which may not be appropriate in some circumstances. More sophisticated CDM models use 2\textsuperscript{nd} and 4\textsuperscript{th} order tensorial representations of the damage variables as well as distinguishing between compressive damage and tensile damage states in order to more accurately characterize anisotropic damage conditions. In this paper, a ductile isotropic damage formulation is prescribed using a modified Johnson-Cook damage initiation criterion and a linear stiffness degradation model.
 
-A CDM model is comprised of two main components to describe the material degradation: a damage initiation criteria, which dictates the conditions required for the material to first yield, as well as a damage evolution function, which indicates how the damage variables will progress subsequent to the damage initiation. 
-
-The damage variables in a CDM model can take a number of forms. Often, for mathematical and physical simplicity, a single scalar damage variable is used to characterize the the state of damage in the material. In this case, the damage variable takes a value between 0 and 1 to represent the degree of damage to the material, where 0 represents a completely undamaged material (original stiffness) and 1 represents a completely damaged material (0 stiffness). A scalar description of damage does limit the applicability of the CDM model to an isotropically damaged state, which may not be appropriate in some circumstances. More sophisticated CDM models use 2\textsuperscript{nd} and 4\textsuperscript{th} order tensorial representations of the damage variables as well as distinguishing between compressive damage and tensile damage states in order to more accurately characterize anisotropic damage conditions. This paper only investigates isotropic damage and scalar damage variables. 
-
-Consider the standard linear elastic constitutive relationship relating the Cauchy stress tensor, $\sigma_{ij}$, to the elastic strain tensor, $\epsilon^{el}_{ij}$, through the 4\textsuperscript{th} order elastic stiffness tensor, $E_{ijkl}$:
-\begin{equation}
-%\boldsymbol{\sigma}=\mathbf{E}\boldsymbol{\epsilon^{el}}
-\sigma_{ij} =E_{ijkl}\epsilon^{el}_{kl}
-\label{eqn:const3a}
-\end{equation}
-
-Using the principles of CDM, one can modify the standard elastic constitutive relationship (\ref{eqn:const3a}) to include a scalar damage parameter, $D$, such that the damage variable can be considered as acting a scaling factor for the elastic stiffness tensor: 
-\begin{equation}
-%\boldsymbol{\sigma}=(1-D)\mathbf{E}:\boldsymbol{\epsilon^{el}}
-\sigma_{ij}=\left(1-D\right)E_{ijkl}\epsilon_{kl}^{el}
-\label{eqn:const3}
-\end{equation}
-
-%From equations \ref{eqn:const3a} and \ref{eqn:const3}, it follows that the damaged elastic stiffness tensor, $\mathbf{E^{d}}$, can be described as the degraded stiffness due to the damage: 
-%\begin{equation}
-%\mathbf{E^{d}}=(1-\mathbf{D})\mathbf{E}\label{eqn:const4}
-%\end{equation}
-%Here, the effective stress, $\boldsymbol{\bar{\sigma}}$, can be introduced as as: 
-%\begin{equation}
-%\boldsymbol{\bar{\sigma}}=\mathbf{E}:(\boldsymbol{\epsilon}^{el})\label{eqn:const6}
-%\end{equation}
-
-%Damage plasticity model based on Strain can be decomposed into elastic
-%and plastic components: 
-%\begin{equation}
-%\boldsymbol{\epsilon}=\boldsymbol{\epsilon}^{el}+\boldsymbol{\epsilon}^{pl}\label{eqn:const1}
-%\end{equation}
-
-
-%Substituting \ref{eqn:const1} and \ref{eqn:const4} into \ref{eqn:const3}
-%results in the following: 
-%\begin{equation}
-%\boldsymbol{\sigma}=\mathbf{E^{d}}:(\boldsymbol{\epsilon}-\boldsymbol{\epsilon}^{pl})\label{eqn:const5}
-%\end{equation}
+In addition to damage, the elasto-plastic behaviour of the rock is also considered using an extended Drucker-Prager model with a linear yield criterion.  
 
 Plasticity based damage mechanics models, in a similar capacity, attempt to incorporate theories of plasticity and damage mechanics into a unified approach to the damage evolution and constitutive relationships \cite{zhang_continuum_2010}. 
 
@@ -64,6 +25,9 @@ The effective stress ($\bar{\sigma}_{ij}$) as defined by CDM, can be described a
 \end{equation}
 
 A plasticity model requires three distinct components to fully characterize the constitutive behaviour of the plastic material: the flow rule, the hardening rule and the yield function. etc.. 
+
+A CDM model is comprised of two main components to describe the material degradation: a damage initiation criteria, which dictates the conditions required for the material to first yield, as well as a damage evolution function, which indicates how the damage variables will progress subsequent to the damage initiation. 
+
 
 In this paper, ABAQUS was used for the CDM simulations. Using the built-in material models, two plasticity based damage mechanics models were chosen to be investigated as each had their respective limitations. The first model presented is the concrete-damaged plasticity model designed for modeling cyclic loading of concrete at low confining pressures. The issue with this material model is the lack of a pressure dependent yield criterion. This limitation prevents accurate modeling of the materials at high confining stresses, as one would expect to experience in-situ in geomaterials. As such, the second model addresses this pressure dependent limitation by combining a Drucker-Prager plasticity model with a ductile damage model. Here, the yield function is pressure dependent, but cyclical loading is not accounted for sufficiently. etc..
 
