@@ -2,10 +2,9 @@
 
 The goal of parameterizing the constitutive model is to generate a set of constant material parameters that completely characterize the material behaviour. Obtaining this parameter set facilitates the parameter estimation and up-scaling process by only varying the specified parameters. In general, During the parameterization, on should aim to minimize the number of parameters, while still yielding a sufficiently accurate response. This parameter minimization is due to the strongly non-linear nature of damage-plasticity constitutive models. as the number of parameters increases, the less likely the optimization algorithms will be able to find the globally optimal parameter set. In addition, it is ideal, but not necessary for the parameters to have physical meaning in order to specify realistic bounds with less ambiguity.
 
-The elastic behaviour can be parameterized using Young's Modulus, $E$, and Poisson's Ratio, $\nu$ for a total of two parameters.
+The elastic behaviour is written in terms of Young's Modulus, $E$, and Poisson's Ratio, $\nu$, which are used as parameters for the parameterization for a total of two parameters. The yield function and flow potential function are also parameterized trivially as they are written in terms of the friction angle, dilation angle, and $K$.
 
-The plastic behaviour
-It was found to be useful when applying bounding limits for the parameters to manipulate \ref{eqn:param2-1} to allow for the governing parameters to have a physical meaning. As such, $\alpha$ and $\beta$ can be rewritten in terms of the peak compressive yield strength, $\sigma_{c}^{p}$, and the plastic strain at the peak compressive yield strength, $\epsilon_c^{pp}$:
+In terms of the hardening function, it was found to be useful when applying bounding limits for the parameters to write $\alpha$ and $\beta$ in terms of parameters that have more physical meaning.  be rewritten in terms of the peak compressive yield strength, $\sigma_{c}^{p}$, and the plastic strain at the peak compressive yield strength, $\epsilon_c^{pp}$:
 
 \begin{equation}
 \beta=\frac{\ln\left[\frac{2\alpha}{1+\alpha} \right ]}{\epsilon_c^{pp}}
