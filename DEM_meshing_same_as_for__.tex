@@ -1,9 +1,3 @@
-DEM meshing same as for REV simulations.
+The meshing of the DEM simulations was identical as described for the REV simulations for the parameter estimation, while the CDM model was meshed using 4-node bilinear plane strain elements.
 
-4-node bilinear plane strain elements were used to mesh the continuum slope.
-
-The models were loaded with a gravity body force in the downward direction.
-
-The models in both DEM and FEM were allowed to find a static equilibrium after the gravity force had been applied. In order decrease the computational demands, the initial static equilibrium was purely elastic, as plastic yield would not have occurred from the gravitational load. Subsequently, a linearly increasing compressive stress along a 10m section at the top of the slope was applied to see at what time/applied stress the slope fails. The load was ramped up from 0MPa to 10 MPa over the course of 100s for a loading rate of 0.1 MPa/s. 
-
-Failure was deemed to have occurred when the....
+The models in both DEM and FEM were allowed to find a static equilibrium after the gravity force had been applied. Subsequently, a the linearly increasing compressive stress along the top of the slope was applied to see at what applied stress the slope fails. The load was increased from $0MPa$ to $25 MPa$ over the course of $100s$ in the quasi-static/static simulations with the knowledge that the slope should fail long before $25MPa$ is reached.
