@@ -1,5 +1,21 @@
-\subsection{ModelParameterization}
-parameterization of the material models is essential to effective upscaling of the system. parameterization needs to be conducted in such a way as to minimize the number of parameters, while still yielding a sufficiently accurate response. in addition, it is ideal, but not necessary for the parameters to have physical meaning in order to specify realistic bounds with less difficulty.
+\subsection{Model Parameterization}
+
+The goal of parameterizing the constitutive model is to generate a set of constant material parameters that completely characterize the material behaviour. Obtaining this parameter set facilitates the parameter estimation and up-scaling process by only varying the specified parameters. In general, During the parameterization, on should aim to minimize the number of parameters, while still yielding a sufficiently accurate response. This parameter minimization is due to the strongly non-linear nature of damage-plasticity constitutive models. as the number of parameters increases, the less likely the optimization algorithms will be able to find the globally optimal parameter set. In addition, it is ideal, but not necessary for the parameters to have physical meaning in order to specify realistic bounds with less ambiguity.
+
+The elastic behaviour can be parameterized using Young's Modulus, $E$, and Poisson's Ratio, $\nu$ for a total of two parameters.
+
+The plastic behaviour
+It was found to be useful when applying bounding limits for the parameters to manipulate \ref{eqn:param2-1} to allow for the governing parameters to have a physical meaning. As such, $\alpha$ and $\beta$ can be rewritten in terms of the peak compressive yield strength, $\sigma_{c}^{p}$, and the plastic strain at the peak compressive yield strength, $\epsilon_c^{pp}$:
+
+\begin{equation}
+\beta=\frac{\ln\left[\frac{2\alpha}{1+\alpha} \right ]}{\epsilon_c^{pp}}
+\label{eqn:param2-2}
+\end{equation}
+
+\begin{equation}
+\alpha =\frac{2\sigma_c^{p}-\sigma_c^{iy}+2\sqrt{-\sigma_c^p\left(\sigma_c^{iy}-\sigma_c^p \right )}}{\sigma_c^{iy}}
+\label{eqn:param2-3}
+\end{equation}
 
 In order to accurately assess the optimal parameter set, the parameter estimation of the CDM material model was conducted in two steps. The first step consisted of a uniaxial tension test to estimate the elastic and tensile plastic properties of the material. The test direction reverses to compression before complete yield of the material in order to assess the tensile damage parameter. 
 
@@ -61,8 +77,6 @@ etc..
 
 In addition, the damage evolution was parameterized using only the plastic displacement at failure parameter. The complete list of all 13 parameters can be found in Table \ref{tab:druckerParamters}
 
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
 \begin{table}[]
 \centering
 \caption{My caption}
