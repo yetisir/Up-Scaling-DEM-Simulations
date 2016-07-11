@@ -1,8 +1,8 @@
 \section{Up-Scaling NFR Simulations}
 
-The axial stress-strain data was taken to be the most indicative of the material response and thus used for the parameter estimation datasets.
+To demonstrate this up-scaling framework, a naturally fractured granite rock mass was up-scaled using this methodology. The up-scaling was conducted by running a series of four quasi-static DEM 'triaxial' compression tests under different confining stresses. These were not true triaxial tests due to the simulations being performed in 2D, but illustrate the method regardless.
 
+The axial stress-strain data was taken to be the most indicative of the material response and thus used for the parameter estimation datasets. Using the aforementioned homogenization and parameter estimation algorithms, an optimal parameter set was able to be determined from monotonic loading tests.
 
-A total of nine parameters were identified as being essential to the definition of the CDM material model. The elastic behavior of the rock mass was described using two parameters, Young’s Modulus, and Poisson’s Ratio, while 5 additional parameters were used to describe the plastic behavior of the rock mass in both tension and compression. The remaining two parameters describe the damage evolution in tension and compression respectively.
+The homogenization and parameter estimation algorithms were rerun using different REV sizes to investigate the effects the REV size has on the resultant parameter set. In general, in a macroscopically homogenous domain, as the REV size increases, the parameter values will converge to a single value, when the REV is too small, the local heterogenaities will induce a variance into the optimal parameter set. From this REV investigation, an appropriate REV size was able to be assessed and applied. 
 
-Up-scaling the NFR DEM simulations was conducted by running a series of compression tests under different confining stresses and unloading the before ultimate failure. This unloading allows for an accurate characterization of the damage response of the material. 
