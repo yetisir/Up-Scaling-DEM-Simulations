@@ -24,7 +24,7 @@ subsection_demSimulations.tex
 subsection_Parameter_Estimation_Results_Using__.tex
 figures/druckerDamage_voronoiGranite/voronoiGranite_druckerDamage_lastFrame.png
 There_are_additional_minor_sources__.tex
-figures/fittedCurves/fittedCurves.png
+figures/fittedCurves/voronoiGraniteReverse_druckerDamage_lastFrame.png
 subsection_Impact_of_REV_Size__.tex
 figures/REVAnalysis/REVAnalysis.png
 section_applicationToCAES.tex
