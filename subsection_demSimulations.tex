@@ -2,33 +2,8 @@
 
 The DEM models used in this investigation consisted of a pseudo-random isotropic fracture network which was represented by a Voronoi tessellation. The average block size was specified to be 0.5m using 20 iterations of LLoyd's method \cite{Lloyd_1982} in order to achieve a more even size distribution. A 10m x 10m model space was determined to be sufficiently large to represent the rock mass behaviour as an REV. 
 
-A Mohr-Coulomb Plasticity model was used as the constitutive model to describe the behaviour of the intact rock while the joint material behaviour was governed by a Coulomb area slip model. The parameters for the rock and joints were chosen to be representative of a fractured granitic rock mass. The rock and joint properties used for the DEM simulations can be found in Table \ref{tab:demProp}.
+A Mohr-Coulomb Plasticity model was used as the constitutive model to describe the plastic behaviour of the intact rock while the joint material behaviour was governed by a Coulomb area slip model. Though, in this case, due to the relative weakness of the joints with respect to the blocks, the blocks are unlikley to experience any yield and thus will behave elastically for the most part. The parameters for the rock and joints were chosen to be representative of a fractured granitic rock mass. The rock and joint properties used for the DEM simulations can be found in Table \ref{tab:demProp}.
 
-%subject to uniaxial and triaxial testing
-%procedures (Fig \ref{fig:vorDFN}). The nature of numerical modelling
-%allows one the luxury of conducting physically impractical material
-%tests such as direct tensile tests in order to characterize the material
-%properties of the NFR.
-
-%\begin{figure}
-%\label{fig:vorDFN} \caption{Two dimensional DFN used for the DEM simulations. A 10m x 10m Voronoi
-%tessellation with an average block size of 0.5m was used to characterize
-%the DFN.}
-%\end{figure}
-
-
-%The 10m x 10m model size was determined to be sufficient to represent
-%the DFN, which was characterized by a Voronoi tessellation with a
-%block size of approximately 0.5m. Since the material model used in
-%this investigation can only consider an isotropic NFR, a inherently
-%isotropic randomly generated Voronoi tessellation was chosen to represent
-%the DFN in the DEM simulation. The rock and joint properties for the
-%model, given in Table \ref{tab:demProp}, were chosen to be representative
-%of a reservoir rock (Pirayehgar and Dusseault, 2015).
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-% \usepackage{multirow}
 \begin{table}[]
 \centering
 \caption{Rock and joint properties for DEM Simulations}
@@ -53,42 +28,16 @@ Property Type          & Property         & Value        \\ \midrule
 \end{table}
 
 
-The finite difference zones within the blocks were meshed with linear three-node triangular plane strain elements with an average side length of 0.5m. This discretization yielded 5-10 zones within each block. A rounding length of 10\% of the average block edge length (0.05m) was applied to the blocks in order to prevent numerical instabilities in the contact algorithm. In addition velocity-proportional viscous damping with a globally adaptive scheme was applied to the system in order to suppress any vibrational energy causing numerical instabilities in the contact algorithm. Alongside the damping, mass scaling was also applied to increase the stable timestep.
+The finite difference zones within the blocks were meshed with linear three-node triangular plane strain elements with an average side length of 0.5m. This discretization yielded 5-10 zones within each block. A rounding length of 10\% of the average block edge length (0.05m) was applied to the blocks in order to prevent numerical instabilities in the contact algorithm. In addition, velocity-proportional viscous damping with a globally adaptive scheme was applied to the system in order to suppress any vibrational energy causing numerical instabilities in the contact algorithm. Alongside the damping, mass scaling was also applied to increase the stable timestep. State data of the model was collected at 50 evenly spaced loading intervals yielding to obtain the stress-strain evolution. 
 
-State data was collected every 2 simulation seconds yeilding a total of 50 data points to fit the simulations to etc.. 
-
-The loading of the DEM simulations was conducted in such a way as to imitate triaxial laboratory tests. Here, a constant stress was applied on the lateral boundaries of the DEM model to represent the confining stress. The compression of the model was conducted by applying a specified displacement field in the vertical direction to the top boundary while keeping the bottom boundary fixed in the vertical direction. Two distinct sets of load cases were considered for the DEM simulations in order to observe key behavioural characteristics. In addition, these load cases were applied at confining stresses of $0.5MPa$, $1MPa$, $2MPa$, and $4MPa$:
+The quasi-static loading of the DEM simulations was conducted in such a way as to imitate triaxial laboratory tests. Here, a constant stress was applied on the lateral boundaries of the DEM model to represent the confining stress. The compression of the model was conducted by applying a specified displacement field in the vertical direction to the top boundary while keeping the bottom boundary fixed in the vertical direction. Two distinct sets of load cases were considered for the DEM simulations in order to observe key behavioural characteristics. In addition, these load cases were applied at confining stresses of $0.5MPa$, $1MPa$, $2MPa$, and $4MPa$:
 
 \begin{enumerate}
 \item Triaxial compressive strength test with a compressive strain rate of $0.05\%/s$ for $100s$ to observe the post yield behaviour.
 \item Triaxial compressive strength test at a strain rate of $0.05\%/s$ for $50s$ followed by a tensile strain rate of $0.05\%/s$ for $50s$ to observe the stiffness degradation.
 \end{enumerate}
 
-%The DEM model was subjected to uniaxial tension and compression cycles
-%as well as triaxial tension and compression cycles under different
-%confining stresses to calibrate the continuum model. The triaxial
-%tests were conducted at confining stresses of 5MPa and 10MPa. These
-%numerical tests were constrained in such a way to imitate the laboratory
-%testing procedures. The only procedural difference in these virtual
-%laboratory tests was that the axial strain is brought back to the
-%initial configuration in order to characterize the damage evolution.
+The aim of conducting the first set of loading cases was to be able to capture the complete post-failure response of the DEM simulations under a series of different confining stresses showing a very strong pressure dependent yield. These simulations were designed in order to capture the physics implemented in the Drucker-Prager plasticity model with ductile damage, including a pressure dependent yield criterion and a damage initiation function that is dependent on the triaxiality. This load case was used for the parameter estimation in order to obtain the optimal parameter set.
 
-%The compression cycles were run at a target strain rate of 0.001/s
-%for a period of 10s in compression followed by a period of 10s in
-%tension to return the strain to zero. The transition from the compression
-%part of the load path to the tension part of the load path was conducted
-%over a period of 2s to avoid shocking the system.
-
-%Because the tension cycles reach failure at a much lower strain, the
-%tension cycles were run at a target strain rate of 0.0001/s for a
-%period of 5s in each direction. In this case, the transition period
-%from tension to compression was 1s.
-
-The aim of conducting the first set of loading cases was to be able to model the complete post-failure response of the DEM simulations under a series of different confining stresses showing a very strong pressure dependent yield. These simulations were designed in order to capture the physics implemented in the Drucker-Prager plasticity model with ductile damage, including a pressure dependent yield criterion and a damage initiation function that is dependent on the triaxiality of the model. 
-
-The second set of load cases aims to explore the stiffness degradation and elastic recovery response of the DEM simulations during unloading. Here, the physics from the concrete damage plasticity model is exhibited such that the stiffness degradation and cyclic loading capacity is investigated. The idea with these simulations was to strain the model past the yield point in order to investigate the post-yield behavior,
-but not strain the model so much that it loses all of its strength.
-
-It is noted that the strain rate was chosen to be sufficiently small
-so as to avoid strain rate effects. The appropriate amount of strain
-for a given DEM simulation will depend upon the DEM geometry in addition
+The second set of load cases aimed to explore the stiffness degradation and elastic recovery response of the DEM simulations during unloading. Here, even though the extended Drucker-Prager model is forumlated for monotonic loading, the cyclic loading capacity of this model was investigated. The idea with these simulations was to strain the model past the yield point in order to investigate the post-yield behavior,
+but not strain the model to failure such that it loses all of its strength. It should be noted that the strain rate for both load cases was chosen to be sufficiently small so as to avoid strain rate effects.
