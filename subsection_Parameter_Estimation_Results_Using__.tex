@@ -4,7 +4,7 @@ Using a PSO algorithm followed by an LMA optimization, the Drucker-Prager plasti
 
 Parameter bounding limits are required by the optimization algorithms in order to limit the search space. These parameter values were chosen based on two criteria: physical limitations and numerical stability. If there existed physical limitations that prevent parameters from exceeding certain values or if there existed a range of realistic values that the parameter should not deviate from, then those physical limitations were specified as the bounds. In other cases, the parameter bounds came from numerical limitations such that beyond a certain capacity, certain parameter values would cause the simulations to become unstable. In these cases, a combination of the two bounding methods was used. The specified bounding limits for each parameter results can be seen in Table \ref{tab:paramDrucker}.
 
-\begin{table}[]
+\begin{table}[!htbp]
 \centering
 \caption{Parameter Estimation Results for Drucker-Prager Model with Ductile Damage}
 \label{tab:paramDrucker}
