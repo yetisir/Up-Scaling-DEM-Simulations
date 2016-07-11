@@ -10,34 +10,30 @@ F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sig
 \label{eqn:const8c}
 \end{equation}
 
-The hydrostatic stress:
-\begin{equation}
-%-\frac{1}{3}tr\left(\boldsymbol{\sigma}\right)
-p\left(\bar{\sigma}_{ij}\right)=\frac{1}{3}\bar{\sigma}_{kk}
-\label{eqn:druc3}
-\end{equation}
+%The hydrostatic stress:
+%\begin{equation}
+%p\left(\bar{\sigma}_{ij}\right)=\frac{1}{3}\bar{\sigma}_{kk}
+%\label{eqn:druc3}
+%\end{equation}
 
-The Von-Mises equivalent stress:
-\begin{equation}
-%\sqrt{\frac{3}{2}}\left(\mathbf{S}:\mathbf{S}\right)
-q\left(\bar{\sigma}_{ij}\right)=\sqrt{\frac{3}{2}S_{ij}S_{ji}}\label{eqn:druc4}
-\end{equation}
+%The Von-Mises equivalent stress:
+%\begin{equation}
+%q\left(\bar{\sigma}_{ij}\right)=\sqrt{\frac{3}{2}S_{ij}S_{ji}}\label{eqn:druc4}
+%\end{equation}
 
-Where $S_{ij}$ is known as the stress deviator with $\delta_{ij}$ being the Kronecker Delta:
+%Where $S_{ij}$ is known as the stress deviator with $\delta_{ij}$ being the Kronecker Delta:
 
-\begin{equation}
-%\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}
-S_{ij} = \bar{\sigma_{ij}} + p\left(\bar{\sigma}_{ij}\right)\delta_{ij}
-\label{eqn:druc4-1}
-\end{equation}
+%\begin{equation}
+%S_{ij} = \bar{\sigma_{ij}} + p\left(\bar{\sigma}_{ij}\right)\delta_{ij}
+%\label{eqn:druc4-1}
+%\end{equation}
 
-The third invariant of deviatoric stress:
+%The third invariant of deviatoric stress:
 
-\begin{equation}
-%\mathbf{S}=\boldsymbol{\sigma}+p\mathbf{I}
-r\left(\bar{\sigma}_{ij}\right)= \sqrt[3]{\frac{9}{2}S_{ij} S_{jk} S_{ki}}
-\label{eqn:druc4-2}
-\end{equation}
+%\begin{equation}
+%r\left(\bar{\sigma}_{ij}\right)= \sqrt[3]{\frac{9}{2}S_{ij} S_{jk} S_{ki}}
+%\label{eqn:druc4-2}
+%\end{equation}
 
 The flow rule in this formulation is non-associated but the flow potential function, $G\left(\bar{\sigma}_{ij}\right)$, is written in a very similar form as the yield function with dilation angle, $\psi$, in place of the friction angle. Like with the yield function, the flow potential function, is written in terms of three stress invariants and two material parameters, dilation angle and $K$:
 
@@ -59,9 +55,9 @@ The damage initiation criterion for this material model was based off of the Joh
 \bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{2}e^{D_{3}\eta}\label{eqn:druc8}
 \end{equation}
 
-After the material has experienced yield and material damage has occurred, the stress-strain relationship becomes strongly mesh-dependant due to strain localization due to the energy dissipation decreasing as the mesh is refined. As such, \citet{Hillerborg_1976} proposed a stress-displacement response based on fracture energy after damage initiation. The damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression. Assuming a linear form, the plastic displacement when the material is completely damaged, $(\bar{u}^{pl}_f)$, can be specified, and the damage evolution can then be written as:
+After the material has experienced yield and material damage has occurred, the stress-strain relationship becomes strongly mesh-dependant due to strain localization due to the energy dissipation decreasing as the mesh is refined. As such, \citet{Hillerborg_1976} proposed a stress-displacement response based on fracture energy after damage initiation. The damage evolution used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression. Assuming a linear form, the effective plastic displacement when the material is completely damaged, $\bar{u}^{pl}_f$, can be specified, and the damage evolution can then be written in terms of the effective plastic displacement, $\bar{u}^{pl}$:
 
 \begin{equation}
-\dot{D}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
+\dot{D}=\frac{\dot{\bar{u}}^{pl}}{\bar{u}}_{f}^{pl}\label{eqn:druc9-1}
 \end{equation}
 
