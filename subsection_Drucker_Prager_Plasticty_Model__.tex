@@ -53,10 +53,10 @@ In addition to the yield function and the flow rule, the hardening rule is assum
 \label{eqn:param2-1}
 \end{equation}
 
-The damage initiation criterion for this material model was based off of the Johnson-Cook model of ductile damage initiation \cite{Johnson_1985}. The standard Johnson-Cook model assumes the equivalent plastic strain when damage is initiated is a function of triaxiality, $\eta$ and is written in terms of 5 material parameters. However, assuming isothermal conditions, neglecting rate effects, and assuming a simplified form of the exponential relationship, the initiation criterion can be reduced to 2 material parameters, $D_2$ and $D_3$:
+The damage initiation criterion for this material model was based off of the Johnson-Cook model of ductile damage initiation \cite{Johnson_1985}. The standard Johnson-Cook model assumes the equivalent plastic strain when damage is initiated is a function of triaxiality, $\eta$ and is written in terms of five material parameters. However, assuming isothermal conditions, neglecting rate effects, and assuming a simplified form of the exponential relationship, the initiation criterion can be reduced to two material parameters, $D_2$ and $D_3$:
 
 \begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
+\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{2}e^{D_{3}\eta}\label{eqn:druc8}
 \end{equation}
 
 After the material has experienced yield and material damage has occurred, the stress-strain relationship becomes strongly mesh-dependant due to strain localization due to the energy dissipation decreasing as the mesh is refined. As such, \citet{Hillerborg_1976} proposed a stress-displacement response based on fracture energy after damage initiation. The damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression. Assuming a linear form, the plastic displacement when the material is completely damaged, $(\bar{u}^{pl}_f)$, can be specified, and the damage evolution can then be written as:
