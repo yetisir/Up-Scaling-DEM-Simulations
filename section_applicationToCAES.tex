@@ -1,5 +1,7 @@
 \section{Application to Slope Stability Analysis}
 
-In order to verify the applicability of the up-scaling methodology outlined in this paper, a slope failure problem was simulated using both DEM and the up-scaled CDM model. 
+In order to attempt to validate the applicability of the up-scaling methodology outlined in this paper, a slope failure problem was simulated using both DEM and the up-scaled CDM model. Here, a simple 2-D slope problem is presented and loaded from the top until failure. The two models were compared based on the resultant stress distribution just as failure occurs. 
 
-Slope failure problems are... etc
+In the DEM model, failure was assessed based on the unbalanced forces in the model. Since the joints in the model have a stiffness and cohesion, when the slope fails, the explicit quasi-static solution becomes dynamic do to a the sudden release of elastic energy and the inability for the applied damping to suppress it all. At this point, the total unbalanced forces in the model increase and the slope can be said to have failed. 
+
+For the CDM model, failure was assessed based on non-convergence of the model. The model was run as a implicit static simulation, which does not converge when the slope fails dynamically. As such, the load step in which the model fails to converge was considered the point of failure.
