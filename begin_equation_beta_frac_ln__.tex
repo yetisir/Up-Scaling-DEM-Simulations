@@ -31,16 +31,7 @@ In addition, the damage evolution was parameterized using only the plastic displ
 \toprule
 \multicolumn{2}{c}{\textbf{Parameter Type}}                                                                      & \textbf{Name}                              & \textbf{Symbol}                   \\ \midrule
 \multicolumn{2}{c}{\multirow{2}{*}{Elastic}}                                                                     & Young's Modulus                            & $E$                               \\
-\multicolumn{2}{c}{}                                                                                             & Poisson's Ratio                            & $\nu$                             \\ \cmidrule{1-2}
-\multirow{6}{*}{Plastic} & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Flow Rule /\\ Yield Function\end{tabular}} & Dilation Angle                             & $\psi$                            \\
-                         &                                                                                       & Yield Stress Ratio                         & $K$                               \\
-                         &                                                                                       & Friction Angle                             & $\beta$                           \\ \cmidrule{2-2}
-                         & \multirow{3}{*}{Hardening Rule}                                                       & Initial Compressive Yield Strength         & $\sigma_c^{iy}$                   \\
-                         &                                                                                       & Peak Compressive Yield Strength & $\sigma_c^{p}$                    \\
-                         &                                                                                       & Strain at Peak Compressive Yield           & $\epsilon_c^{pp}$                 \\ \cmidrule{1-2}
-\multirow{3}{*}{Damage}  & \multirow{2}{*}{Initiation}                                                           & Yield Strain at $-0.5$ Triaxiality         & $\bar{\epsilon}^{pl}_{y_{-0.5}}$  \\
-                         &                                                                                       & Yield Strain at $-0.75$ Triaxiality        & $\bar{\epsilon}^{pl}_{y_{-0.75}}$ \\ \cmidrule{2-2}
-                         & Evolution                                                                             & Plastic Displacement at Failure            & $\bar{u}^{pl}_f$                  \\ \bottomrule
+
 \end{tabular}
 \end{table}
 
