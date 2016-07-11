@@ -31,7 +31,7 @@ figures/REVAnalysis/REVAnalysis.png
 section_applicationToCAES.tex
 subsection_Model_Description_The_model__.tex
 figures/slope diagram1/SlopeSchematic.png
-DEM_meshing_same_as_for__.tex
+The_meshing_of_the_DEM__.tex
 subsection_DNS_Comparison_A_comparison__.tex
 figures/S11Contours/S11Contours.png
 figures/S22Contours/S22Contours.png
