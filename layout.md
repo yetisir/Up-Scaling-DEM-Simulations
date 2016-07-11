@@ -16,7 +16,7 @@ section_continuumModels.tex
 subsection_Drucker_Prager_Plasticty_Model__.tex
 Flow_Rule_same_as_concrete__.tex
 subsection_parameterization.tex
-figures/3fulllenghtpaddle-1140x642/3fulllenghtpaddle-1140x642.png
+figures/3fulllenghtpaddle-1140x642/test.png
 begin_equation_beta_frac_ln__.tex
 section_upscalingNFR.tex
 subsection_demSimulations.tex
