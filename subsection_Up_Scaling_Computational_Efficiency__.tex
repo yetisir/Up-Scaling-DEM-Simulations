@@ -1,16 +1,18 @@
 \subsection{Up-Scaling Computational Efficiency}
 
-It was found that runnning the continuum models took an order of magnitude less computational effort. 
+It was found that running the CDM model took almost to two orders of magnitude less computational effort than the DEM model as can be seen in Table \ref{tab:computation}. The CDM model was meshed with a comparable number of continuum elements as in the DEM simulation for an accurate comparison. The DEM model had $25,898$ elements and the CDM model was meshed with $29,866$ elements. It was determined that this mesh refinement constituted a sufficiently converged solution. 
 
 \begin{table}[!htbp]
 \centering
-\caption{My caption}
-\label{my-label}
+\caption{Comparison of Computational Time for the DNS}
+\label{tab:computation}
 \begin{tabular}{@{}ccccc@{}}
 \toprule
 \textbf{Simulation} & \textbf{No. Continuum} & \textbf{Processor} & \textbf{Slope Failure} & \textbf{Computational} \\ 
 \textbf{Type} & \textbf{Elements} & \textbf{Clock Speed} & \textbf{Load} & \textbf{Time} \\ \midrule
-DEM                      & $25898$                         & $2.20 GHz$                    & $11.2 MPa$                  & $46.5 hrs$                  \\
-CDM                      & $29866$                         & $1.80 GHz$                    & $11.4 MPa$                  & $0.65 hrs$                  \\ \bottomrule
+DEM                      & $25,898$                         & $2.20 GHz$                    & $11.2 MPa$                  & $46.5 hrs$                  \\
+CDM                      & $29,866$                         & $1.80 GHz$                    & $11.4 MPa$                  & $0.65 hrs$                  \\ \bottomrule
 \end{tabular}
 \end{table}
+
+The DEM simulation was run serially on a $2.2GHz$ CPU while the continuum model was run on a $1.8GHz$ CPU. Despite the CDM model having more continuum elements than the DEM model, and the CDM model running on a slower CPU, a decrease in computational time of the DEM simulation from $46.5hrs$ to $0.65$ hours was observed. This increase in computational efficiency with marginal decrease in model accuracy is immensely useful for large scale geomechanical problems in NFR. 
