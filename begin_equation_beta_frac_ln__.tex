@@ -8,26 +8,8 @@
 \label{eqn:param2-3}
 \end{equation}
 
-In order to accurately assess the optimal parameter set, the parameter estimation of the CDM material model was conducted in two steps. The first step consisted of a uniaxial tension test to estimate the elastic and tensile plastic properties of the material. The test direction reverses to compression before complete yield of the material in order to assess the tensile damage parameter. 
 
-Parameterization of plastic CDM models involves the parameterization of all six key components of plastic CDM models:
-
-For both the concrete damaged plasticity model and the Drucker-Prager model, the elastic behaviour is able to be parameterized with just Young's elastic modulus and Poisson's ratio. These two parameters are able to fully characterize the elastic stiffness tensor.
-
-Parameterization of flow potential from equation \ref{eqn:const11} can be done directly using the eccentricity and the dilation angle.
-
-Parameterization of the compressive and tensile hardening functions:
-
-The parameterization of the yeild functions, and damage behaviour for the two models differ in approach and assumptions and are described below:
-
-The Drucker-Prager plasticity model with ductile damage was parameterized completely using 13 parameters to describe the elastic, plastic and damage behaviour of the up-scaled material. The elastic relationship, flow potential function, and compressive hardening function were parameterized as discussed previously. 
-
-The hyperbolic Drucker-Prager yield function was parameterized using the two material parameters that govern the shape of the curve from equation \ref{eqn:druc2}: the friction angle at large confining stress and the initial hydrostatic tensile strength.
-
-Furthermore, the damage initiation criterion from equation \ref{eqn:druc8} is described in terms of 3 material parameters, $D_1$, $D_2$, and $D_3$. These parameters describe the shape of the curve, but do not have any physical meaning. To make setting the bounding limits during the parameter estimation simpler, the Johnson-Cook parameters were written in terms of yield plastic strain at triaxialities of 0, 1, and 0.5 ($\bar{\epsilon}^{pl}_{f_0}$, $\bar{\epsilon}^{pl}_{f_1}$, and $\bar{\epsilon}^{pl}_{f_{0.5}}$ respectively:
-%\begin{equation}
-%\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:dparam6}
-%\end{equation}
+Similarly, the Johnson-Cook damage initiation criterion from \ref{eqn:druc8} is described in terms of two material parameters, $D_2$, and $D_3$. These parameters describe the shape of the curve, but do not have any physical meaning. To make setting the bounding limits during the parameter estimation simpler, the Johnson-Cook parameters were written in terms of yield plastic strain at triaxialities of -0.5 and -0.75, $\bar{\epsilon}^{pl}_{f_-0.5}$,and $\bar{\epsilon}^{pl}_{f_{-0.75}}$ respectively:
 
 \begin{equation}
 D_2=\frac{\left(\bar{\epsilon}^{pl}_{y_{-0.5}}\right)^3}{\left(\bar{\epsilon}^{pl}_{y_{-0.75}}\right)^2}
@@ -39,34 +21,7 @@ D_3=4\ln \left (\frac{\bar{\epsilon}^{pl}_{y_{-0.5}}}{\bar{\epsilon}^{pl}_{y_{-0
 \label{eqn:dparam9}
 \end{equation}
 
-The elastic response of the material can be fully characterized with just Young's modulus, $E$, and Poisson's ratio $\nu$. Assuming plane strain conditions
-
-
-
-It was found to be useful when applying bounding limits for the parameters to manipulate \ref{eqn:param2-1} to allow for the governing parameters to have a physical meaning. As such, $\alpha$ and $\beta$ can be rewritten in terms of the peak compressive yield strength, $\sigma_{c}^{p}$, and the plastic strain at the peak compressive yield strength, $\epsilon_c^{pp}$:
-
-\begin{equation}
-\beta=\frac{\ln\left[\frac{2\alpha}{1+\alpha} \right ]}{\epsilon_c^{pp}}
-\label{eqn:param2-2}
-\end{equation}
-
-\begin{equation}
-\alpha =\frac{2\sigma_c^{p}-\sigma_c^{iy}+2\sqrt{-\sigma_c^p\left(\sigma_c^{iy}-\sigma_c^p \right )}}{\sigma_c^{iy}}
-\label{eqn:param2-3}
-\end{equation}
-
-Here, the compressive yield stress, $\sigma_{c}$, is written as function
-of the inelastic strain, $\bar{\epsilon}^{in}$, and three additional
-parameters. The three parameters are the initial compressive yield
-stress ($\sigma_{c}^{iy}$), the peak compressive yield stress ($\sigma_{c}^{p}$),
-and the plastic strain at the peak compressive yield stress ($\sigma_{c}^{iy}$).
-The physical significance of each of these parameters can be seen
-in Fig \ref{fig:conccomp}, where they define the y-intercept and the peak of the curve..
-etc..
-
-
-
-In addition, the damage evolution was parameterized using only the plastic displacement at failure parameter. The complete list of all 13 parameters can be found in Table \ref{tab:druckerParamters}
+In addition, the damage evolution was parameterized using only the plastic displacement at failure parameter. The complete list of all 11 aformentioned parameters can be found summarized in Table \ref{tab:druckerParamters}
 
 \begin{table}[]
 \centering
@@ -81,7 +36,7 @@ In addition, the damage evolution was parameterized using only the plastic displ
                          &                                                                                       & Yield Stress Ratio                         & $K$                               \\
                          &                                                                                       & Friction Angle                             & $\beta$                           \\ \cmidrule{2-2}
                          & \multirow{3}{*}{Hardening Rule}                                                       & Initial Compressive Yield Strength         & $\sigma_c^{iy}$                   \\
-                         &                                                                                       & Peak Compressive Yield Strength Difference & $\sigma_c^{p}$                    \\
+                         &                                                                                       & Peak Compressive Yield Strength & $\sigma_c^{p}$                    \\
                          &                                                                                       & Strain at Peak Compressive Yield           & $\epsilon_c^{pp}$                 \\ \cmidrule{1-2}
 \multirow{3}{*}{Damage}  & \multirow{2}{*}{Initiation}                                                           & Yield Strain at $-0.5$ Triaxiality         & $\bar{\epsilon}^{pl}_{y_{-0.5}}$  \\
                          &                                                                                       & Yield Strain at $-0.75$ Triaxiality        & $\bar{\epsilon}^{pl}_{y_{-0.75}}$ \\ \cmidrule{2-2}
