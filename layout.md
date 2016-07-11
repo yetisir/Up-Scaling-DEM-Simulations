@@ -36,6 +36,7 @@ subsection_DNS_Comparison_A_qualitative__.tex
 figures/S11Contours/S11Contours.png
 figures/S22Contours/S22Contours.png
 figures/S12Contours/S12Contours.png
+As_can_be_seen_the__.tex
 figures/SurfaceDeflection/SurfaceDeflection.png
 subsection_Up_Scaling_Computational_Efficiency__.tex
 section_conclusions.tex
