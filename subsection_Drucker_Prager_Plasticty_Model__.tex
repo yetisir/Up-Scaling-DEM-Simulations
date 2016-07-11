@@ -3,10 +3,10 @@ The Drucker-Prager plasticity model was developed by by \citet{drucker_implicati
 
 In addition, the Drucker-Prager model is suitable for using in conjunction with progressive damage and failure models. In this formulation, the Johnson-Cook Damage model is used to model the damage evolution of the rock mass \cite{johnson_fracture_1985}. At a sufficiently large scale, the damage behaviour of NFR can be thought of as behaving in a ductile capacity. 
 
-Here, for the extended Drucker-Prager plasticity model, a linear yield function, $F\left(\bar{\sigma}_{ij}\right)$ is assumed to be a function of three stress invariants: the Von-Mises equivalent stress, $p\left(\bar{\sigma}_{ij}\right)$, the hydrostatic stress, $q\left(\bar{\sigma}_{ij}\right)$, and the third invariant of deviatoric stress, $r\left(\bar{\sigma}_{ij}\right)$. In addition, the yield function is written in terms of the compressive yield stress, $\sigma_c^y$, which is defined by the hardening function and two material parameters: the friction angle, $\beta$, a parameter $K$, defined as the ratio of the yield stress in triaxial tension to the yield stress in triaxial compression:
+Here, for the extended Drucker-Prager plasticity model, a linear yield function, $F\left(\bar{\sigma}_{ij}\right)$ is assumed to be a function of three stress invariants: the Von-Mises equivalent stress, $p\left(\bar{\sigma}_{ij}\right)$, the hydrostatic stress, $q\left(\bar{\sigma}_{ij}\right)$, and the third invariant of deviatoric stress, $r\left(\bar{\sigma}_{ij}\right)$. In addition, the yield function is written in terms of the compressive yield stress, $\sigma_c^y$, which is defined by the hardening function and two material parameters: the friction angle, $\phi$, a parameter $K$, defined as the ratio of the yield stress in triaxial tension to the yield stress in triaxial compression:
 
 \begin{equation}
-F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\beta - \left(1-\frac{1}{3}\tan\beta \right)\sigma_c^y
+F\left(\bar{\sigma}_{ij}, \bar{\epsilon}^{pl}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\phi - \left(1-\frac{1}{3}\tan\phi \right)\sigma_c^y
 \label{eqn:const8c}
 \end{equation}
 
@@ -39,112 +39,29 @@ r\left(\bar{\sigma}_{ij}\right)= \sqrt[3]{\frac{9}{2}S_{ij} S_{jk} S_{ki}}
 \label{eqn:druc4-2}
 \end{equation}
 
-
-%and $t$ is:
-%\begin{equation}
-%t=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]
-%\label{eqn:const10}
-%\end{equation}
-
-
 The flow rule in this formulation is non-associated but the flow potential function, $G\left(\bar{\sigma}_{ij}\right)$, is written in a very similar form as the yield function with dilation angle, $\psi$, in place of the friction angle. Like with the yield function, the flow potential function, is written in terms of three stress invariants and two material parameters, dilation angle and $K$:
 
 \begin{equation}
 G\left(\bar{\sigma}_{ij}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\psi\label{eqn:const11}
 \end{equation}
 
-Where $\psi$ is the dilation angle of the material, $\sigma^{iy}$ is the initial yield stress, $\varepsilon$ is the eccentricity of the flow potential, while $p$ and $q$ stress invariants represent the mises equivalent stress and the equivalent pressure stress (hydrostatic stress) and are defined as follows:
-
-
-In addition to the yield function and the flow rule, the hardening rule is prescribed to govern the increase/decrease in yield stress as the plastic strain increases. More specifically, the hardening function, $h$, in these models is used to relate the equivalent plastic strain, $\bar{\epsilon}^{pl}$,  to the plastic strain in rate form: 
-
-The Barcelona model takes the following form in order to capture the key hardening and softening behaviour of the material, and can be written in terms of the initial compressive yield strength $\sigma_c^{iy}$, and two material parameters, $\alpha$ and $\beta$:
+In addition to the yield function and the flow rule, the hardening rule is assumed to take the form of the Barcelona model \cite{lubliner_plastic-damage_1989}. The Barcelona model allows for material hardening before softening and approaches a yield stress of 0 as the plastic strain increases.  This form of the hardening function can be written in terms of three material paramters, initial compressive yield strength $Y_0$, $\alpha$ and $\beta$:
 
 \begin{equation}
 %\sigma_{c}\left(\bar{\epsilon}^{in}\right)=\frac{\sigma_{c}^{iy}-\sigma_{c}^{p}}{\left(\epsilon_{c}^{pp}\right)^{2}}\left(\bar{\epsilon}^{in}-\epsilon_{c}^{pp}\right)^{2}+\sigma_{c}^{p}
-\sigma_c=\sigma_c^{iy}\left [ \left ( 1+\alpha \right ) e^{-\beta\bar{\epsilon}^{pl}}-\alpha e^{-2\beta\bar{\epsilon}^{pl}}  \right ]
+\sigma_c=Y_0\left [ \left ( 1+\alpha \right ) e^{-\beta\bar{\epsilon}^{pl}}-\alpha e^{-2\beta\bar{\epsilon}^{pl}}  \right ]
 \label{eqn:param2-1}
 \end{equation}
 
-It was found to be useful when applying bounding limits for the parameters to manipulate \ref{eqn:param2-1} to allow for the governing parameters to have a physical meaning. As such, $\alpha$ and $\beta$ can be rewritten in terms of the peak compressive yield strength, $\sigma_{c}^{p}$, and the plastic strain at the peak compressive yield strength, $\epsilon_c^{pp}$:
+The damage initiation criterion for this material model was based off of the Johnson-Cook model of ductile damage initiation \cite{Johnson_1985}. The standard Johnson-Cook model assumes the equivalent plastic strain when damage is initiated is a function of triaxiality, $\eta$ and is written in terms of 5 material parameters. However, assuming isothermal conditions, neglecting rate effects, and assuming a simplified form of the exponential relationship, the initiation criterion can be reduced to 2 material parameters, $D_2$ and $D_3$:
 
 \begin{equation}
-\beta=\frac{\ln\left[\frac{2\alpha}{1+\alpha} \right ]}{\epsilon_c^{pp}}
-\label{eqn:param2-2}
+\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
 \end{equation}
 
-\begin{equation}
-\alpha =\frac{2\sigma_c^{p}-\sigma_c^{iy}+2\sqrt{-\sigma_c^p\left(\sigma_c^{iy}-\sigma_c^p \right )}}{\sigma_c^{iy}}
-\label{eqn:param2-3}
-\end{equation}
-
-Here, the compressive yield stress, $\sigma_{c}$, is written as function
-of the inelastic strain, $\bar{\epsilon}^{in}$, and three additional
-parameters. The three parameters are the initial compressive yield
-stress ($\sigma_{c}^{iy}$), the peak compressive yield stress ($\sigma_{c}^{p}$),
-and the plastic strain at the peak compressive yield stress ($\sigma_{c}^{iy}$).
-The physical significance of each of these parameters can be seen
-in Fig \ref{fig:conccomp}, where they define the y-intercept and the peak of the curve..
-etc..
-
-For the damage models, the damage initiation criteria and evolution equations are different for each material model. In general though, the damage initiation criteria for both material models is strain based and the nature of the damage evolution is assumed to be a function of the effective stress, and the equivalent plastic strain:
-\begin{equation}
-D=D\left(\bar{\sigma}_{ij},\bar{\epsilon}^{pl}\right)\label{eqn:const8}
-\end{equation}
-
-
-The damage initiation criterion for this material model was based off of the Johnson-Cook model of damage initiation \cite{Johnson_1985}. For this model, a ductile damage formulation was assumed. At large confining pressures at large scale, the damage behaviour of rock can be considered to be behaving in a ductile capacity. More specifically, the Johnson-Cook model assumes the equivalent plastic strain when damage is initiated is a function of triaxiality, $\eta$:
-
-Because the expected loading for these geomaterials does not have a high degree of thermal variance and the loading tends to be very slow, isothermal conditions and negligible strain rate effects are assumed to yield the following form of the Johnson-Cook damage initiation model:
-
-\begin{equation}
-\bar{\epsilon}_{f}^{pl}\left(\eta\right)=\left[D_{1}+D_{2}e^{D_{3}\eta}\right]\label{eqn:druc8}
-\end{equation}
-
-After the material has experienced yield and material damage has occurred, the stress-strain relationship becomes strongly mesh-dependant due to strain localization due to the energy dissipation decreasing as the mesh is refined. As such, \citet{Hillerborg_1976} proposed a stress-displacement response based on fracture energy after damage initiation. The effective plastic strain rate is related to the plastic displacement rate, $\dot{\bar{u}}^{pl}$, by the characteristic element length, $L$, as follows:
-
-\begin{equation}
-\dot{\bar{u}}^{pl}=L\dot{\bar{\epsilon}}^{pl}\label{eqn:druc9}
-\end{equation}
-
-The damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression.  Here, a mesh independent measure of the plastic displacement, $\bar{u}^{pl}$ is used to to govern the evolution of damage to make the formulation more universal:
-
-
-Assuming a linear form, the plastic displacement when the material is completely damaged, $(\bar{u}^{pl}_f)$, can be specified, and the damage evolution can then be written as:
+After the material has experienced yield and material damage has occurred, the stress-strain relationship becomes strongly mesh-dependant due to strain localization due to the energy dissipation decreasing as the mesh is refined. As such, \citet{Hillerborg_1976} proposed a stress-displacement response based on fracture energy after damage initiation. The damage evolution model used in this constitutive model assumes that damage is a progressively linear degradation of the material stiffness in compression. Assuming a linear form, the plastic displacement when the material is completely damaged, $(\bar{u}^{pl}_f)$, can be specified, and the damage evolution can then be written as:
 
 \begin{equation}
 \dot{D}=\frac{L\dot{\bar{\epsilon}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}=\frac{\dot{\bar{u}}^{pl}}{\dot{\bar{u}}_{f}^{pl}}\label{eqn:druc9-1}
 \end{equation}
 
-The Drucker-Prager plasticity model with ductile damage was parameterized completely using 13 parameters to describe the elastic, plastic and damage behaviour of the up-scaled material. The elastic relationship, flow potential function, and compressive hardening function were parameterized as discussed previously. 
-
-The hyperbolic Drucker-Prager yield function was parameterized using the two material parameters that govern the shape of the curve from equation \ref{eqn:druc2}: the friction angle at large confining stress and the initial hydrostatic tensile strength.
-
-%The Drucker-Prager plasticity model can be written in terms of 4 individual
-%components: The friction angle, dilation angle, initial tensile strength,
-%and the hardening rule. The hardening rule assumes a functional form
-%in terms of a power law according to \cite{prantl_identification_2013}:
-
-%\begin{equation}
-%\sigma_{y}=A+B\left(\bar{\epsilon}^{pl}\right)^{n}\label{eqn:dparam5}
-%\end{equation}
-
-%This yields a total of 6 parameters for the plasticity characterization.
-%The damage characterization is comprised of two main components, the
-%damage initiation and the damage evolution. The damage initiation
-%is based on the Johnson-Cook model as follows (from before):
-
-Furthermore, the damage initiation criterion from equation \ref{eqn:druc8} is described in terms of 3 material parameters, $D_1$, $D_2$, and $D_3$. These parameters describe the shape of the curve, but do not have any physical meaning. To make setting the bounding limits during the parameter estimation simpler, the Johnson-Cook parameters were written in terms of yield plastic strain at triaxialities of 0, 1, and 0.5 ($\bar{\epsilon}^{pl}_{f_0}$, $\bar{\epsilon}^{pl}_{f_1}$, and $\bar{\epsilon}^{pl}_{f_{0.5}}$ respectively:
-%\begin{equation}
-%\bar{\epsilon}_{f}^{pl}\left(\eta\right)=D_{1}+D_{2}e^{D_{3}\eta}\label{eqn:dparam6}
-%\end{equation}
-
-\begin{equation}
-D_2=\frac{\left(\bar{\epsilon}^{pl}_{y_{-0.5}}\right)^3}{\left(\bar{\epsilon}^{pl}_{y_{-0.75}}\right)^2}
-\label{eqn:dparam8}
-\end{equation}
-
-\begin{equation}
-D_3=4\ln \left (\frac{\bar{\epsilon}^{pl}_{y_{-0.5}}}{\bar{\epsilon}^{pl}_{y_{-0.75}}}\right )
-\label{eqn:dparam9}
-\end{equation}
