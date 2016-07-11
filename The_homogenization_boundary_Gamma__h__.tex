@@ -6,7 +6,7 @@ A^{h}=\dfrac{1}{2}\sum_{i=1}^{n}x_{i}^{h}(y_{i+1}^{h}-y_{i-1}^{h})
 \label{eqn:hom1}
 \end{equation}
 
-At this point, within the homogenization domain, one must differentiate between the blocks and the void space between the blocks as they have fundamentally different behaviour. As such, the homogenization domain can be decomposed into two mutually exclusive subdomains representing the voids and blocks, $\Omega^{v}$ and $\Omega^{b}$, respectively. The total block area associated with the block subdomain, $A^{b}$, can be assessed as a summation of $m$ block areas within the homogenization domain, while the individual block area can be assessed in a similar manner to \ref{eqn:hom1}. For $n^{j}$ block boundary vertices, $V_{i,j}^{b}=(x_{i,j}^{b},y_{i,j}^{b})$ representing the $i$th set of vertex coordinates on the $j$th block, the total block area can be calculated as: 
+At this point, within the homogenization domain, one must differentiate between the blocks and the void space between the blocks as they have fundamentally different behaviour. As such, the homogenization domain can be decomposed into two mutually exclusive subdomains representing the voids and blocks, $\Omega^{v}$ and $\Omega^{b}$, respectively. The total block area associated with the block subdomain, $A^{b}$, can be assessed as a summation of $m$ block areas within the homogenization domain, while the individual block area can be assessed in a similar manner to (\ref{eqn:hom1}). For $n^{j}$ block boundary vertices, $V_{i,j}^{b}=(x_{i,j}^{b},y_{i,j}^{b})$ representing the $i$th set of vertex coordinates on the $j$th block, the total block area can be calculated as: 
 
 \begin{equation}
 A^{b}=\dfrac{1}{2}\sum_{j=0}^{m}\sum_{i=1}^{n_{j}}x_{i,j}^{b}(y_{i+1,j}^{b}-y_{i-1,j}^{b})\label{eqn:hom2}
@@ -14,6 +14,7 @@ A^{b}=\dfrac{1}{2}\sum_{j=0}^{m}\sum_{i=1}^{n_{j}}x_{i,j}^{b}(y_{i+1,j}^{b}-y_{i
 
 
 Assuming that the block domain and the void domain are jointly exhaustive of the total homogenization domain, the total area associated with the void subdomain, $A^{v}$, can be written as the difference of the homogenization domain area and the block subdomain area: 
+
 \begin{equation}
 A^{v}=A^{h}-A^{b}\label{eqn:hom3}
 \end{equation}
