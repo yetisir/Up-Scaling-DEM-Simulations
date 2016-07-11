@@ -9,7 +9,7 @@ section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homoarea.png
 In_this_homogenization_method_the__.tex
-figures/3fulllenghtpaddle-1140x1/homogenizationboundary.png
+figures/3fulllenghtpaddle-1140x1/homoboundary.png
 The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
