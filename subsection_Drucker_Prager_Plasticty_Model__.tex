@@ -41,11 +41,11 @@ The flow rule in this formulation is non-associated but the flow potential funct
 G\left(\bar{\sigma}_{ij}\right)=\frac{1}{2}q\left(\bar{\sigma}_{ij}\right)\left [ 1+\frac{1}{K}-\left ( 1-\frac{1}{K} \right )\left ( \frac{r\left(\bar{\sigma}_{ij}\right)}{q\left(\bar{\sigma}_{ij}\right)} \right )^3 \right ]-p\left(\bar{\sigma}_{ij}\right)\tan\psi\label{eqn:const11}
 \end{equation}
 
-In addition to the yield function and the flow rule, the hardening rule is assumed to take the form of the Barcelona model \cite{lubliner_plastic-damage_1989}. The Barcelona model allows for material hardening before softening and approaches a yield stress of 0 as the plastic strain increases.  This form of the hardening function can be written in terms of three material paramters, initial compressive yield strength $Y_0$, $\alpha$ and $\beta$:
+In addition to the yield function and the flow rule, the hardening rule is assumed to take the form of the Barcelona model \cite{lubliner_plastic-damage_1989}. The Barcelona model allows for material hardening before softening and approaches a yield stress of 0 as the plastic strain increases.  This form of the hardening function can be written in terms of three material parameters, initial compressive yield strength $\sigma_c^{iy}$, $\alpha$ and $\beta$:
 
 \begin{equation}
 %\sigma_{c}\left(\bar{\epsilon}^{in}\right)=\frac{\sigma_{c}^{iy}-\sigma_{c}^{p}}{\left(\epsilon_{c}^{pp}\right)^{2}}\left(\bar{\epsilon}^{in}-\epsilon_{c}^{pp}\right)^{2}+\sigma_{c}^{p}
-\sigma_c=Y_0\left [ \left ( 1+\alpha \right ) e^{-\beta\bar{\epsilon}^{pl}}-\alpha e^{-2\beta\bar{\epsilon}^{pl}}  \right ]
+\sigma_c=\sigma_c^{iy}\left [ \left ( 1+\alpha \right ) e^{-\beta\bar{\epsilon}^{pl}}-\alpha e^{-2\beta\bar{\epsilon}^{pl}}  \right ]
 \label{eqn:param2-1}
 \end{equation}
 
