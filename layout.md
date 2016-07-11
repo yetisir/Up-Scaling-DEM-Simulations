@@ -23,7 +23,7 @@ section_upscalingNFR.tex
 subsection_demSimulations.tex
 subsection_Parameter_Estimation_Results_Using__.tex
 figures/druckerDamage_voronoiGranite/fittedCurves.png
-reverse__.tex
+There_are_additional_minor_sources__.tex
 figures/fittedCurves/fittedCurves.png
 subsection_Impact_of_REV_Size__.tex
 figures/REVAnalysis/REVAnalysis.png
