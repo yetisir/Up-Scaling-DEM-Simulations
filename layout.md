@@ -8,7 +8,7 @@ figures/DEM/DEM.png
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
-However_one_must_also_note__.tex
+In_this_homogenization_method_the__.tex
 figures/3fulllenghtpaddle-1140x1/3fulllenghtpaddle-1140x1.png
 The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
