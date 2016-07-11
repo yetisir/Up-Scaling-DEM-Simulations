@@ -13,6 +13,7 @@ figures/3fulllenghtpaddle-1140x1/homogenizationboundary.png
 The_homogenization_boundary_Gamma__h__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
+subsection_Assessment_of_the_REV__.tex
 section_continuumModels.tex
 subsection_Drucker_Prager_Plasticty_Model__.tex
 Flow_Rule_same_as_concrete__.tex
