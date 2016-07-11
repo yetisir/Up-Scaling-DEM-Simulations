@@ -29,7 +29,7 @@ figures/fittedCurves/voronoiGraniteReverse_druckerDamage_lastFrame.png
 subsection_Impact_of_REV_Size__.tex
 figures/REVAnalysis/REVAnalysis.png
 section_applicationToCAES.tex
-subsection_Model_Description_The_slope__.tex
+subsection_Model_Description_The_model__.tex
 figures/slope diagram1/SlopeSchematic.png
 DEM_meshing_same_as_for__.tex
 subsection_DNS_Comparison_A_comparison__.tex
