@@ -6,6 +6,7 @@ The_next_piece_of_software__.tex
 section_distinctElementMethod.tex
 figures/DEM/DEM.png
 section_parameterEstimation.tex
+subsection_Assessment_of_the_REV__1.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homogenizationarea.png
 In_this_homogenization_method_the__.tex
