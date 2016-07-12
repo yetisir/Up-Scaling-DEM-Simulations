@@ -12,7 +12,7 @@ A goal of the up-scaling methodology is to identify the parameters of a continuu
 Identifying the appropriate size of an RVE for a given NFR is a challenging task, which is often based on trial and error. Clearly, the RVE should be sufficiently large such that the homogenized stress-strain response for the DEM RVE has converged. In our experience, a safe RVE size for a NFR with non-uniform fracture spacing is about 10 times the average spacing between fractures. The role of RVE size is further investigated below.
 
 \subsection*{Exercise DEM RVE}
-1) The average stress-strain response of a DEM RVE is obtain for various load-paths though homogenization; 2) The parameters of continuum constitutive model are determined using a series of optimization algorithms to estimate an optimal set of parameters for the continuum model.
+The DEM RVE is exercised for different load-paths in a way that is akin  to conducting multiple laboratory tests on physical specimens to characterize the full range of material behaviour. Specifically the mechanical response of NFR depends the degree of confinement and so it is necessary to perform virtual triaxial tests a different levels of confinement. 
 
 \subsection*{Apply homogenization algorithms}
 Output from the DEM simulation include the nodal displacements of the deformable blocks between the natural fractures and therefore the normal and tangential crack opening displacements. From the displacements, the microscale stress in the deformable blocks can be determined.  Using these quantities, the average (macroscale) behaviour of the DEM RVE can be  
