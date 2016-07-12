@@ -1,5 +1,7 @@
 \section{Overview of the Up-Scaling Methodology}
-The goal of the up-scaling methodology is to identify the parameters of a continuum constitutive model that best emulates the response of the DEM REV. The up-scaling methodology has five steps: 
+The goal of the up-scaling methodology is to identify the parameters of a continuum constitutive model (macroscale model) that best emulates the response of the DEM REV (microscale model).  
+
+The up-scaling methodology has five steps: 
 \begin{enumerate}
     \item Identify the DEM RVE for the NFR.
 	\item Exercise the  DEM RVE using multiple load paths.
@@ -12,23 +14,20 @@ The goal of the up-scaling methodology is to identify the parameters of a contin
 Identifying the appropriate size of an RVE for a given NFR is a challenging task, which is often based on trial and error. Clearly, the RVE should be sufficiently large such that the homogenized stress-strain response for the DEM RVE has converged. In our experience, a safe RVE size for a NFR with non-uniform fracture spacing is about 10 times the average spacing between fractures. The role of RVE size is further investigated below.
 
 \subsection*{Exercise DEM RVE}
-The DEM RVE is exercised for different load-paths in a way that is akin  to conducting multiple laboratory tests on physical specimens to characterize the full range of material behaviour. Specifically, the mechanical response of NFR depends the degree of confinement and so it is necessary to perform multiple virtual triaxial tests a different levels of confinement. 
+The DEM RVE is exercised for different load-paths in a way that is akin  to conducting multiple laboratory tests on physical specimens to characterize the full range of material behaviour. Specifically, the mechanical response of NFR depends upon the degree of confinement and so it is necessary to perform multiple virtual triaxial tests at different levels of confinement. 
 
 \subsection*{Apply homogenization algorithms}
-Output from the DEM simulation include the nodal displacements of the deformable blocks between the natural fractures and therefore the normal and tangential crack opening displacements. From the displacements, the microscale stress in the deformable blocks can be determined.  Using these quantities, the average (macroscale) stress-strain behaviour of the DEM RVE is determined. The homogenization algorithm is discussed in detail in Section XXX.
+Output from the DEM simulation include the nodal displacements of the deformable blocks between the natural fractures and therefore the normal and tangential crack opening displacements. From the displacements, the microscale stress in the deformable blocks can be determined.  Using these quantities, the average (macroscale) stress-strain behaviour of the DEM RVE is determined. The homogenization algorithm is discussed in detail in Section 3.
 
-\subsection*{continuum constitutive model)
-In dealing with NFR, the behaviour of the rock mass is largely controlled by the reactivation and failure of existing natural fractures.
-
-\subsection*{continuum constitutive model)
-In dealing with NFR, the behaviour of the rock mass is largely controlled by the reactivation and failure of existing natural fractures. As fractures grow, the integrity and stiffness of the rock mass decreases. From this perspective, a continuum description of a NFR can be well approximated using Continuum Damage Mechanics (CDM). CDM models capture the salient features of progressive failure and stiffness degradation without the need for an explicit representation of the fracture network. Here we adopted a Ducker-Prager model characterized by 11 parameters-2 elastic, 6 plastic, and 3 damage.
+\subsection*{continuum constitutive model}
+In dealing with NFR, the behaviour of the rock mass is largely controlled by the reactivation and failure of existing natural fractures. As fractures grow, the integrity and stiffness of the rock mass decreases. From this perspective, a continuum description of a NFR can be well approximated using Continuum Damage Mechanics (CDM). CDM models capture the salient features of progressive failure and stiffness degradation without the need for an explicit representation of the fracture network. Here we adopted a Ducker-Prager model characterized by 11 parameters-2 elastic, 6 plastic, and 3 damage. This model is decribed in more detail in Section 4.
 
 \subsection*{run parameter estimation algorithms}
-In this step, the 11 parameters of the CDM which lead to the CDM that is best able to approximate the average (macroscale) stress-strain behaviour of the RVE for all of the load-paths explored  are determined using an iterative optimization algorithm. The optimization algorithm is discussed further in Section YYY.
+In this step, the 11 parameters of the CDM which best approximates the average (macroscale) stress-strain behaviour of the RVE are determined using an iterative optimization algorithm. The optimization algorithm is discussed further in Section YYY.
 
-\subsection(software implementation)
-The upscaling framework that is presented here consists of four main software components (Figure \ref{fig:workflow}). In procedural order, the first software component involved is a DEM simulation package. The DEM software is used to generate a dataset of DEM displacements and stresses, which is subsequently fed into the homogenization program to produce the average (macroscale) stress and strain tensors over the whole range of strains and for each load path. At this point, the homogenized stress-strain data is used by the parameter estimation software as observation data (i.e., laboratory text data). The parameter estimation program, using optimization algorithms, iteratively executes the CDM model for each load path using different parameter sets, while attempting a least-squares minimization of the error between the homogenized and CDM stress-strain curves. Eventually, the algorithm converges to a near-optimal parameter set that can be viewed to be the best estimate of the NFR responses by the given continuum model.
+\subsection{Software Implementation}
+The upscaling framework that is presented here consists of four main software components (Figure \ref{fig:workflow}). In procedural order, the first software component involved is a DEM simulation package, which is used to directly model the NFR. The DEM software accepts as inputs the geometry of the DFN, the material properties of the rock and the natural fractures, and the load paths. The DEM software outputs the microscale displacement and stress-strain responses for each load path.  The microscale data is subsequently fed into the homogenization program to compute the average (macroscale) stress- strain tensors over the whole range of strains of each load path. Next, the homogenized stress-strain data is used by the parameter estimation software as observation data (i.e., laboratory/field data). The parameter estimation program, using optimization algorithms, iteratively executes the CDM model for each load path using different parameter sets, while attempting minimize the error between the homogenized microscale and CDM stress-strain curves. Eventually, the algorithm converges to a near-optimal parameter set that can be viewed to be the best estimate of the NFR responses by the given continuum model.
 
-Once the optimal parameter set for the CDM model has been identified, the newly established constitutive model can be used in Finite Element Method (FEM) models or with any other numerical or analytical model.
+Once an optimal parameter set for the CDM model has been identified, the newly established constitutive model can be used in Finite Element Method (FEM) models or with any other numerical or analytical simulation.
 
 
