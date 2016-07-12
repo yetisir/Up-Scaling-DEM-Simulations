@@ -1,15 +1,19 @@
 \section{Up-Scaling Methodology}
-A goal of the up-scaling methodology is to identify the parameters of a continuum constitutive model that best emulates the response of DEM REV. the up-scaling methodology has two step: 1) The average stress-strain response of a DEM RVE is obtain for various load-paths though homogenization; 2) The parameters of continuum constitutive model are determined using a series of optimization algorithms to estimate an optimal set of parameters for the continuum model.
-
-In dealing with NFR, the behaviour of the rock mass is largely controlled by the discontinuities. If these discontinuities are sufficiently large, as is the case in NFR, one can describe the rock as being in a damaged state. From this perspective, a continuum description of NFR can be established using Continuum Damage Mechanics (CDM). These CDM models allow for the modeling of progressive failure and stiffness degradation due to applied loads without the need for an explicit representation of the fracture network. This article aims to use up-scaling to describe the constitutive behaviour of NFR using CDM by means of homogenization and parameter estimation. 
+A goal of the up-scaling methodology is to identify the parameters of a continuum constitutive model that best emulates the response of DEM REV. the up-scaling methodology has five step: 1) The average stress-strain response of a DEM RVE is obtain for various load-paths though homogenization; 2) The parameters of continuum constitutive model are determined using a series of optimization algorithms to estimate an optimal set of parameters for the continuum model.
 
 In order for this  up-scaling method to be implemented, the CDM model has to be parameterized by identifying key parameters in the constitutive relationships that govern the behavioral response. The general upscaling methodology presented here can be summarized in three steps:
 \begin{enumerate}
-	\item Run REV DEM simulations under various loading conditions.
-	\item Apply homogenization algorithms to DEM results to obtain stress-strain curves.
+    \item Identify DEM REV for the NFR.
+	\item Exercise DEM REV using multiple load paths.
+	\item Apply homogenization algorithms to DEM (microscale) results to determine the average (macroscale) stress-strain response of the RVE.
+	\item Identify a continuum constitutive model suitable to capture the salient features of NFR mechanics.
 	\item Run parameter estimation algorithms to minimize the difference between the CDM and DEM responses.
 \end{enumerate}
 
 Once the optimal parameter set for the CDM model has been identified, the newly established constitutive model can be used in a Finite Element Method (FEM) code to simulate the response of NFR at the reservoir scale.
 
 The upscaling framework that is presented here consists of four main software components (Figure \ref{fig:workflow}). In procedural order, the first software component involved is a DEM simulation package. The DEM software is used to generate the initial dataset which is subsequently fed into the homogenization program to produce the homogenized stress and strain tensors. At this point, the homogenized stress-strain data is used by the parameter estimation software as observation data. The parameter estimation program, using optimization algorithms, iteratively runs single element CDM models attempting a least-squares minimization between the DEM and CDM stress strain curves. Eventually, the algorithm converges to an optimal parameter set that can be said to represent the DEM model in a continuum capcity.
+
+--- 
+In dealing with NFR, the behaviour of the rock mass is largely controlled by the discontinuities. If these discontinuities are sufficiently large, as is the case in NFR, one can describe the rock as being in a damaged state. From this perspective, a continuum description of a NFR can be established using Continuum Damage Mechanics (CDM). The CDM models capture the salient features of progressive failure and stiffness degradation without the need for an explicit representation of the fracture network. This article aims to use up-scaling to describe the constitutive behaviour of NFR using CDM by means of homogenization and parameter estimation. 
+---
