@@ -1,7 +1,7 @@
 abstract.tex
 section_introduction.tex
 section_upscalingMethodology.tex
-figures/upscalingworkflow/flowChartUpScaling.png
+figures/upscalingworkflow/UpScaling Flow Chart-1.png
 section_distinctElementMethod.tex
 figures/DEM/DEM.png
 section_parameterEstimation.tex
