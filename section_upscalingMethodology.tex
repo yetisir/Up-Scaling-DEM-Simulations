@@ -1,8 +1,6 @@
 \section{Up-Scaling Methodology}
 The upscaling methodology that is developed in this paper aims to emulate the constitutive response of DEM simulations within a continuum framework. This emulation is achieved though homogenization of the DEM simulations in order to get an average stress-strain response of the system. A parameterized continuum model is subsequently fit to this DEM response using a series of optimization algorithms to ultimately estimate an optimal set of parameters for the continuum model.
 
-%in general, standard geomechanical material models tend to be elastoplastic in nature. 
-
 In dealing with NFR, the behaviour of the rock mass is largely controlled by the discontinuities such as cleavage, cracks and fractures. If these discontinuities are sufficiently large, as is the case in NFR, one can describe the rock as being in a damaged state. From this perspective, a continuum description of NFR can be  established using Continuum Damage Mechanics (CDM). These CDM models allow for the modeling of progressive failure and stiffness degradation due to applied loads without the need for an explicit representation of the fracture network. This article aims to use up-scaling to describe the constitutive behaviour of NFR using CDM by means of homogenization and parameter estimation. 
 
 In order for this  up-scaling method to be implemented, the CDM model has to be parameterized by identifying key parameters in the constitutive relationships that govern the behavioral response. This parameterization has to be done for each material model used, aiming to minimize the number of parameters required to describe the CDM model. 
