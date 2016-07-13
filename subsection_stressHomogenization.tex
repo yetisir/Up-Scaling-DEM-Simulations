@@ -18,10 +18,10 @@ The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$, is derived f
 %\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
 %\end{equation}
 
-When each deformable block is discretized by constant stress triangles (elements/zones), the integration of the stress over each deformable block subdomain can be written as a summation in the form of a spatially weighted average of the zone stresses. Let $\boldsymbol{\sigma}_{IJ}^{m}$ denote the stress in zone $J$ of deformable block $I$, $N_{I}^{z}$ denote the number of zones within block $I$, $A_{IJ}^{z}$ denote area of zone $J$ in block $I$, and $N^{b}$ denote the number of deformable blocks. The homogenized stress is then defined as 
+When each deformable block is discretized by constant stress triangles (elements/zones), the integration of the stress over each deformable block subdomain can be written as a summation in the form of a spatially weighted average of the zone stresses. Let $\boldsymbol{\sigma}_{IJ}^{m}$ denote the stress in zone $J$ of deformable block $I$, $N_{I}^{z}$ denote the number of zones within block $I$, $A_{IJ}$ denote area of zone $J$ in block $I$, and $N^{b}$ denote the number of deformable blocks. The homogenized stress is then defined as 
 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{I=1}^{N^{b}}\sum_{J=1}^{N_{I}^{z}}\boldsymbol{\sigma}_{IJ}^{z}A_{IJ}^{z}\label{eqn:stress4}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{I=1}^{N^{b}}\sum_{J=1}^{N_{I}^{z}}\boldsymbol{\sigma}_{IJ}^{m}A_{IJ}\label{eqn:stress4}
 \end{equation}
 
 Here, (\ref{eqn:stress4}) represents the final form of the homogenized stress tensor formulation as a function of zone stresses zone areas and homogenization area.
