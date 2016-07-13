@@ -15,21 +15,13 @@ At this point, it becomes convenient to assume a small displacement formulation 
 Following Wellman et al., 2008, the above integral can be converted to a following boundary integral using the divergence theorem:
 
 \begin{equation}
-\int_{\Omega^h}\left[\nabla\mathbf{u}^m+\left(\nabla\mathbf{u}^m\right)^{T}\right]dA=\oint_{\Gamma_h}\left[\mathbf{u}^m\otimes\mathbf{n}+\mathbf{n}\otimes\mathbf{u}^m\right]d\Gamma\label{eqn:strain1-1}
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\oint_{\Gamma^{h}}\left[\mathbf{u}^m\otimes\mathbf{n}+\mathbf{n}\otimes\mathbf{u}^m\right]d\Gamma\label{eqn:strain5-1}
 \end{equation}
 
 where $\mathbf{n}$ is the outward pointing normal to $\Gamma_h$
 
-If one considers the strain behaviour of the block boundary and the void boundary, the average displacement and normal of a particular segment
-will be identical regardless of whether it is a block boundary segment or a void boundary segment. Substitution of (\ref{eqn:strain1}) and (\ref{eqn:strain1-1}) into (\ref{eqn:strain2}) allows one to write the homogenized strain tensor as follows:
+When $\Gamma_h$ is define by a set of line segments over which the displacement is linear the boundary integral can be rewritten as a summation over the boundary with $N$ boundary segments. Let $\bar{\mathbf{u}}^m_{I}$ denote the average displacement along the $I^{th}$ boundary segment of the homogenization boundary. The average displacement along a boundary segment is calculated as the average of the two nodal displacements defining the boundary of each segment. Let $\mathbf{n}_{I}$ represent the outward pointing normal to the $I^{th}$ boundary segment on the homogenization boundary.  Let the length of boundary segment $I$ be denoted by $L_{I}$. The homogenized stain can be rewritten as
 
 \begin{equation}
-\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\oint_{\Gamma^{h}}\left[\mathbf{u}\otimes\mathbf{n}+\mathbf{n}\otimes\mathbf{u}\right]d\Gamma\label{eqn:strain5-1}
-\end{equation}
-
-
-Here, one can again take advantage of the discontinuous nature of the DEM simulations, allowing for the continuous boundary integrals to be written as a summation over the boundary with $N$ boundary segments, where $\mathbf{u}_{i}$ represents the average displacement along the $i^{th}$ boundary segment on the homogenization boundary. This conversion assumes that the boundary segment is linear and the displacement field along the boundary segment is also linear. The average displacement along a boundary segment is thus calculated as a linear average of the two nodal displacements defining the boundary segment. Furthermore, $\mathbf{n}_{i}$ represents the outward normal of the $i^{th}$ boundary segment on the homogenization boundary with a length of $L_{i}$:
-
-\begin{equation}
-\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\sum_{i=1}^{N}\left[\mathbf{u}_{i}\otimes\mathbf{n}_{i}+\mathbf{n}_{i}\otimes\mathbf{u}_{i}\right]L_{i}\label{eqn:strain7}
+\langle\boldsymbol{\epsilon}\rangle=\frac{1}{2A^{h}}\sum_{I=1}^{N}\left[\mathbf{u}^m_{I}\otimes\mathbf{n}_{I}+\mathbf{n}_{I}\otimes\mathbf{u}^m_{I}\right]L_{I}\label{eqn:strain7}
 \end{equation}
