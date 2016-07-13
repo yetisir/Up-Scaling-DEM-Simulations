@@ -4,6 +4,7 @@ section_upscalingMethodology.tex
 figures/upscalingworkflow/UpScaling Flow Chart-1.png
 section_distinctElementMethod.tex
 figures/DEM/DEM.png
+section_Definition_of_a_suitable__.tex
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homoarea.png
