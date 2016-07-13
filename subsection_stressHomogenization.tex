@@ -18,7 +18,7 @@ The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$, is derived f
 %\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
 %\end{equation}
 
-Since the block subdomain is inherently discretized, the integration of the stress over the block subdomain can be written as a summation in the form of a spatially weighted average of the zone stresses, $\boldsymbol{\sigma}_{ij}^{z}$. For $N_{i}^{z}$ zones within each of $N^{b}$ number of blocks in the block subdomain the average stress can be weighted based on the zone area, $A_{ij}^{z}$: 
+When each deformable block is discretized by constant stress triangles (elements), the integration of the stress over each deformable block subdomain can be written as a summation in the form of a spatially weighted average of the zone stresses, $\boldsymbol{\sigma}_{ij}^{z}$. For $N_{i}^{z}$ zones within each of $N^{b}$ number of blocks in the block subdomain the average stress can be weighted based on the zone area, $A_{ij}^{z}$: 
 
 \begin{equation}
 \langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{i=1}^{N^{b}}\sum_{j=1}^{N_{i}^{z}}\boldsymbol{\sigma}_{ij}^{z}A_{ij}^{z}\label{eqn:stress4}
