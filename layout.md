@@ -8,7 +8,6 @@ section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homoarea.png
 In_this_homogenization_method_the__.tex
-x__.tex
 subsection_stressHomogenization.tex
 subsection_strainHomogenization.tex
 subsection_Assessment_of_the_REV__.tex
