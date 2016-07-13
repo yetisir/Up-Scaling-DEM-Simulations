@@ -1,6 +1,6 @@
 \subsection{Stress Homogenization}
 
-The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$, is derived from the definition of the spatial average of the microscale stress of the deformable blocks of the DEM simulation, $\boldsymbol{\sigma}^m$, over the homogenization domain $\Omega^{h}$. Let $\boldsymbol{\sigma}^m_I$ denote the microscale stress in block $I$ and let
+The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$, is derived from the definition of the spatial average of the microscale stress of the deformable blocks of the DEM simulation, $\boldsymbol{\sigma}^m$, over the homogenization domain $\Omega^{h}$. 
 \begin{equation}
 \langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{h}}\boldsymbol{\sigma}^m dA\label{eqn:stress1}
 \end{equation}
@@ -18,10 +18,10 @@ The homogenized Cauchy stress, $\langle\boldsymbol{\sigma}\rangle$, is derived f
 %\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\int_{\Omega^{b}}\boldsymbol{\sigma}dA\label{eqn:stress2a}
 %\end{equation}
 
-When each deformable block is discretized by constant stress triangles (elements), the integration of the stress over each deformable block subdomain can be written as a summation in the form of a spatially weighted average of the zone stresses, $\boldsymbol{\sigma}_{ij}^{z}$. For $N_{i}^{z}$ zones within each of $N^{b}$ number of blocks in the block subdomain the average stress can be weighted based on the zone area, $A_{ij}^{z}$: 
+When each deformable block is discretized by constant stress triangles (elements/zones), the integration of the stress over each deformable block subdomain can be written as a summation in the form of a spatially weighted average of the zone stresses. Let $\boldsymbol{\sigma}_{IJ}^{m}$ denote the stress in zone $J$ of deformable block $I$, $N_{I}^{z}$ denote the number of zones within block $I$, $A_{IJ}^{z}$ denote area of zone $J$ in block $I$, and $N^{b}$ denote the number of deformable blocks. The homogenized stress is then defined as 
 
 \begin{equation}
-\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{i=1}^{N^{b}}\sum_{j=1}^{N_{i}^{z}}\boldsymbol{\sigma}_{ij}^{z}A_{ij}^{z}\label{eqn:stress4}
+\langle\boldsymbol{\sigma}\rangle=\frac{1}{A^{h}}\sum_{I=1}^{N^{b}}\sum_{J=1}^{N_{I}^{z}}\boldsymbol{\sigma}_{IJ}^{z}A_{IJ}^{z}\label{eqn:stress4}
 \end{equation}
 
 Here, (\ref{eqn:stress4}) represents the final form of the homogenized stress tensor formulation as a function of zone stresses zone areas and homogenization area.
