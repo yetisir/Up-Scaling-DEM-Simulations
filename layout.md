@@ -4,7 +4,7 @@ section_upscalingMethodology.tex
 figures/upscalingworkflow/UpScaling Flow Chart-1.png
 section_distinctElementMethod.tex
 figures/DEM/demnew.png
-The_stress_within_these_domains__.tex
+The_interaction_between_these_elements__.tex
 section_Definition_of_a_suitable__.tex
 section_parameterEstimation.tex
 section_homogenizationApproach.tex
