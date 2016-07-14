@@ -11,7 +11,7 @@ In this paper, ITASCA\textsuperscript{TM}'s implementation of a 2-dimensional DE
 Consider an arbitrary deformable domain, $\Omega$, with a boundary, $\Gamma$, that is subdivided by discontinuities into $i$ number of deformable subdomains, each denoted by $\Omega_i$ (Figure\ref{fig:DEM}). Let $\Gamma_{ij}=\Gamma_{ji}$ represent the boundary between $\Omega_i$ and $\Omega_j$. The motion of these subdomains is governed by the conservation of momentum which relates the stress field divergence, $\nabla\boldsymbol{\sigma}^m$, to the domain acceleration, $\ddot{\mathbf{u}}^m$ and density, $\rho$:
 
 \begin{equation}
-\rho \ddot{\mathbf{u}}-\nabla\boldsymbol{\sigma}}=0
+\rho \ddot{\mathbf{u}}^m-\nabla\boldsymbol{\sigma}^m=0
 \label{eqn:cauchy}
 \end{equation}
 
