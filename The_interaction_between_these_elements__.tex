@@ -2,20 +2,20 @@
 The interaction between these elements is the distinguishing feature in the DEM formulation, and is comprised of two main components: contact detection and the constitutive relationship. The contact detection algorithms are responsible for ensuring that the elements do not penetrate each other and ensuring that the appropriate contact forces are transferred between elements. These contact forces are governed by constitutive models of the discontinuities which can be described in general by a shear stiffness, $k_s$, in a direction parallel to the discontinuity, and a normal stiffness, $k_n$, in a direction normal to the discontinuity. The normal stress in the discontinuity, $\sigma_n$, can be expressed as a function of the normal elastic displacement, $u_n$, up until the tensile strength, $T$, is exceeded: 
 
 \begin{equation}
-\sigma_n=\left\{\begin{array}
+\sigma_n=\left\{\begin{matrix}
 -k_n u_n &if&\sigma_n \geq -T\\ 
  0 & if &\sigma_n < -T
-\end{array}\right.
+\end{matrix}\right.
 \label{eqn:demnormal}
 \end{equation}
 
 Futhermore, the shear stress, $\tau_s$, in the discontinuity can be written in terms of the elastic shear displacement, $u_s^e$, until the maximum shear strength, $\tau_s$ is reached, at which point, the shear stress becomes the maximum shear stress:
 
 \begin{equation}
-\tau_s=\left\{\begin{array}
+\tau_s=\left\{\begin{matrix}
 -k_s u_s^e &if&\left |\tau_{s} \right | < \tau_{max}\\ 
- frac{u_s^e}{\left|u_s^e\right|}\tau_{max} & if &\left |\tau_{s} \right | \geq \tau_{max}
-\end{array}\right.
+\frac{u_s^e}{\left|u_s^e\right|}\tau_{max} & if &\left |\tau_{s} \right | \geq \tau_{max}
+\end{matrix}\right.
 \label{eqn:demshear}
 \end{equation}
 
