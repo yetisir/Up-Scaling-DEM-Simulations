@@ -3,7 +3,7 @@ The interaction between these elements is the distinguishing feature in the DEM 
 
 \begin{equation}
 \sigma_n=\left\{\begin{matrix}
--k_n u_n &if&\sigma_n \geq -T\\ 
+\sigma_n\left(-k_n, u_n\right) &if&\sigma_n \geq -T\\ 
  0 & if &\sigma_n < -T
 \end{matrix}\right.
 \label{eqn:demnormal}
@@ -13,7 +13,7 @@ Futhermore, the shear stress, $\tau_s$, in the discontinuity can be written in t
 
 \begin{equation}
 \tau_s=\left\{\begin{matrix}
--k_s u_s^e &if&\left |\tau_{s} \right | < \tau_{max}\\ 
+\tau_s\left(k_s,u_s^e, \sigma_n\right) &if&\left |\tau_{s} \right | < \tau_{max}\\ 
 \frac{u_s^e}{\left|u_s^e\right|}\tau_{max} & if &\left |\tau_{s} \right | \geq \tau_{max}
 \end{matrix}\right.
 \label{eqn:demshear}
