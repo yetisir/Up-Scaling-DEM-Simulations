@@ -6,7 +6,6 @@ section_distinctElementMethod.tex
 figures/DEM/demnew.png
 The_interaction_between_these_elements__.tex
 section_Definition_of_a_suitable__.tex
-section_parameterEstimation.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homoarea.png
 In_this_homogenization_method_the__.tex
