@@ -4,7 +4,7 @@ section_upscalingMethodology.tex
 figures/upscalingworkflow/UpScaling Flow Chart-1.png
 section_distinctElementMethod.tex
 figures/DEM/demnew.png
-The_interaction_between_these_elements__.tex
+The_interaction_between_Omega_i_and__.tex
 section_homogenizationApproach.tex
 figures/homogenizationarea/homoarea.png
 In_this_homogenization_method_the__.tex
