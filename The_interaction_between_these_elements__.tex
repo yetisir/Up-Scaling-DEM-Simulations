@@ -1,5 +1,5 @@
 
-The interaction between these elements is the distinguishing feature in the DEM formulation, and is comprised of two main components: contact detection and the constitutive relationship. The contact detection algorithms are responsible for ensuring that the elements do not penetrate each other and ensuring that the appropriate contact forces are transferred between elements. These contact forces are governed by constitutive models of the discontinuities which can be described in general by a shear stiffness, $k_s$, in a direction parallel to the discontinuity, and a normal stiffness, $k_n$, in a direction normal to the discontinuity. The normal stress in the discontinuity, $\sigma_n$, can be expressed as a function of the normal elastic displacement, $u_n$, up until the tensile strength, $T$, is exceeded: 
+The interaction between \Omega_i and \Omega_j along \Gamma_ij is the distinguishing feature in the DEM formulation, and is comprised of two main components: contact detection and the constitutive relationship. The contact detection algorithms are responsible for ensuring that \Omega_i and \Omega_j do not penetrate each other and ensuring that the appropriate contact forces are transferred between elements. These contact forces are governed by constitutive models of \Gamma_i which can be described in general by a shear stiffness, $k_s$, in a direction parallel to the \Gamma_i, and a normal stiffness, $k_n$, in a direction normal to \Gamm_i. The normal stress in the discontinuity, $\sigma_n$, can be expressed as a function of the normal elastic displacement, $u_n$, up until the tensile strength, $T$, is exceeded: 
 
 \begin{equation}
 \sigma_n=\left\{\begin{matrix}
@@ -9,12 +9,12 @@ The interaction between these elements is the distinguishing feature in the DEM 
 \label{eqn:demnormal}
 \end{equation}
 
-Futhermore, the shear stress, $\tau_s$, in the discontinuity can be written in terms of the elastic shear displacement, $u_s^e$, until the maximum shear strength, $\tau_s$ is reached. The when the shear stress within the discontinuity exceeds the prescribed maximum shear stress, the discontinuity experiences plastic shear displacements in order not to exceed the maximum shear stress:
+Futhermore, the shear stress, $\tau_i$, in \Gamma_i can be written in terms of the elastic shear displacement, $u_i^s$, until the maximum shear strength, $\tau^{max}$ is reached. The when the shear stress within the discontinuity exceeds the prescribed maximum shear stress, the discontinuity experiences plastic shear displacements in order not to exceed the maximum shear stress:
 
 \begin{equation}
-\tau_s=\left\{\begin{matrix}
-\tau_s\left(k_s,u_s^e, \sigma_n\right) &if&\left |\tau_{s} \right | < \tau_{max}\\ 
-\frac{u_s^e}{\left|u_s^e\right|}\tau_{max} & if &\left |\tau_{s} \right | \geq \tau_{max}
+\tau_i=\left\{\begin{matrix}
+\tau_i\left(k_s,u_i^s, \sigma_i^n\right) &if&\left |\tau_i \right | < \tau^{max}\\ 
+\frac{u_i^s}{\left|u_i_^s\right|}\tau^{max} & if &\left |\tau_i \right | \geq \tau_{max}
 \end{matrix}\right.
 \label{eqn:demshear}
 \end{equation}
