@@ -5,7 +5,7 @@ There exists a set of methods, referred to as Discrete Element Methods, which pr
 
 With DEM methods, the discontinuous system is represented as an assembly of deformable blocks such that the interfaces between the blocks represent the discontinuities. With respect to NFR, the blocks can be used to represent the intact rock while the discontinuities represent the joints in the rock mass. 
 
-Consider an arbitrary deformable domain, $\Omega$, with a boundary, $\Gamma$, that is subdivided by prescribed discontinuities into $i$ number of subdomains, each denoted by $\Omega_i$ (Figure \ref{fig:DEM}). Let $\Gamma_{ij}=\Gamma_{ji}$ represent the boundary between $\Omega_i$ and $\Omega_j$. The motion of these subdomains (Herein referred to as elements) is governed by the conservation of momentum which relates the divergence of the stress field within the element, $\nabla\boldsymbol{\sigma}^m$, to the element acceleration, $\ddot{\mathbf{u}}^m$, and density, $\rho$:
+Consider an arbitrary deformable domain, $\Omega$, with a boundary, $\Gamma$, that is subdivided by prescribed discontinuities into $i$ number of subdomains, each denoted by $\Omega_i$ (Figure \ref{fig:DEM}). Let $\Gamma_{ij}=\Gamma_{ji}$ represent the boundary between $\Omega_i$ and $\Omega_j$. The motion of these subdomains (discrete elements) is governed by the conservation of momentum which relates the divergence of the stress field within the element, $\nabla\boldsymbol{\sigma}^m$, to the element acceleration, $\ddot{\mathbf{u}}^m$, and density, $\rho$:
 
 \begin{equation}
 \rho \ddot{\mathbf{u}}^m=\nabla\cdot\boldsymbol{\sigma}^m
