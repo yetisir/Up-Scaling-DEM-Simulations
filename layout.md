@@ -31,7 +31,7 @@ subsection_Model_Description_The_model__.tex
 figures/slope diagram1/SlopeSchematic.png
 The_meshing_of_the_DEM__.tex
 subsection_DNS_Comparison_A_qualitative__.tex
-figures/S11Contours/S11Contours.png
+figures/S11Contours/S11.png
 figures/S22Contours/S22Contours.png
 figures/S12Contours/S12Contours.png
 As_can_be_seen_the__.tex
