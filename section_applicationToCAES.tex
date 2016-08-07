@@ -1,7 +1,7 @@
 \section{Comparison to DNS - Application to Slope Stability Analysis}
 
-In order to attempt to validate the applicability of the up-scaling methodology outlined in this paper, a slope failure problem was simulated using both DEM and the up-scaled CDM model. Here, a simple 2-D slope problem is presented and loaded from the top until failure. The two models were compared based on the resultant stress distribution just as failure occurs. 
+To validate the up-scaling methodology used, a simple 2-D slope problem is presented and loaded from the top until failure using both DEM and the up-scaled CDM model. Here, the resultant stress distribution are compared just as failure occurs. 
 
-In the DEM model, failure was assessed based on the unbalanced forces in the model. Since the joints in the model have a stiffness and cohesion, when the slope fails, the explicit quasi-static solution becomes dynamic do to a the sudden release of elastic energy and the inability for the applied damping to suppress it all. At this point, the total unbalanced forces in the model increase and the slope can be said to have failed. 
+In the DEM model, failure can be assessed based on the unbalanced forces in the model. Since the joints in the model have a stiffness and cohesion, when the slope fails, the explicit quasi-static solution becomes dynamic because of a sudden release of elastic energy and the inability of the applied damping to suppress it all. At this point, the total unbalanced forces in the model increase and the slope can be said to have failed. 
 
-For the CDM model, failure was assessed based on non-convergence of the model. The model was run as a implicit static simulation, which does not converge when the slope fails dynamically. As such, the load step in which the model fails to converge was considered the point of failure.
+For the CDM model, failure can be assessed based on non-convergence of the model when run as an implicit static simulation, which does not converge when the slope fails. The load step in which the CDM model fails to converge because the slope fails dynamically is considered the point of failure.
