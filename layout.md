@@ -22,7 +22,7 @@ section_upscalingNFR.tex
 subsection_demSimulations.tex
 subsection_Verification_of_the_Parameter__.tex
 figures/druckerDamage_voronoiGranite/voronoiGranite_druckerDamage_lastFrame_dir-2.png
-There_are_additional_minor_sources__.tex
+The_optimal_parameter_set_in__.tex
 figures/fittedCurves/voronoiGraniteVerify_druckerDamage_lastFrame_dir-2.png
 subsection_Impact_of_REV_Size__.tex
 figures/REVAnalysis/REVAnalysis.png
