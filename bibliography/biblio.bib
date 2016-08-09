@@ -1,4 +1,337 @@
-@article{Gracie_2011,
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<title>Authorea</title>
+<meta name="description" content="Collaborate on scientific articles, write student papers, share technical documents. Authorea is the online editor and word processor for scholars and researchers.">
+<!-- meta property="og:image" content="https://authorea.com/assets/thumb.png" / -->
+
+
+<meta name="robots" content="nofollow" />
+
+<meta name="robots" content="noindex" />
+
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" media="all" href="/assets/application-6b24270579dccc308ee3dfbda24d9a7f0c05b72bac247e37084fe2d4ac143993.css" />
+<link rel="stylesheet" media="print" href="/assets/print-34807d72140343a345d60595116200fd136ed149233f381c5221540d3286a606.css" />
+
+
+<!-- needed for our upload interface -->
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" id="theme" media="screen" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<!-- useful in development -->
+<!-- <script src="/assets/jquery/jquery-ui.js" type="text/javascript"></script> -->
+<!-- <script src="/assets/jquery/jquery-1.11.1.js" type="text/javascript"></script> -->
+
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<!-- <script src="//cdn.quilljs.com/latest/quill.min.js"></script> -->
+<script src="/assets/application-a61ee76c6afee3b69e391bf7df1f16addc9f52b4f1bb743ad3ed3ebcbc57910f.js"></script>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  //MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+  MathJax.Hub.Config({
+    config: ["MMLorHTML.js"],
+    jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+    extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+    TeX: {
+      equationNumbers: {autoNumber: "all"},
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js", "color.js"]
+    }
+  });
+</script>
+<script src="/assets/jquery.gritter.min-f363f71c7dce27e2fa28dbdd3f265e0edfa805a8044f4d2987d2759f4f6ddb64.js"></script>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="d11D+FHNTh6uXS5yviY6JeGtgSj0vt7DccPLqeVlUI3zd8CZskrqOsn2jVOc7A+Kfi6WgeMIt0saOmbVsnsj6A==" />
+
+<!-- favicon -->
+<link rel="shortcut icon" href="/assets/au_fav.ico">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+var host = window.location.host;
+var domain = 'auto';
+if(host=="www.authorea.com"){
+  ga('create', 'UA-37313163-2', domain);
+}
+else{ //domain is "authorea.com"
+  ga('create', 'UA-37313163-3', domain);
+}
+
+var user_identity = '74037';
+ga('set', 'userId', user_identity);
+
+ga('send', 'pageview');
+</script>
+
+<script src="/assets/google_analytics_events-1f06c96018d6283de1f74b1ebf47955bbc628e616313c8bc93f4092992905621.js"></script>
+
+<script async src='//www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+
+<!-- Intercom Code -->
+<script>
+  window.intercomSettings = {
+    app_id: "hiu0hy2t",
+    name: "Mike Yetisir",
+    email: "yetisir@gmail.com",
+    created_at: 1446148715
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/hiu0hy2t';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+<!-- End Intercom Code -->
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1685268075024354');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1685268075024354&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+    <link rel="stylesheet" media="all" href="/assets/modules/article/main-9234ea3a7763cfac50f97b6105d8964101faadd435ad0851946c8d7a76d096d8.css" />
+
+    <meta name="citation_publisher" content="Authorea"/>
+    <meta name="citation_title" content=""/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@authorea">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="">
+
+    <!-- Open Graph (Facebook and more) protocol metadata -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/home/hsolo/authorea/users/74037/articles/87994" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="Authorea" />
+    <meta property="article:modified_time" content="2016-08-08 20:59:34 UTC" />
+    <meta property="article:publisher" content="https://www.authorea.com" />
+
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+    <!-- <a class="brand" href="/"><em>Au</em>thorea</a> -->
+    <a href="/"><i class="brand"><img src="/assets/Authorea-navbar.png" style="height:45px" id="authorea_navbar"></i></a>
+
+          <div class="btn-group pull-right" style="padding:5px">
+            <a class="btn btn-small btn-link dropdown-toggle navbar-button-user" id="navbar-button-user" data-toggle="dropdown" href="#">
+              <div class="user-gravatar-overlay"><img alt="Mike Yetisir" width="32" height="32" class="initials" src="data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAIAAACsiDHgAAAABGdBTUEAALGP
+C/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUw
+AADqYAAAOpgAABdwnLpRPAAAAAZiS0dEKip1daamHTZNLQAAAAlwSFlzAAAA
+SAAAAEgARslrPgAAA7pJREFUWMNj1NIqLV22jGHIAqaBdsCoBwbaAaMeGGgH
+jHpgoB0w6oGBdgCNPVBfFjzV1Onq1a6uyMiKV34bjaSJMTRvo8d2PQeIrs62
+SCmrMoh47cnAOtP+q/+6/kf+V+EXj+UXxGVCkJ6pnVIYxATvCsOnCp1kegAZ
+QAxijmbSYUrHpYbxOmM3Y5TfH6N2xWmYsjNv79O9+vz3j797/z1LV3G+rC2J
+xUEtTAsZeVPLnfZqp935+HLxx/fbTC8YPtSiyAPvU75O/7lEaA53Jnu0rbnG
+SskpuFSaNSoHiB2T1BDw4Wp+w/k5+4cdsuyrmI+h37pWnD7ecGeC51d9F/ka
+hbuiS3kDUYJpkUG0vL6cgXA/z9wpV3a9vnz2f/D/V/99KfLA294vPD+8T9bf
+3fDSKmCl8VxFT1wqA1YZz1XyvPTwsdzb3U+138/9ehJTzeyOfc5XZ/30+rP8
+r1Gan5OH9n5o7K1lFGPcDBG5ceDZmw96e2yvFD9xxe82ojzA0cP6hEV93aVT
+B++tcpikdU36N78E13E2f2Q1XAJsrSwmrrP0JGRF1106dejeSratLJFM57AE
+x/YvjT8+Lis4GnxL08ffsFDhkfQaoXc8E9xm6UrIiiolirnxxU3+uyv+Usl/
+zf+l/wm0lInyAPs2lkimc7ttr5Q8dvlZ8lvm702vRQbRCvrIatwK9BbL5TNe
+Y+hmiNpmetHwoTb7NpZI5rO4zJzLe+Dp9eUQ09LKnfZqpWb8donTLr7S98T0
+Xd6BvGvaT1mJcRtRHmDbyhrJfBZi2da4C0sfXghYaYKWkAJWmcxV9NydfvnF
+49dfnX+k/pZg38oawXwOl5kfBL+t/RmxSPSI+s1DIbfNQpS51CZL/BOQm6S+
+88olKWJcRYIHWDmYnZigBei6y6cP3VulUyRzWmiSUqKYG3+c1H/BG9x3Ta8o
+WYkJr710+tC9VRCVLIZMO5gO4Dd5/sSDrde3/Cj5LfP35iWuR5PfJh4tu5n7
+XJ7KHmC8ztjNGAlhX+l7bPo2747US4mPUyGh7nfZWFDx/eO6t+1fxM/o3Dv2
+6i1CF0MUfpO/5Py49Xv/V6mfH34X3fd5feFTGPFOhwYTqRogYO3lU4furUpy
+s2fTWPpj1W+Zvzc31J+5cT+WmGxHXUBmU2LzrXOsD44IzuHJ5IiRWSP0jmfC
++oYzN+7F0tPpEEBmDLxP+Tr9x5IDQte0ns7jtGRrZrn0svUj57co8kyjBDCO
+jkqMemDUA0MbjHpgoMGoBwYaDHkPAACEYYXcse7I2QAAAABJRU5ErkJggg==
+" /><img alt="Mike Yetisir" width="32" height="32" class="gravatar" src="https://secure.gravatar.com/avatar/5ddbed969c0b09996846d2589248a62a.png?s=32&amp;d=blank" /></div>
+              <span class="user-name-overlay">Mike Yetisir <i class="icon-caret-down"></i></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/users/74037" id="navbar-button-homepage"><i class="icon-home"></i> Homepage</a>
+              </li>
+              <li>
+                <a href="https://www.authorea.com/oauth/google_contacts" id="navbar-button-settings"><i class="icon-google-plus"></i> Find friends</a>
+              </li>
+              <li>
+                <a href="/users/74037/edit" id="navbar-button-settings"><i class="icon-cogs"></i> Settings | Preferences</a>
+              </li>
+              <li>
+                <a href="/users/74037/update_password" id="navbar-button-settings"><i class="icon-lock"></i> Change Password</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="/signout" data-method="delete" rel="nofollow" id="navbar-button-signout"><i class="icon-signout"></i> Log out</a>
+              </li>
+            </ul>
+          </div>
+
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse pull-right">
+        <ul class="nav" style="padding-top:8px">
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Browse <i class="icon-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="/browse">Articles</a></li>
+              <li><a href="/featured_templates">Templates</a></li>
+              <li><a href="/featured_institutions">Organizations</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <i class="icon-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="/product">Overview</a></li>
+              <li><a href="/user_plans">Pricing</a></li>
+              <li><a href="/aboutus">About us</a></li>
+              <li><a href="/jobs">Careers</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Help <i class="icon-caret-down"></i></a>
+            <ul class="dropdown-menu">
+      	      <li><a href="/faq">FAQ</a></li>
+              <li><a href="/help">Tutorials</a></li>
+            </ul>
+        </li>
+        <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+jQuery(document).ready(function() {
+  $('#help-button').click(
+    function(e){
+      $.get('/help-modal-content', function(data) {
+        $('#help-modal-content').html(data);
+      });
+    });
+});
+</script>
+
+    
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+            
+<div class="article-header-info" id="inline-list">
+  <span class="none-element header-left-icons" id="publication-stage-button">
+      <i class="icon-bookmark"></i> ROUGH DRAFT
+  </span>
+  <span class="none-element do-print pull-right" style="font-size: 13px; margin-bottom:25px;"><i class="icon-link"></i> authorea.com/87994</span>
+  <ul class="nav nav-tabs article-header-left">
+    <li class="">
+      <a href="/users/74037/articles/87994/_show_article">
+        <i class="icon-pencil"></i>
+        &nbsp;Main</a>
+</a>    </li>
+    <li class="active">
+      <a href="/users/74037/articles/87994/master/folder">
+        <i class="icon-folder-open-alt"></i>
+        &nbsp;Folder
+</a>    </li>
+    <li class="">
+      <a href="/users/74037/articles/87994/_show_article_feed">
+        <i class="icon-time"></i>
+        &nbsp;History
+</a>    </li>
+    <li class="hide-element chat-tab">
+      <a href="/users/74037/articles/87994/group_chat">
+        <i class="icon-comments-alt"></i>
+        &nbsp;Chat
+</a>    </li>
+  </ul>
+  <div style="clear: both;"></div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var $articleData = $('#article-data').data();
+    if ($articleData && $articleData['isCollaborator']) {
+      $('.chat-tab').removeClass('hide-element');
+    }
+});
+</script>
+
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span1 article-left-sidebar">
+          
+        </div>
+        <div class="span11">
+          <!--Body content-->
+          <!-- from http://stackoverflow.com/questions/17931534/how-to-define-flash-notifications-with-twitter-bootstrap-rails-gem -->
+
+          
+<div id="article-data" class="" style="display:none" data-current-user="{&quot;id&quot;:74037,&quot;name&quot;:&quot;Mike Yetisir&quot;}" data-is-admin="true" data-is-collaborator="true" data-is-developer="false" data-is-following="true" data-is-private="true" data-faye-channel-name="/production-user74037-article87994" data-faye-signature="ebc4fdea582943a1436dc036825e60def85bc686" data-faye-article-private-channel-name="/production-user74037-article87994/private" data-faye-article-private-signature="cf182f31f4ec2397909321d2062125b77da50d8e" data-faye-server="https://faye.authorea.com/faye" data-blank-paragraph-id="__blank__" data-checked-out-items="null" data-authenticity-token="hvZ9aPktElkUTirqdB5EX4B8xncBIHcEE/P0pCJYk8QC3P4JGqq2fXPlictW1HHwH//R3haWHox4ClnYdUbgoQ==" data-article-id="87994" data-default-format="latex" data-number-of-unread-chat-messages="null" data-theme="null" data-fontsize="null" data-keybinding="null" data-line-numbering="null" data-editor-height="null" data-dictionary="en_CA" data-show-all-comments="null" data-auto-name-blocks="null" data-numbered-headings="true" data-can-comment="null" data-access-token="null" data-sync-address="/users/74037/articles/87994/sync">this is for holding javascript data</div>
+
+
+
+
+<ul class="breadcrumb"><li><a href="/users/74037/articles/87994/master/folder/">Up-Scaling DEM Simulations</a></li><li><span class='divider'>/</span> <a href="/users/74037/articles/87994/master/folder/bibliography">bibliography</a></strong></li><li><span class='divider'>/</span> <strong>biblio.bib</strong></li>
+
+        <li class="pull-right">
+          <a href="/users/74037/articles/87994/master/file/bibliography/biblio.bib/_edit">
+            <i class="icon-edit"></i>  Edit
+            </a>
+        </li>
+
+
+
+</ul>
+  <pre>@article{Gracie_2011,
   doi = {10.1002/nme.3112},
   url = {http://dx.doi.org/10.1002/nme.3112},
   year = {2011},
@@ -24,7 +357,7 @@
   pages = {47--65},
   author = {P. A. Cundall and O. D. L. Strack},
   title = {{A discrete numerical model for granular assemblies}},
-  journal = {G{\'{e}}otechnique},
+  journal = {G{\&#39;{e}}otechnique},
 }
 
 
@@ -141,7 +474,7 @@
 
 
 @misc{matott_ostrich:_2008,
-  title = {{{OSTRICH}: {An} {Optimization} {Software} {Tool}; {Documentation} and {User}'s {Guide}}},
+  title = {{{OSTRICH}: {An} {Optimization} {Software} {Tool}; {Documentation} and {User}&#39;s {Guide}}},
   url = {http://www.eng.buffalo.edu/~lsmatott/Ostrich/OstrichMain.html},
   urldate = {2016-02-20},
   publisher = {Department of Civil, Structural and Environmental Engineering, State University of New York at Buffalo},
@@ -157,7 +490,7 @@
   url = {http://epubs.siam.org/doi/pdf/10.1137/0111030},
   number = {2},
   urldate = {2016-01-12},
-  journal = {Journal of the Society for Industrial \& Applied Mathematics},
+  journal = {Journal of the Society for Industrial \&amp; Applied Mathematics},
   author = {Marquardt, Donald W.},
   year = {1963},
   pages = {431--441},
@@ -175,11 +508,11 @@
   number = {2/3/4},
   urldate = {2015-07-23},
   journal = {Engineering Computations},
-  author = {D'Addetta, G.A. and Ramm, E. and Diebels, S. and Ehlers, W.},
+  author = {D&#39;Addetta, G.A. and Ramm, E. and Diebels, S. and Ehlers, W.},
   month = {mar},
   year = {2004},
   pages = {360--383},
-  file = {D'Addetta et al. - 2004 - A particle center based homogenization strategy fo.pdf:/home/yeti/.zotero/zotero/hy7wzfqc.default/zotero/storage/TGABX923/D'Addetta et al. - 2004 - A particle center based homogenization strategy fo.pdf:application/pdf},
+  file = {D&#39;Addetta et al. - 2004 - A particle center based homogenization strategy fo.pdf:/home/yeti/.zotero/zotero/hy7wzfqc.default/zotero/storage/TGABX923/D&#39;Addetta et al. - 2004 - A particle center based homogenization strategy fo.pdf:application/pdf},
 }
 
 
@@ -274,7 +607,7 @@
 @inproceedings{Kennedy,
   doi = {10.1109/icnn.1995.488968},
   url = {http://dx.doi.org/10.1109/icnn.1995.488968},
-  publisher = {Institute of Electrical {\&} Electronics Engineers ({IEEE})},
+  publisher = {Institute of Electrical {\&amp;} Electronics Engineers ({IEEE})},
   author = {J. Kennedy and R. Eberhart},
   year = {1995},
   title = {{Particle swarm optimization}},
@@ -293,7 +626,7 @@
 
 
 @misc{matott_ostrich:_2016,
-  title = {{{OSTRICH}: {An} {Optimization} {Software} {Tool}; {Documentation} and {User}'s {Guide}}},
+  title = {{{OSTRICH}: {An} {Optimization} {Software} {Tool}; {Documentation} and {User}&#39;s {Guide}}},
   url = {http://www.eng.buffalo.edu/~lsmatott/Ostrich/OstrichMain.html},
   urldate = {2016-02-20},
   publisher = {Department of Civil, Structural and Environmental Engineering, State University of New York at Buffalo},
@@ -374,7 +707,7 @@
   volume = {6},
   number = {6},
   pages = {773--781},
-  author = {A. Hillerborg and M. Mod{\'{e}}er and P.-E. Petersson},
+  author = {A. Hillerborg and M. Mod{\&#39;{e}}er and P.-E. Petersson},
   title = {{Analysis of crack formation and crack growth in concrete by means of fracture mechanics and finite elements}},
   journal = {Cement and Concrete Research},
 }
@@ -400,7 +733,7 @@
   url = {http://dx.doi.org/10.1109/tit.1982.1056489},
   year = {1982},
   month = {mar},
-  publisher = {Institute of Electrical {\&} Electronics Engineers ({IEEE})},
+  publisher = {Institute of Electrical {\&amp;} Electronics Engineers ({IEEE})},
   volume = {28},
   number = {2},
   pages = {129--137},
@@ -509,7 +842,7 @@
   volume = {192},
   number = {28-30},
   pages = {3233--3244},
-  author = {Fr{\'{e}}d{\'{e}}ric Feyel},
+  author = {Fr{\&#39;{e}}d{\&#39;{e}}ric Feyel},
   title = {{A multilevel finite element method ({FE}2) to describe the response of highly non-linear structures using generalized continua}},
   journal = {Computer Methods in Applied Mechanics and Engineering},
 }
@@ -693,3 +1026,15 @@
   author = {Nick Barton},
   title = {{Rock Quality Seismic Velocity, Attenuation and Anisotropy}},
 }
+</pre>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
